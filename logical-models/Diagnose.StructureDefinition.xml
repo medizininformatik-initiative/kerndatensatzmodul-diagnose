@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Diagnose" />
+  <name value="Diagnose" />
+  <status value="draft" />
+  <fhirVersion value="4.0.0" />
+  <kind value="logical" />
+  <abstract value="false" />
+  <type value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Diagnose" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="Diagnose">
+      <path value="Diagnose" />
+      <short value="Das Basismodul Diagnosen enthält Diagnosen als Behandlungsbegründungen und abrechnungsbasiertes Gliederungsmerkmal, z.B. als Hauptdiagnose, Nebendiagnose, Quartalsdiagnose etc." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Element" />
+      </type>
+    </element>
+    <element id="Diagnose.Fallrelation">
+      <path value="Diagnose.Fallrelation" />
+      <short value="Dient dazu, die Diagnose zu einem Fall zuzuordnen, dies sollte so genau wie möglich passieren. " />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Identifier" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Identifier" />
+      </type>
+    </element>
+    <element id="Diagnose.Identifikation">
+      <path value="Diagnose.Identifikation" />
+      <short value="Diagnose-Identifikation" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Identifier" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Identifier" />
+      </type>
+    </element>
+    <element id="Diagnose.Diagnoseerläuterung">
+      <path value="Diagnose.Diagnoseerläuterung" />
+      <short value="Damit soll dem Arzt die Möglichkeit gegeben werden evt. nähere Angaben zu einer Diagnose in Form von Freitext zu machen." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Diagnose.Freitextbeschreibung">
+      <path value="Diagnose.Freitextbeschreibung" />
+      <short value="Diagnose im Klartext. Im Bereich der medizinischen Dokumentation sollte die Textbeschreibung obligatorisch sein." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Diagnose.BergründungVonAusnahmen">
+      <path value="Diagnose.BergründungVonAusnahmen" />
+      <short value="Unter bestimmten Umständen ist es erforderlich, das Auftreten einer Diagnose zu Abrechnungszwecken zu begründen, z.B. für geschlechtsspezifische Plausibilitätsprüfungen. Eine Codierung für Ausnahmebegründungen gibt es zurzeit nicht, d.h. diese erfolgt in Freitext." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Diagnose.Oraganmanifestationen">
+      <path value="Diagnose.Oraganmanifestationen" />
+      <short value="Zusatzangabe zum Primärcode ICD-10: Organmanifestationen. Der Code für die Organmanifestation einer Erkrankung wird in der ICD-Codierung mit einem Stern (*) gekennzeichnet" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="code" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/code" />
+      </type>
+    </element>
+    <element id="Diagnose.Auslöser">
+      <path value="Diagnose.Auslöser" />
+      <short value="Zusatzangabe zum Primärcode ICD-10: Auslöser (Ätiologie), z. B. welcher Erreger. Der Code für die Ätiologie einer Erkrankung wird in der ICD-Codierung mit einem Kreuz (†) gekennzeichnet" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="code" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/code" />
+      </type>
+    </element>
+    <element id="Diagnose.Dokumentationsdatum">
+      <path value="Diagnose.Dokumentationsdatum" />
+      <short value="Das Datum ist der Zeitpunkt, an dem eine Krankheit z. B. durch einen Arzt dokumentiert wurde. Hinweis: Wenn zwischen Feststellung der Diagnose und Dokumentationsdatum nicht unterschieden werden muss, ist das Datum der Feststellung der Diagnose (Diagnosedatum) anzugeben." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="date" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/date" />
+      </type>
+    </element>
+    <element id="Diagnose.KlinischRelevanterZeitraum">
+      <path value="Diagnose.KlinischRelevanterZeitraum" />
+      <short value="Der Zeitraum wird durch zwei Datumsangaben beschrieben, das heißt, von wann bis wann ein Patient an der diagnostizierten Krankheit litt. Über den Zeitraum kann auch ausgedrückt werden, seit wann ein Patient an einer Krankheit leidet, indem nur das Startdatum des Zeitraums angegeben wird. Das Startdatum des Zeitraums kann abweichen von dem Diagnosedatum. Datumsangaben zu Diagnosen können in unterschiedlicher Präzision vorhanden sein." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Diagnose.KlinischRelevanterZeitraum.von-am">
+      <path value="Diagnose.KlinischRelevanterZeitraum.von-am" />
+      <short value="Startdatum" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="date" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/date" />
+      </type>
+    </element>
+    <element id="Diagnose.KlinischRelevanterZeitraum.bis">
+      <path value="Diagnose.KlinischRelevanterZeitraum.bis" />
+      <short value="Enddatum" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="date" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/date" />
+      </type>
+    </element>
+    <element id="Diagnose.Feststellungsdatum">
+      <path value="Diagnose.Feststellungsdatum" />
+      <short value="Das Datum ist der Zeitpunkt, an dem eine Krankheit z. B. durch einen Arzt festgestellt wurde. Dies wird im Folgenden mit Diagnosedatum bezeichnet." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="date" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/date" />
+      </type>
+    </element>
+    <element id="Diagnose.VorhandenBeiAufnahme">
+      <path value="Diagnose.VorhandenBeiAufnahme" />
+      <short value="Ist die Diagnose bei der Aufnahme in die Gesundheitseinrichtung vorhanden." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="boolean" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/boolean" />
+      </type>
+    </element>
+    <element id="Diagnose.VorhandenBeiEntlassung">
+      <path value="Diagnose.VorhandenBeiEntlassung" />
+      <short value="Ist die Diagnose bei der Entlassung in der Gesundheitseinrichtung vorhanden." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="boolean" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/boolean" />
+      </type>
+    </element>
+    <element id="Diagnose.DiagnoseKodiert">
+      <path value="Diagnose.DiagnoseKodiert" />
+      <short value="Im Bereich der administrativen und statistischen Auswertung wird die Diagnose mit Hilfe von Codiersystemen verschlüsselt. So wird z.B. bei der Abrechnung nach §301 und §295 SGB V die Codierung von Diagnosen mittels ICD-10 GM gesetzlich vorgeschrieben. Weitere Codiersysteme sind z.B. die „Alpha-ID&quot;, SNOMED CT und ID MACS." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Diagnose.DiagnoseKodiert.Diagnosecode">
+      <path value="Diagnose.DiagnoseKodiert.Diagnosecode" />
+      <short value="Diagnosecode" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="code" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/code" />
+      </type>
+    </element>
+    <element id="Diagnose.DiagnoseKodiert.Codesystem">
+      <path value="Diagnose.DiagnoseKodiert.Codesystem" />
+      <short value="Codesystem für den Diagnosecode, in Deutschland vorrangig ICD-10-GM, aber auch weitere Codesysteme wie Orphanet sollten möglich sein." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Identifier" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Identifier" />
+      </type>
+    </element>
+    <element id="Diagnose.DiagnoseKodiert.KatalogtextDiagnosecode">
+      <path value="Diagnose.DiagnoseKodiert.KatalogtextDiagnosecode" />
+      <short value="Zum Diagnosecode kann der assoziierte Text im Codiersystem (Klassentext, Displaytext/-name, Preferred Name, etc.) angegeben werden. Dieser Text entspricht nicht (unbedingt) der freitextlichen Beschreibung einer Diagnose und kann automatisch von einem System anhand des Codes angegeben werden." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Diagnose.Lokalisation">
+      <path value="Diagnose.Lokalisation" />
+      <short value="Über die Lokalisation kann angegeben werden, in welchem Bereich des Körpers eine Krankheit diagnostiziert wurde (topographische Information). Die Beschreibung der Lokalisation kann sowohl im Klartext erfolgen, als auch über einen Codierungsschlüssel. Hier ist z.B. der in der Tumordokumentation benutzte Lokalisationsschlüssel, abgeleitet aus der ICD-O, zu nennen. Eine Zusatzangabe kann je nach Organ die Angabe der Körperseite (Seitenlokalisation) sein." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="code" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/code" />
+      </type>
+    </element>
+    <element id="Diagnose.Körperstelle">
+      <path value="Diagnose.Körperstelle" />
+      <short value="Körperstelle der Diagnose inkl. Lateralität (R, L, B). " />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Diagnose.Diagnosetyp">
+      <path value="Diagnose.Diagnosetyp" />
+      <short value="Über den Diagnosetyp wird angegeben, um welche Art von Diagnose es sich handelt. Der Diagnosetyp wird codiert angegeben. Bei der Angabe des Diagnosetyps ist darauf zu achten, dass dieser auch im richtigen Kontext verwendet wird. Zum Beispiel wird es bei der Beschreibung einer Diagnose im Rahmen einer Überweisung nicht den Diagnosetyp „Entlassungsdiagnose&quot; geben." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Diagnose.Diagnosensicherheit">
+      <path value="Diagnose.Diagnosensicherheit" />
+      <short value="Die Diagnosensicherheit, d.h. wie sicher die Diagnose im Einzelfall zu werten ist, kann unterschiedlich angegeben werden. Für Abrechnungszwecke in der ambulanten Versorgung muss obligatorisch ein Zusatzkennzeichen für die Diagnosensicherheit (A, G, V oder Z) angegeben werden, d. h. die Angabe ist obligatorisch. In der stationären Versorgung sind diese Zusatzkennzeichen für die Angabe der Diagnosensicherheit für Abrechnungszwecke dagegen nicht zulässig." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="code" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/code" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
