@@ -1,0 +1,34 @@
+{
+    "compose": {
+        "include": [
+            {
+                "filter": [
+                    {
+                        "op": "is-a",
+                        "property": "concept",
+                        "value": "404684003"
+                    },
+                    {
+                        "op": "is-a",
+                        "property": "concept",
+                        "value": "272379006"
+                    },
+                    {
+                        "op": "is-a",
+                        "property": "concept",
+                        "value": "243796009"
+                    }
+                ],
+                "system": "http://snomed.info/sct"
+            }
+        ]
+    },
+    "date": "2020-05-01",
+    "description": "Enthaelt alle SNOMED Clinical finding, Event und Situation with explicit context codes",
+    "experimental": true,
+    "name": "diagnoses-codes",
+    "publisher": "Medizininformatik Initiative",
+    "status": "draft",
+    "url": "https://www.medizininformatik-initiative.de/fhir/core/ValueSet/diagnoses-sct",
+    "resourceType": "ValueSet"
+}
