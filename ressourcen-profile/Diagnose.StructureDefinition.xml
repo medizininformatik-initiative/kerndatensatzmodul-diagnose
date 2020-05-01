@@ -83,6 +83,10 @@
       <sliceName value="icd10-gm" />
       <max value="1" />
       <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://fhir.de/ValueSet/dimdi/icd-10-gm" />
+      </binding>
     </element>
     <element id="Condition.code.coding:icd10-gm.system">
       <path value="Condition.code.coding.system" />
@@ -105,6 +109,10 @@
       <sliceName value="alpha-id" />
       <max value="1" />
       <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://fhir.de/ValueSet/dimdi/alpha-id" />
+      </binding>
     </element>
     <element id="Condition.code.coding:alpha-id.system">
       <path value="Condition.code.coding.system" />
@@ -122,6 +130,10 @@
       <sliceName value="sct" />
       <max value="1" />
       <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/ValueSet/diagnoses-sct" />
+      </binding>
     </element>
     <element id="Condition.code.coding:sct.system">
       <path value="Condition.code.coding.system" />
@@ -217,7 +229,7 @@
       <mustSupport value="true" />
     </element>
     <element id="Condition.onset[x]:onsetPeriod">
-      <path value="Condition.onset[x]" />
+      <path value="Condition.onsetPeriod" />
       <sliceName value="onsetPeriod" />
       <type>
         <code value="Period" />
@@ -225,7 +237,7 @@
       <mustSupport value="true" />
     </element>
     <element id="Condition.onset[x]:onsetPeriod.start">
-      <path value="Condition.onset[x].start" />
+      <path value="Condition.onsetPeriod.start" />
       <mustSupport value="true" />
     </element>
     <element id="Condition.onset[x]:onsetPeriod.start.extension">
@@ -239,7 +251,7 @@
       </slicing>
     </element>
     <element id="Condition.onset[x]:onsetPeriod.start.extension:lebensphase-start">
-      <path value="Condition.onset[x].start.extension" />
+      <path value="Condition.onsetPeriod.start.extension" />
       <sliceName value="lebensphase-start" />
       <max value="1" />
       <type>
@@ -249,7 +261,7 @@
       <mustSupport value="true" />
     </element>
     <element id="Condition.onset[x]:onsetPeriod.end">
-      <path value="Condition.onset[x].end" />
+      <path value="Condition.onsetPeriod.end" />
       <mustSupport value="true" />
     </element>
     <element id="Condition.onset[x]:onsetPeriod.end.extension">
@@ -263,7 +275,7 @@
       </slicing>
     </element>
     <element id="Condition.onset[x]:onsetPeriod.end.extension:lebensphase-ende">
-      <path value="Condition.onset[x].end.extension" />
+      <path value="Condition.onsetPeriod.end.extension" />
       <sliceName value="lebensphase-ende" />
       <max value="1" />
       <type>
