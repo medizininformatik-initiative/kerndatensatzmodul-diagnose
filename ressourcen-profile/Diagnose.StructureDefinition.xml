@@ -252,6 +252,7 @@
       </slicing>
     </element>
     <element id="Condition.onset[x]:onsetPeriod.end.extension:lebensphase-ende">
+      <path value="Condition.onset[x].end.extension" />
       <sliceName value="lebensphase-ende" />
       <max value="1" />
       <type>
