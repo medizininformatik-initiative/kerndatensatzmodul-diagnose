@@ -134,6 +134,22 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Condition.code.coding:orphanet">
+      <path value="Condition.code.coding" />
+      <sliceName value="orphanet" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:orphanet.system">
+      <path value="Condition.code.coding.system" />
+      <min value="1" />
+      <patternUri value="http://www.orpha.net" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:orphanet.code">
+      <path value="Condition.code.coding.code" />
+      <min value="1" />
+    </element>
     <element id="Condition.bodySite">
       <path value="Condition.bodySite" />
       <mustSupport value="true" />
