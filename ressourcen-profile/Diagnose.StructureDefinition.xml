@@ -75,6 +75,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Condition.code.coding:icd10-gm">
@@ -198,19 +199,26 @@
       <mustSupport value="true" />
     </element>
     <element id="Condition.onset[x]:onsetPeriod">
-      <path value="Condition.onsetPeriod" />
+      <path value="Condition.onset[x]" />
       <sliceName value="onsetPeriod" />
       <type>
         <code value="Period" />
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="Condition.onset[x]:onsetPeriod">
+      <path value="Condition.onset[x]" />
+      <sliceName value="onsetPeriod" />
+      <type>
+        <code value="Period" />
+      </type>
+    </element>
     <element id="Condition.onset[x]:onsetPeriod.start">
-      <path value="Condition.onsetPeriod.start" />
+      <path value="Condition.onset[x].start" />
       <mustSupport value="true" />
     </element>
     <element id="Condition.onset[x]:onsetPeriod.start.extension">
-      <path value="Condition.onsetPeriod.start.extension" />
+      <path value="Condition.onset[x].start.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -220,9 +228,8 @@
       </slicing>
     </element>
     <element id="Condition.onset[x]:onsetPeriod.start.extension:lebensphase-start">
-      <path value="Condition.onsetPeriod.start.extension" />
+      <path value="Condition.onset[x].start.extension" />
       <sliceName value="lebensphase-start" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -231,11 +238,10 @@
       <mustSupport value="true" />
     </element>
     <element id="Condition.onset[x]:onsetPeriod.end">
-      <path value="Condition.onsetPeriod.end" />
       <mustSupport value="true" />
     </element>
     <element id="Condition.onset[x]:onsetPeriod.end.extension">
-      <path value="Condition.onsetPeriod.end.extension" />
+      <path value="Condition.onset[x].end.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -245,9 +251,7 @@
       </slicing>
     </element>
     <element id="Condition.onset[x]:onsetPeriod.end.extension:lebensphase-ende">
-      <path value="Condition.onsetPeriod.end.extension" />
       <sliceName value="lebensphase-ende" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -256,7 +260,7 @@
       <mustSupport value="true" />
     </element>
     <element id="Condition.onset[x]:onsetDateTime">
-      <path value="Condition.onsetDateTime" />
+      <path value="Condition.onset[x]" />
       <sliceName value="onsetDateTime" />
       <type>
         <code value="dateTime" />
