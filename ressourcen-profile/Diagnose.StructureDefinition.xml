@@ -238,6 +238,7 @@
       <mustSupport value="true" />
     </element>
     <element id="Condition.onset[x]:onsetPeriod.end">
+      <path value="Condition.onset[x].end" />
       <mustSupport value="true" />
     </element>
     <element id="Condition.onset[x]:onsetPeriod.end.extension">
