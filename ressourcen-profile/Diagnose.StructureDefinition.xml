@@ -206,13 +206,6 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Condition.onset[x]:onsetPeriod">
-      <path value="Condition.onset[x]" />
-      <sliceName value="onsetPeriod" />
-      <type>
-        <code value="Period" />
-      </type>
-    </element>
     <element id="Condition.onset[x]:onsetPeriod.start">
       <path value="Condition.onset[x].start" />
       <mustSupport value="true" />
