@@ -169,6 +169,8 @@
     </element>
     <element id="Condition.subject">
       <path value="Condition.subject" />
+      <min value="1" />
+      <max value="1" />
       <type>
         <code value="Reference" />
         <profile value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference" />
