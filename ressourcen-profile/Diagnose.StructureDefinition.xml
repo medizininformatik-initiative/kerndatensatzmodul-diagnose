@@ -4,6 +4,7 @@
   <version value="0.9" />
   <name value="Diagnose" />
   <status value="draft" />
+  <description value="Dieses Profil beschreibt eine Diagnose der Medizininformatik Initiative" />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="workflow" />
