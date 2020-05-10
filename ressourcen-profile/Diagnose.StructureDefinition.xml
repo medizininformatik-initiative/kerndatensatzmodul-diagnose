@@ -90,6 +90,70 @@
         <valueSet value="http://fhir.de/ValueSet/dimdi/icd-10-gm" />
       </binding>
     </element>
+    <element id="Condition.code.coding:icd10-gm.extension">
+      <path value="Condition.code.coding.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Condition.code.coding:icd10-gm.extension:Diagnosesicherheit">
+      <path value="Condition.code.coding.extension" />
+      <sliceName value="Diagnosesicherheit" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:icd10-gm.extension:Seitenlokalisation">
+      <path value="Condition.code.coding.extension" />
+      <sliceName value="Seitenlokalisation" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://fhir.de/StructureDefinition/seitenlokalisation" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:icd10-gm.extension:AusrufezeichenCode">
+      <path value="Condition.code.coding.extension" />
+      <sliceName value="AusrufezeichenCode" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://fhir.de/StructureDefinition/icd-10-gm-ausrufezeichen" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:icd10-gm.extension:ManifestationsCode">
+      <path value="Condition.code.coding.extension" />
+      <sliceName value="ManifestationsCode" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/icd-10-gm-manifestation" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:icd10-gm.extension:Primaercode">
+      <path value="Condition.code.coding.extension" />
+      <sliceName value="Primaercode" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/icd-10-gm-primaercode" />
+      </type>
+      <mustSupport value="true" />
+    </element>
     <element id="Condition.code.coding:icd10-gm.system">
       <path value="Condition.code.coding.system" />
       <min value="1" />
@@ -231,7 +295,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Condition.onset[x]:onsetPeriod">
-      <path value="Condition.onsetPeriod" />
       <sliceName value="onsetPeriod" />
       <type>
         <code value="Period" />
@@ -239,7 +302,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Condition.onset[x]:onsetPeriod.start">
-      <path value="Condition.onsetPeriod.start" />
       <mustSupport value="true" />
     </element>
     <element id="Condition.onset[x]:onsetPeriod.start.extension">
@@ -253,7 +315,6 @@
       </slicing>
     </element>
     <element id="Condition.onset[x]:onsetPeriod.start.extension:lebensphase-start">
-      <path value="Condition.onsetPeriod.start.extension" />
       <sliceName value="lebensphase-start" />
       <max value="1" />
       <type>
@@ -263,7 +324,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Condition.onset[x]:onsetPeriod.end">
-      <path value="Condition.onsetPeriod.end" />
       <mustSupport value="true" />
     </element>
     <element id="Condition.onset[x]:onsetPeriod.end.extension">
@@ -277,7 +337,6 @@
       </slicing>
     </element>
     <element id="Condition.onset[x]:onsetPeriod.end.extension:lebensphase-ende">
-      <path value="Condition.onsetPeriod.end.extension" />
       <sliceName value="lebensphase-ende" />
       <max value="1" />
       <type>
