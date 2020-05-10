@@ -4,6 +4,7 @@
   <version value="0.9" />
   <name value="Lebensphase" />
   <status value="draft" />
+  <description value="In dieser Extension wird die Lebensphase/Altersklasse einer Person beschrieben." />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="rim" />
