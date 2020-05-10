@@ -1,0 +1,18 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://fhir.de/ValueSet/dimdi/icd-10-gm",
+  "version": "2020",
+  "name": "ICD-10-GM 2020",
+  "status": "draft",
+  "experimental": true,
+  "date": "2015-03-12",
+  "description": "Internationale statistische Klassifikation der Krankheiten und verwandter Gesundheitsprobleme. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI).",
+  "compose": {
+    "include": [
+      {
+        "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+        "version": "2020"
+      }
+    ]
+  }
+}
