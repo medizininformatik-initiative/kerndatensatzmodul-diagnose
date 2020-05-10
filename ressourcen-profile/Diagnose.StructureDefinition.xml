@@ -42,6 +42,27 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Condition" />
   <derivation value="constraint" />
   <differential>
+    <element id="Condition">
+      <path value="Condition" />
+      <constraint>
+        <key value="icd-1" />
+        <severity value="warning" />
+        <human value="Bei Angabe eines Codes in der Haupt-Kreuz-Extension, muss dieser auch Bestandteil des postkoordinierten ICD-Codes sein!" />
+        <expression value="extension('https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/icd-10-gm-primaercode').empty() or code.contains($this.extension('https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/icd-10-gm-primaercode').value.code)" />
+      </constraint>
+      <constraint>
+        <key value="icd-2" />
+        <severity value="warning" />
+        <human value="Bei Angabe eines Codes in der Stern-Extension, muss dieser auch Bestandteil des postkoordinierten ICD-Codes sein!" />
+        <expression value="extension('https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/icd-10-gm-manifestation').empty() or code.contains($this.extension('https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/icd-10-gm-manifestation').value.code)" />
+      </constraint>
+      <constraint>
+        <key value="icd-3" />
+        <severity value="warning" />
+        <human value="Bei Angabe eines Codes in der Ausrufezeichen-Extension, muss dieser auch Bestandteil des postkoordinierten ICD-Codes sein!" />
+        <expression value="extension('http://fhir.de/StructureDefinition/icd-10-gm-ausrufezeichen').empty() or code.contains($this.extension('http://fhir.de/StructureDefinition/icd-10-gm-ausrufezeichen').value.code)" />
+      </constraint>
+    </element>
     <element id="Condition.id">
       <path value="Condition.id" />
       <mustSupport value="true" />
