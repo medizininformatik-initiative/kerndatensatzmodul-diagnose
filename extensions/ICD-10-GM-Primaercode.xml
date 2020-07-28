@@ -1,5 +1,5 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/icd-10-gm-primaercode" />
+  <url value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/icd-10-gm-primaercode" />
   <version value="0.9" />
   <name value="ICD-10-GM-Primaercode" />
   <title value="ICD-Kodes ohne Kennzeichen oder mit einem Kreuz (Ätiologie, „†“)" />
@@ -30,7 +30,7 @@
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="ttps://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/icd-10-gm-primaercode" />
+      <fixedUri value="ttps://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/icd-10-gm-primaercode" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />

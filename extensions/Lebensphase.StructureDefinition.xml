@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Lebensphase" />
+  <url value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Lebensphase" />
   <version value="0.9" />
   <name value="Lebensphase" />
   <status value="draft" />
@@ -26,12 +26,6 @@
   <derivation value="constraint" />
   <differential>
     <element id="Extension">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Extension" />
       <short value="Lebensphase" />
       <definition value="In dieser Extension wird die Lebensphase/Altersklasse einer Person beschrieben." />
@@ -44,15 +38,9 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
-      <fixedUri value="http://example.org/fhir/StructureDefinition/Lebensphase" />
+      <fixedUri value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Lebensphase" />
     </element>
     <element id="Extension.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Extension.value[x]" />
       <min value="1" />
       <type>
@@ -60,38 +48,20 @@
       </type>
     </element>
     <element id="Extension.value[x].coding">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Extension.value[x].coding" />
       <min value="1" />
       <max value="1" />
       <isModifier value="false" />
       <binding>
         <strength value="required" />
-        <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/ValueSet/Lebensphase" />
+        <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/Lebensphase" />
       </binding>
     </element>
     <element id="Extension.value[x].coding.system">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Extension.value[x].coding.system" />
       <min value="1" />
     </element>
     <element id="Extension.value[x].coding.code">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Extension.value[x].coding.code" />
       <min value="1" />
     </element>

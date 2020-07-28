@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Diagnose" />
+  <url value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose" />
   <version value="0.9" />
   <name value="Diagnose" />
   <status value="draft" />
@@ -49,21 +49,21 @@
         <severity value="warning" />
         <human value="Bei Angabe eines Codes in der Haupt-Kreuz-Extension, muss dieser auch Bestandteil des postkoordinierten ICD-Codes sein!" />
         <expression value="extension('https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/icd-10-gm-primaercode').empty() or code.contains($this.extension('https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/icd-10-gm-primaercode').value.code)" />
-        <source value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Diagnose" />
+        <source value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose" />
       </constraint>
       <constraint>
         <key value="icd-2" />
         <severity value="warning" />
         <human value="Bei Angabe eines Codes in der Stern-Extension, muss dieser auch Bestandteil des postkoordinierten ICD-Codes sein!" />
         <expression value="extension('https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/icd-10-gm-manifestation').empty() or code.contains($this.extension('https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/icd-10-gm-manifestation').value.code)" />
-        <source value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Diagnose" />
+        <source value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose" />
       </constraint>
       <constraint>
         <key value="icd-3" />
         <severity value="warning" />
         <human value="Bei Angabe eines Codes in der Ausrufezeichen-Extension, muss dieser auch Bestandteil des postkoordinierten ICD-Codes sein!" />
         <expression value="extension('http://fhir.de/StructureDefinition/icd-10-gm-ausrufezeichen').empty() or code.contains($this.extension('http://fhir.de/StructureDefinition/icd-10-gm-ausrufezeichen').value.code)" />
-        <source value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Diagnose" />
+        <source value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose" />
       </constraint>
     </element>
     <element id="Condition.id">
@@ -166,7 +166,7 @@
       <max value="*" />
       <type>
         <code value="Extension" />
-        <profile value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/icd-10-gm-manifestation" />
+        <profile value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/icd-10-gm-manifestation" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -177,7 +177,7 @@
       <max value="*" />
       <type>
         <code value="Extension" />
-        <profile value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/icd-10-gm-primaercode" />
+        <profile value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/icd-10-gm-primaercode" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -230,7 +230,7 @@
       </patternCoding>
       <binding>
         <strength value="required" />
-        <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/ValueSet/diagnoses-sct" />
+        <valueSet value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct" />
       </binding>
     </element>
     <element id="Condition.code.coding:sct.system">
@@ -301,7 +301,6 @@
       <type>
         <code value="Reference" />
         <profile value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference" />
-        <targetProfile value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Patient" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -355,7 +354,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Lebensphase" />
+        <profile value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Lebensphase" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -379,7 +378,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Lebensphase" />
+        <profile value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Lebensphase" />
       </type>
       <mustSupport value="true" />
     </element>

@@ -1,5 +1,5 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/icd-10-gm-manifestation" />
+  <url value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/icd-10-gm-manifestation" />
   <version value="0.9" />
   <name value="ICD-10-GM-Manifestation" />
   <title value="Extension zur Erfassung des ICD-10-GM Manifestationscodes ('Stern-Code')" />
@@ -24,7 +24,7 @@
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/icd-10-gm-manifestation" />
+      <fixedUri value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/icd-10-gm-manifestation" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
