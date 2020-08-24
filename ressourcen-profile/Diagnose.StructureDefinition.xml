@@ -317,7 +317,6 @@
         </discriminator>
         <rules value="closed" />
       </slicing>
-      <min value="1" />
       <type>
         <code value="dateTime" />
       </type>
