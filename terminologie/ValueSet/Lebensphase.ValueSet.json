@@ -4,7 +4,7 @@
   "version": "0.9",
   "name": "Lebensphase",
   "title": "Lebensphase",
-  "status": "draft",
+  "status": "active",
   "experimental": false,
   "publisher": "Medizininformatik Initative",
   "description": "Dieses Valueset enthält die Codes zur Beschreibung von Altersklassen/Lebensphasen",
