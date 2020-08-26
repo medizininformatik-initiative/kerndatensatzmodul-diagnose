@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/Lebensphase",
-  "version": "0.9",
+  "version": "1.0",
   "name": "Lebensphase",
   "title": "Lebensphase",
   "status": "active",
