@@ -84,7 +84,7 @@
     </element>
     <element id="Condition.clinicalStatus">
       <path value="Condition.clinicalStatus" />
-      <min value="1" />
+      <min value="0" />
       <mustSupport value="true" />
     </element>
     <element id="Condition.code">
