@@ -350,7 +350,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Condition.onset[x]:onsetPeriod.start.extension:lebensphase-start">
+    <element id="Condition.onset[x]:onsetPeriod.start.extension:lebensphase-von">
       <path value="Condition.onset[x].start.extension" />
       <sliceName value="lebensphase-start" />
       <max value="1" />
@@ -374,7 +374,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Condition.onset[x]:onsetPeriod.end.extension:lebensphase-ende">
+    <element id="Condition.onset[x]:onsetPeriod.end.extension:lebensphase-bis">
       <path value="Condition.onset[x].end.extension" />
       <sliceName value="lebensphase-ende" />
       <max value="1" />
