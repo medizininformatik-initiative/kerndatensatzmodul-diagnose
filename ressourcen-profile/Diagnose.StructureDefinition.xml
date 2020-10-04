@@ -169,7 +169,7 @@
       <max value="*" />
       <type>
         <code value="Extension" />
-        <profile value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/icd-10-gm-manifestation" />
+        <profile value="http://fhir.de/StructureDefinition/icd-10-gm-manifestationscode" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -180,7 +180,7 @@
       <max value="*" />
       <type>
         <code value="Extension" />
-        <profile value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/icd-10-gm-primaercode" />
+        <profile value="http://fhir.de/StructureDefinition/icd-10-gm-primaercode" />
       </type>
       <mustSupport value="true" />
     </element>
