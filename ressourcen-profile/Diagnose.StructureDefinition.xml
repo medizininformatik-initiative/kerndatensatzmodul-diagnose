@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose" />
-  <version value="0.9" />
+  <version value="1.0" />
   <name value="Diagnose" />
-  <status value="draft" />
+  <status value="active" />
   <description value="Dieses Profil beschreibt eine Diagnose der Medizininformatik Initiative" />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -307,10 +307,6 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Condition.encounter">
-      <path value="Condition.encounter" />
-      <max value="0" />
-    </element>
     <element id="Condition.onset[x]">
       <path value="Condition.onset[x]" />
       <slicing>
@@ -352,11 +348,11 @@
     </element>
     <element id="Condition.onset[x]:onsetPeriod.start.extension:lebensphase-von">
       <path value="Condition.onset[x].start.extension" />
-      <sliceName value="lebensphase-start" />
+      <sliceName value="lebensphase-von" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Lebensphase" />
+        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Stage_Life" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -376,11 +372,11 @@
     </element>
     <element id="Condition.onset[x]:onsetPeriod.end.extension:lebensphase-bis">
       <path value="Condition.onset[x].end.extension" />
-      <sliceName value="lebensphase-ende" />
+      <sliceName value="lebensphase-bis" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Lebensphase" />
+        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Stage_Life" />
       </type>
       <mustSupport value="true" />
     </element>
