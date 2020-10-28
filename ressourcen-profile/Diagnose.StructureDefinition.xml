@@ -307,10 +307,6 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Condition.encounter">
-      <path value="Condition.encounter" />
-      <max value="0" />
-    </element>
     <element id="Condition.onset[x]">
       <path value="Condition.onset[x]" />
       <slicing>
