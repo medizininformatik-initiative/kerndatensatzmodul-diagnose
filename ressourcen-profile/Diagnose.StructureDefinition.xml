@@ -169,7 +169,7 @@
       <max value="*" />
       <type>
         <code value="Extension" />
-        <profile value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/icd-10-gm-manifestation" />
+        <profile value="http://fhir.de/StructureDefinition/icd-10-gm-manifestationscode" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -180,7 +180,7 @@
       <max value="*" />
       <type>
         <code value="Extension" />
-        <profile value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/icd-10-gm-primaercode" />
+        <profile value="http://fhir.de/StructureDefinition/icd-10-gm-primaercode" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -350,7 +350,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Condition.onset[x]:onsetPeriod.start.extension:lebensphase-start">
+    <element id="Condition.onset[x]:onsetPeriod.start.extension:lebensphase-von">
       <path value="Condition.onset[x].start.extension" />
       <sliceName value="lebensphase-start" />
       <max value="1" />
@@ -374,7 +374,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Condition.onset[x]:onsetPeriod.end.extension:lebensphase-ende">
+    <element id="Condition.onset[x]:onsetPeriod.end.extension:lebensphase-bis">
       <path value="Condition.onset[x].end.extension" />
       <sliceName value="lebensphase-ende" />
       <max value="1" />
