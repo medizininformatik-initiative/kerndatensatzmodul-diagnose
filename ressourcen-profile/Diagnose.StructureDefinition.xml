@@ -187,7 +187,6 @@
     <element id="Condition.code.coding:icd10-gm.system">
       <path value="Condition.code.coding.system" />
       <min value="1" />
-      <patternUri value="http://fhir.de/CodeSystem/dimdi/icd-10-gm" />
       <mustSupport value="true" />
     </element>
     <element id="Condition.code.coding:icd10-gm.version">
