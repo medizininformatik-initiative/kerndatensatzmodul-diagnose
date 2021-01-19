@@ -26,10 +26,12 @@
     "date": "2020-05-01",
     "description": "Enthaelt alle SNOMED Clinical finding, Event und Situation with explicit context codes",
     "experimental": true,
-    "name": "diagnoses-codes",
+    "name": "ValueSetSNOMED-Diagnose-Code",
+    "title": "ValueSet - SNOMED-Diagnose-Code",
     "publisher": "Medizininformatik Initiative",
     "status": "active",
     "version": "1.0",
     "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct",
-    "resourceType": "ValueSet"
+    "resourceType": "ValueSet",
+    "id": "ValueSetSNOMED-Diagnose-Code"
 }
