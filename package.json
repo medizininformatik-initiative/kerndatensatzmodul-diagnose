@@ -1,0 +1,25 @@
+{
+  "name": "de.medizininformatikinitiative.kerndatensatz.diagnose",
+  "version": "1.0.2",
+  "description": "Medizininformatik Initiative - Modul Diagnose",
+  "author": "alexanderzautke",
+  "fhirVersions": [
+    "4.0.1"
+  ],
+  "devDependencies": null,
+  "canonicals": null,
+  "keywords": null,
+  "license": null,
+  "homepage": null,
+  "directories": null,
+  "title": null,
+  "fhir-version-list": null,
+  "maintainers": null,
+  "canonical": null,
+  "url": null,
+  "jurisdiction": null,
+  "dependencies": {
+    "KBV.Basis": "1.1.3",
+    "de.medizininformatikinitiative.kerndatensatz.meta": "1.0.3"
+  }
+}
