@@ -45,4 +45,4 @@ jobs:
           PATH_TO_EXAMPLES: beispiele
           DOTNET_VALIDATION_ENABLED: true
           JAVA_VALIDATION_ENABLED: true
-          EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET
+          EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET # https://github.com/FirelyTeam/firely-net-sdk/issues/1563, fixed in Firely.Termin 2.1.0
