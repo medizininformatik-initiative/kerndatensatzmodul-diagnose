@@ -48,4 +48,5 @@ jobs:
           
           # https://github.com/FirelyTeam/firely-net-sdk/issues/1563, fixed in Firely.Termin 2.1.0
           # Identifier.system must be an absolute reference, not a local reference
-          EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET, VALIDATION_CONFORMANCE_JAVA
+          # diagnoses-sct Expansion
+          EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET, VALIDATION_CONFORMANCE_JAVA VALIDATION_EXAMPLES_JAVA
