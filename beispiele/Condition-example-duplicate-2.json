@@ -27,7 +27,7 @@
       {
         "extension": [
           {
-            "url": "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/icd-10-gm-primaercode",
+            "url": "http://fhir.de/StructureDefinition/icd-10-gm-primaercode",
             "valueCoding": {
               "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
               "version": "2020",
@@ -35,7 +35,7 @@
             }
           },
           {
-            "url": "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/icd-10-gm-manifestation",
+            "url": "http://fhir.de/StructureDefinition/icd-10-gm-manifestationscode",
             "valueCoding": {
               "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
               "version": "2020",
