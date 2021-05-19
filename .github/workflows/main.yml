@@ -41,13 +41,12 @@ jobs:
       - name: Firely.Terminal (GitHub Actions)
         uses: FirelyTeam/firely-terminal-pipeline@v0.2.0-alpha4
         with:
-          PATH_TO_CONFORMANCE_RESOURCES: terminologie/ValueSet ressourcen-profile #logical-models #terminologie/CodeSystem
+          PATH_TO_CONFORMANCE_RESOURCES: terminologie/ValueSet ressourcen-profile logical-models #terminologie/CodeSystem
           PATH_TO_EXAMPLES: beispiele
           DOTNET_VALIDATION_ENABLED: true
           JAVA_VALIDATION_ENABLED: true
           OUTPUT_FORMAT: SUMMARY
           
-          # https://github.com/FirelyTeam/firely-net-sdk/issues/1563, fixed in Firely.Termin 2.1.0
           # Identifier.system must be an absolute reference, not a local reference
           # diagnoses-sct Expansion
-          EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET, VALIDATION_CONFORMANCE_JAVA VALIDATION_EXAMPLES_JAVA
+          EXPECTED_FAILS: VALIDATION_CONFORMANCE_JAVA VALIDATION_EXAMPLES_JAVA
