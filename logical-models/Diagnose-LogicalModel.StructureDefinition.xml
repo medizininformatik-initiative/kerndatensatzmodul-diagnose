@@ -219,7 +219,7 @@
     </element>
     <element id="Diagnose.KlinischRelevanterZeitraum.Zeitraum">
       <path value="Diagnose.KlinischRelevanterZeitraum.Zeitraum" />
-      <short value="klinisch relevanter Zeitraum " />
+      <short value="klinisch relevanter Zeitraum" />
       <definition value="Der Zeitraum wird durch zwei Datumsangaben beschrieben, das heißt, von wann bis wann ein Patient an der diagnostizierten Krankheit litt. Über den Zeitraum kann auch ausgedrückt werden, seit wann ein Patient an einer Krankheit leidet, indem nur das Startdatum des Zeitraums angegeben wird. Das Startdatum des Zeitraums kann abweichen von dem Diagnosedatum. Datumsangaben zu Diagnosen können in unterschiedlicher Präzision vorhanden sein." />
       <min value="0" />
       <max value="*" />
