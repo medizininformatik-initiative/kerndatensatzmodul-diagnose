@@ -32,8 +32,8 @@
         <code value="BackboneElement" />
       </type>
     </element>
-    <element id="Diagnose.ICD10GMDiagnoseKodiert.VollständigerDiagnosekode">
-      <path value="Diagnose.ICD10GMDiagnoseKodiert.VollständigerDiagnosekode" />
+    <element id="Diagnose.ICD10GMDiagnoseKodiert.VollstaendigerDiagnosekode">
+      <path value="Diagnose.ICD10GMDiagnoseKodiert.VollstaendigerDiagnosekode" />
       <short value="Primärcode mit ggf. Sekundärcodes, Codesystem und Katalogtext" />
       <min value="0" />
       <max value="*" />
@@ -42,8 +42,8 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/code" />
       </type>
     </element>
-    <element id="Diagnose.ICD10GMDiagnoseKodiert.Ätiologiekode">
-      <path value="Diagnose.ICD10GMDiagnoseKodiert.Ätiologiekode" />
+    <element id="Diagnose.ICD10GMDiagnoseKodiert.Aetiologiekode">
+      <path value="Diagnose.ICD10GMDiagnoseKodiert.Aetiologiekode" />
       <short value="Ätiologie (Auslöser), z. B. welcher Erreger. Der Code für die Ätiologie einer Erkrankung wird in der ICD-Codierung mit einem Kreuz (†) gekennzeichnet" />
       <min value="0" />
       <max value="*" />
@@ -101,8 +101,8 @@
         <code value="BackboneElement" />
       </type>
     </element>
-    <element id="Diagnose.ALPHAIDKodiert.VollständigerDiagnosekode">
-      <path value="Diagnose.ALPHAIDKodiert.VollständigerDiagnosekode" />
+    <element id="Diagnose.ALPHAIDKodiert.VollstaendigerDiagnosekode">
+      <path value="Diagnose.ALPHAIDKodiert.VollstaendigerDiagnosekode" />
       <short value="AlphaID, Codesystem und Katalogtext" />
       <min value="0" />
       <max value="*" />
@@ -120,8 +120,8 @@
         <code value="BackboneElement" />
       </type>
     </element>
-    <element id="Diagnose.ORPHANETDiagnoseKodiert.VollständigerDiagnosekode">
-      <path value="Diagnose.ORPHANETDiagnoseKodiert.VollständigerDiagnosekode" />
+    <element id="Diagnose.ORPHANETDiagnoseKodiert.VollstaendigerDiagnosekode">
+      <path value="Diagnose.ORPHANETDiagnoseKodiert.VollstaendigerDiagnosekode" />
       <short value="Orpha-Kennnummer, Codesystem und Krankheitsname" />
       <min value="0" />
       <max value="*" />
@@ -139,8 +139,8 @@
         <code value="BackboneElement" />
       </type>
     </element>
-    <element id="Diagnose.SNOMEDDiagnoseKodiert.VollständigerDiagnosekode">
-      <path value="Diagnose.SNOMEDDiagnoseKodiert.VollständigerDiagnosekode" />
+    <element id="Diagnose.SNOMEDDiagnoseKodiert.VollstaendigerDiagnosekode">
+      <path value="Diagnose.SNOMEDDiagnoseKodiert.VollstaendigerDiagnosekode" />
       <short value="SNOMED-CT Kode, Codesystem und präferierter Name" />
       <min value="0" />
       <max value="*" />
@@ -158,8 +158,8 @@
         <code value="BackboneElement" />
       </type>
     </element>
-    <element id="Diagnose.WeitereKodiersysteme.VollständigerDiagnosekode">
-      <path value="Diagnose.WeitereKodiersysteme.VollständigerDiagnosekode" />
+    <element id="Diagnose.WeitereKodiersysteme.VollstaendigerDiagnosekode">
+      <path value="Diagnose.WeitereKodiersysteme.VollstaendigerDiagnosekode" />
       <short value="Angabe des Kodes, Codesystems und des Katalogtextes" />
       <min value="0" />
       <max value="*" />
@@ -188,8 +188,8 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/string" />
       </type>
     </element>
-    <element id="Diagnose.Diagnoseerläuterung">
-      <path value="Diagnose.Diagnoseerläuterung" />
+    <element id="Diagnose.Diagnoseerlaeuterung">
+      <path value="Diagnose.Diagnoseerlaeuterung" />
       <short value="Damit soll dem Arzt die Möglichkeit gegeben werden, umfangreichere Angaben zusätzlich zu einer Diagnose abzufassen." />
       <min value="0" />
       <max value="*" />
