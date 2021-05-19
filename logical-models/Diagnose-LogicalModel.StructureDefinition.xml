@@ -19,9 +19,6 @@
       <short value="Das Basismodul Diagnosen enthält Diagnosen als Behandlungsbegründungen und abrechnungsbasiertes Gliederungsmerkmal, z.B. als Hauptdiagnose, Nebendiagnose, Quartalsdiagnose etc." />
       <min value="0" />
       <max value="*" />
-      <type>
-        <code value="Element" />
-      </type>
     </element>
     <element id="Diagnose.ICD10GMDiagnoseKodiert">
       <path value="Diagnose.ICD10GMDiagnoseKodiert" />
