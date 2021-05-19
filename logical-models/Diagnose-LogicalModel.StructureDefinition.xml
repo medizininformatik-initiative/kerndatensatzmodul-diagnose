@@ -168,8 +168,8 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/code" />
       </type>
     </element>
-    <element id="Diagnose.Körperstelle">
-      <path value="Diagnose.Körperstelle" />
+    <element id="Diagnose.Koerperstelle">
+      <path value="Diagnose.Koerperstelle" />
       <short value="Über die Körperstelle kann angegeben werden, in welchem Bereich des Körpers eine Krankheit diagnostiziert wurde (Topografische Informatiomn)" />
       <min value="0" />
       <max value="*" />
