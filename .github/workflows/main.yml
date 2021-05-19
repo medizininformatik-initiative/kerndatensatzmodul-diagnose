@@ -45,8 +45,7 @@ jobs:
           PATH_TO_EXAMPLES: beispiele
           DOTNET_VALIDATION_ENABLED: true
           JAVA_VALIDATION_ENABLED: true
-          OUTPUT_FORMAT: SUMMARY
+          OUTPUT_FORMAT: RAW
           
-          # Identifier.system must be an absolute reference, not a local reference
           # diagnoses-sct Expansion
           EXPECTED_FAILS: VALIDATION_EXAMPLES_JAVA
