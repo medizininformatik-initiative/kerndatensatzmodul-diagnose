@@ -1,6 +1,6 @@
 {
   "name": "de.medizininformatikinitiative.kerndatensatz.diagnose",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Medizininformatik Initiative - Modul Diagnose",
   "author": "alexanderzautke",
   "fhirVersions": [
