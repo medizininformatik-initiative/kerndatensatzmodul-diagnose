@@ -264,6 +264,7 @@
     <element id="Condition.code.coding:orphanet.code">
       <path value="Condition.code.coding.code" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Condition.bodySite">
       <path value="Condition.bodySite" />
