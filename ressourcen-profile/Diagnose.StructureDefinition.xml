@@ -136,6 +136,18 @@
         <rules value="open" />
       </slicing>
     </element>
+    <element id="Condition.code.coding:icd10-gm.extension:Mehrfachcodierungs-Kennzeichen">
+      <path value="Condition.code.coding.extension" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:icd10-gm.extension:Seitenlokalisation">
+      <path value="Condition.code.coding.extension" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:icd10-gm.extension:Diagnosesicherheit">
+      <path value="Condition.code.coding.extension" />
+      <mustSupport value="true" />
+    </element>
     <element id="Condition.code.coding:icd10-gm.system">
       <path value="Condition.code.coding.system" />
       <min value="1" />
