@@ -48,6 +48,18 @@
       <path value="Condition.id" />
       <mustSupport value="true" />
     </element>
+    <element id="Condition.meta">
+      <path value="Condition.meta" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.meta.source">
+      <path value="Condition.meta.source" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.meta.profile">
+      <path value="Condition.meta.profile" />
+      <mustSupport value="true" />
+    </element>
     <element id="Condition.extension">
       <path value="Condition.extension" />
       <slicing>
@@ -66,18 +78,6 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/condition-related" />
       </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Condition.meta">
-      <path value="Condition.meta" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Condition.meta.source">
-      <path value="Condition.meta.source" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Condition.meta.profile">
-      <path value="Condition.meta.profile" />
       <mustSupport value="true" />
     </element>
     <element id="Condition.clinicalStatus">
