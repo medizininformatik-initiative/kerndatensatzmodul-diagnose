@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="ProfileConditionDiagnose" />
   <url value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose" />
-  <version value="1.0" />
+  <version value="2.0.0" />
   <name value="ProfileConditionDiagnose" />
   <title value="Profile - Condition - Diagnose" />
   <status value="active" />
@@ -114,12 +114,12 @@
       <sliceName value="icd10-gm" />
       <max value="1" />
       <patternCoding>
-        <system value="http://fhir.de/CodeSystem/dimdi/icd-10-gm" />
+        <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm" />
       </patternCoding>
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://fhir.de/ValueSet/dimdi/icd-10-gm" />
+        <valueSet value="http://fhir.de/ValueSet/bfarm/icd-10-gm" />
       </binding>
     </element>
     <element id="Condition.code.coding:icd10-gm.extension">
@@ -206,12 +206,12 @@
       <sliceName value="alpha-id" />
       <max value="1" />
       <patternCoding>
-        <system value="http://fhir.de/CodeSystem/dimdi/alpha-id" />
+        <system value="http://fhir.de/CodeSystem/bfarm/alpha-id" />
       </patternCoding>
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://fhir.de/ValueSet/dimdi/alpha-id" />
+        <valueSet value="http://fhir.de/ValueSet/bfarm/alpha-id" />
       </binding>
     </element>
     <element id="Condition.code.coding:alpha-id.system">
