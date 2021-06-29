@@ -354,7 +354,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Stage_Life" />
+        <profile value="http://fhir.de/StructureDefinition/lebensphase" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -378,7 +378,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Stage_Life" />
+        <profile value="http://fhir.de/StructureDefinition/lebensphase" />
       </type>
       <mustSupport value="true" />
     </element>
