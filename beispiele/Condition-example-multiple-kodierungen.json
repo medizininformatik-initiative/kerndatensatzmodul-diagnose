@@ -23,7 +23,7 @@
         "display": "Sonstige näher bezeichnete Krankheiten des Innenohres"
       },
       {
-        "system": "http://fhir.de/ValueSet/bfarm/alpha-id",
+        "system": "http://fhir.de/CodeSystem/bfarm/alpha-id",
         "code": "I125918"
       },
       {
