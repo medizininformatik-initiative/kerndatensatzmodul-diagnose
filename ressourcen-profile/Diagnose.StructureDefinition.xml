@@ -75,6 +75,26 @@
       <path value="Condition.id" />
       <mustSupport value="true" />
     </element>
+    <element id="Condition.extension">
+      <path value="Condition.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Condition.extension:ReferenzPrimaerdiagnose">
+      <path value="Condition.extension" />
+      <sliceName value="ReferenzPrimaerdiagnose" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/condition-related" />
+      </type>
+      <mustSupport value="true" />
+    </element>
     <element id="Condition.meta">
       <path value="Condition.meta" />
       <mustSupport value="true" />
