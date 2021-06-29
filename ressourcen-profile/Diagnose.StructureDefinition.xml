@@ -47,10 +47,16 @@
     <element id="Condition">
       <path value="Condition" />
       <constraint>
-        <key value="icd-8" />
+        <key value="mii-con1" />
         <severity value="warning" />
         <human value="Bei Angabe eines Codes in der Seitenlokalisations-Extension, muss dieser auch Bestandteil des ICD-Codes sein!" />
         <expression value="extension('http://fhir.de/StructureDefinition/seitenlokalisation').empty() or code.contains($this.extension('http://fhir.de/StructureDefinition/seitenlokalisation').value.code)" />
+      </constraint>
+      <constraint>
+        <key value="mii-con2" />
+        <severity value="warning" />
+        <human value="Bei Angabe eines Codes in der Seitenlokalisations-Extension, muss dieser auch Bestandteil des ICD-Codes sein!" />
+        <expression value="extension('http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit').empty() or code.contains($this.extension('http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit').value.code)" />
       </constraint>
     </element>
     <element id="Condition.id">
@@ -281,6 +287,7 @@
     </element>
     <element id="Condition.encounter">
       <path value="Condition.encounter" />
+      <min value="1" />
       <type>
         <code value="Reference" />
         <profile value="https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference" />
