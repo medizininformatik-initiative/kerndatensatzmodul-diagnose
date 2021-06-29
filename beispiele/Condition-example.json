@@ -1,6 +1,6 @@
 {
   "resourceType": "Condition",
-  "id": "ExampleCondition",
+  "id": "ExampleConditionMinimal",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose"
@@ -17,7 +17,7 @@
   "code": {
     "coding": [
       {
-        "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+        "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
         "version": "2020",
         "code": "S50.0",
         "display": "Prellung des Ellenbogens"
@@ -32,6 +32,9 @@
   },
   "subject": {
     "reference": "Patient/12345"
+  },
+  "encounter": {
+    "reference": "Encounter/12345"
   },
   "onsetPeriod": {
     "start": "2020-02-26T12:00:00+01:00",

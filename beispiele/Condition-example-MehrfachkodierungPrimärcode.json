@@ -1,6 +1,6 @@
 {
   "resourceType": "Condition",
-  "id": "ExampleConditionDuplicate2",
+  "id": "ExampleConditionMehrfachkodierungPrimärcode",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose"
@@ -27,22 +27,6 @@
       {
         "extension": [
           {
-            "url": "http://fhir.de/StructureDefinition/icd-10-gm-primaercode",
-            "valueCoding": {
-              "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
-              "version": "2020",
-              "code": "A54.4"
-            }
-          },
-          {
-            "url": "http://fhir.de/StructureDefinition/icd-10-gm-manifestationscode",
-            "valueCoding": {
-              "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
-              "version": "2020",
-              "code": "M73.04"
-            }
-          },
-          {
             "url": "http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit",
             "valueCoding": {
               "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_DIAGNOSESICHERHEIT",
@@ -56,16 +40,26 @@
               "code": "L",
               "display": "links"
             }
+          },
+          {
+            "url": "http://fhir.de/StructureDefinition/icd-10-gm-mehrfachcodierungs-kennzeichen",
+            "valueCoding": {
+                "system": "http://fhir.de/CodeSystem/icd-10-gm-mehrfachcodierungs-kennzeichen",
+                "code": "†"
+            }
           }
         ],
         "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
         "version": "2020",
-        "code": "A54.4† M73.04*",
+        "code": "A54.4",
         "display": "Bursitis gonorrhoica"
       }
     ]
   },
   "subject": {
+    "reference": "Patient/12345"
+  },
+  "encounter": {
     "reference": "Patient/12345"
   },
   "onsetPeriod": {

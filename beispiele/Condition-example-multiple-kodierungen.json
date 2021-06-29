@@ -1,6 +1,6 @@
 {
   "resourceType": "Condition",
-  "id": "ExampleConditionDuplicate3",
+  "id": "ExampleConditionMultipleKodierungen",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose"
@@ -17,13 +17,13 @@
   "code": {
     "coding": [
       {
-        "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+        "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
         "version": "2020",
         "code": "H83.8",
         "display": "Sonstige näher bezeichnete Krankheiten des Innenohres"
       },
       {
-        "system": "http://fhir.de/ValueSet/dimdi/alpha-id",
+        "system": "http://fhir.de/ValueSet/bfarm/alpha-id",
         "code": "I125918"
       },
       {
@@ -35,6 +35,9 @@
   },
   "subject": {
     "reference": "Patient/12345"
+  },
+  "encounter": {
+    "reference": "Encounter/12345"
   },
   "onsetPeriod": {
     "start": "2020-02-13T16:56:00+01:00"
