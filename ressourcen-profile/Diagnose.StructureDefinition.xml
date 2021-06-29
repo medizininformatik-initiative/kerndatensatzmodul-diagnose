@@ -138,14 +138,17 @@
     </element>
     <element id="Condition.code.coding:icd10-gm.extension:Mehrfachcodierungs-Kennzeichen">
       <path value="Condition.code.coding.extension" />
+      <sliceName value="Mehrfachcodierungs-Kennzeichen" />
       <mustSupport value="true" />
     </element>
     <element id="Condition.code.coding:icd10-gm.extension:Seitenlokalisation">
       <path value="Condition.code.coding.extension" />
+      <sliceName value="Seitenlokalisation" />
       <mustSupport value="true" />
     </element>
     <element id="Condition.code.coding:icd10-gm.extension:Diagnosesicherheit">
       <path value="Condition.code.coding.extension" />
+      <sliceName value="Diagnosesicherheit" />
       <mustSupport value="true" />
     </element>
     <element id="Condition.code.coding:icd10-gm.system">
