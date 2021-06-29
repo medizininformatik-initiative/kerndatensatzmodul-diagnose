@@ -44,21 +44,6 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Condition" />
   <derivation value="constraint" />
   <differential>
-    <element id="Condition">
-      <path value="Condition" />
-      <constraint>
-        <key value="mii-con1" />
-        <severity value="warning" />
-        <human value="Bei Angabe eines Codes in der Seitenlokalisations-Extension, muss dieser auch Bestandteil des ICD-Codes sein!" />
-        <expression value="extension('http://fhir.de/StructureDefinition/seitenlokalisation').empty() or code.contains($this.extension('http://fhir.de/StructureDefinition/seitenlokalisation').value.code)" />
-      </constraint>
-      <constraint>
-        <key value="mii-con2" />
-        <severity value="warning" />
-        <human value="Bei Angabe eines Codes in der Seitenlokalisations-Extension, muss dieser auch Bestandteil des ICD-Codes sein!" />
-        <expression value="extension('http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit').empty() or code.contains($this.extension('http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit').value.code)" />
-      </constraint>
-    </element>
     <element id="Condition.id">
       <path value="Condition.id" />
       <mustSupport value="true" />
