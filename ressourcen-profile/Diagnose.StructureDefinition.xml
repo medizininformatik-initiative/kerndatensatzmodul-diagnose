@@ -170,6 +170,10 @@
       <path value="Condition.code.coding" />
       <sliceName value="alpha-id" />
       <max value="1" />
+      <type>
+        <code value="Coding" />
+        <profile value="http://fhir.de/StructureDefinition/CodingAlphaID" />
+      </type>
       <patternCoding>
         <system value="http://fhir.de/CodeSystem/bfarm/alpha-id" />
       </patternCoding>
