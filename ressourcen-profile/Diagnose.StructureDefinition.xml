@@ -136,60 +136,6 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Condition.code.coding:icd10-gm.extension:Diagnosesicherheit">
-      <path value="Condition.code.coding.extension" />
-      <sliceName value="Diagnosesicherheit" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Condition.code.coding:icd10-gm.extension:Seitenlokalisation">
-      <path value="Condition.code.coding.extension" />
-      <sliceName value="Seitenlokalisation" />
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://fhir.de/StructureDefinition/seitenlokalisation" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Condition.code.coding:icd10-gm.extension:AusrufezeichenCode">
-      <path value="Condition.code.coding.extension" />
-      <sliceName value="AusrufezeichenCode" />
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://fhir.de/StructureDefinition/icd-10-gm-ausrufezeichen" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Condition.code.coding:icd10-gm.extension:ManifestationsCode">
-      <path value="Condition.code.coding.extension" />
-      <sliceName value="ManifestationsCode" />
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://fhir.de/StructureDefinition/icd-10-gm-manifestationscode" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Condition.code.coding:icd10-gm.extension:Primaercode">
-      <path value="Condition.code.coding.extension" />
-      <sliceName value="Primaercode" />
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://fhir.de/StructureDefinition/icd-10-gm-primaercode" />
-      </type>
-      <mustSupport value="true" />
-    </element>
     <element id="Condition.code.coding:icd10-gm.system">
       <path value="Condition.code.coding.system" />
       <min value="1" />
