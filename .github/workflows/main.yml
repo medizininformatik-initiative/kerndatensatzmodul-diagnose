@@ -49,5 +49,5 @@ jobs:
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
           
-          # diagnoses-sct Expansion
+          # The Coding provided (http://fhir.de/CodeSystem/bfarm/icd-10-gm#XX.X) is not in the value set http://fhir.de/ValueSet/bfarm/icd-10-gm, and a code is required from this value set.
           EXPECTED_FAILS: VALIDATION_EXAMPLES_JAVA
