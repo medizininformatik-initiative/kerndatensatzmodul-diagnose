@@ -24,7 +24,8 @@
       },
       {
         "system": "http://fhir.de/CodeSystem/bfarm/alpha-id",
-        "code": "I125918"
+        "code": "I125918",
+        "version": "2020"
       },
       {
         "system": "http://www.orpha.net",
