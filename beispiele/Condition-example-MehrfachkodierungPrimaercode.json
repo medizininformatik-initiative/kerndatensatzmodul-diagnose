@@ -49,7 +49,7 @@
             }
           }
         ],
-        "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+        "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
         "version": "2020",
         "code": "A54.4",
         "display": "Gonokokkeninfektion des Muskel-Skelett-Systems"
