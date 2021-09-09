@@ -19,7 +19,7 @@
   "url": null,
   "jurisdiction": null,
   "dependencies": {
-    "de.basisprofil.r4": "1.0.0-rc4",
+    "de.basisprofil.r4": "1.0.0",
     "de.medizininformatikinitiative.kerndatensatz.meta": "1.0.3"
   }
 }
