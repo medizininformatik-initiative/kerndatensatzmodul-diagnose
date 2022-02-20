@@ -70,9 +70,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Condition.extension:ReferenzPrimaerdiagnose">
+    <element id="Condition.extension:related">
       <path value="Condition.extension" />
-      <sliceName value="ReferenzPrimaerdiagnose" />
+      <sliceName value="related" />
       <max value="1" />
       <type>
         <code value="Extension" />
