@@ -1,3 +1,6 @@
 /terminologie/icd10gm2020
 /terminologie/alphaid2020
 /ModulDiagnose.xlsx
+fsh-generated/includes
+.DS_Store
+fsh-generated/resources/ImplementationGuide-mii-ig-diagnose*
