@@ -19,8 +19,39 @@
   error: The resource must have a valid id
 
 - name: naming-convention-id
-  predicate: id.matches('^mii-(pr|ex|lm|vs|cs|cm|sm|ns|sp|cps|od|ig|exa)-diagnose(\S*)$')
-  error-message: "id naming convention mismatch"
+  status: "Checking if all resource ids follow the naming convention"
+  predicate: id.matches('^mii-(pr|ex|lm|vs|cs|cm|sm|ns|sp|cps|od|ig|exa)-diagnose')
+  error-message: "resource id naming convention mismatch"
+  files:
+    - /**/*.xml
+    - /**/*.json
+    - "!package.json"
+    - "!/**/CodeSystemICD10GM*.json"
+
+- name: naming-convention-name
+  status: "Checking if all resource names follow the naming convention"
+  predicate: name.exists() implies name.matches('^MII_(PR|EX|LM|VS|CS|CM|SM|NS|SP|CPS|OD|IG|EXA)_Diagnose')
+  error-message: "resource name naming convention mismatch"
+  files:
+    - /**/*.xml
+    - /**/*.json
+    - "!package.json"
+    - "!/**/CodeSystemICD10GM*.json"
+
+- name: naming-convention-title
+  status: "Checking if all resource titles follow the naming convention"
+  predicate: title.exists() implies title.matches('^MII_(PR|EX|LM|VS|CS|CM|SM|NS|SP|CPS|OD|IG|EXA)_Diagnose')
+  error-message: "resource name naming convention mismatch"
+  files:
+    - /**/*.xml
+    - /**/*.json
+    - "!package.json"
+    - "!/**/CodeSystemICD10GM*.json"
+
+- name: naming-convention-url
+  status: "Checking if all resource urls follow the naming convention"
+  predicate: url.exists() implies url.matches('^https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/')
+  error-message: "resource url naming convention mismatch"
   files:
     - /**/*.xml
     - /**/*.json
