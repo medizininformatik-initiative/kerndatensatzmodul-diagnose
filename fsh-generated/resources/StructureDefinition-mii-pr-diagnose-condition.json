@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-diagnose-condition",
   "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose",
-  "version": "2.0.0-ballot2",
+  "version": "2.0.0",
   "name": "MII_PR_Diagnose_Condition",
   "title": "MII PR Diagnose Condition",
   "status": "active",
@@ -77,19 +77,6 @@
         "id": "Condition.meta.profile",
         "path": "Condition.meta.profile",
         "mustSupport": true
-      },
-      {
-        "id": "Condition.extension",
-        "path": "Condition.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "rules": "open"
-        }
       },
       {
         "id": "Condition.extension:ReferenzPrimaerdiagnose",
@@ -368,19 +355,6 @@
         "mustSupport": true
       },
       {
-        "id": "Condition.onset[x]:onsetPeriod.start.extension",
-        "path": "Condition.onset[x].start.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "rules": "open"
-        }
-      },
-      {
         "id": "Condition.onset[x]:onsetPeriod.start.extension:lebensphase-von",
         "path": "Condition.onset[x].start.extension",
         "sliceName": "lebensphase-von",
@@ -400,19 +374,6 @@
         "id": "Condition.onset[x]:onsetPeriod.end",
         "path": "Condition.onset[x].end",
         "mustSupport": true
-      },
-      {
-        "id": "Condition.onset[x]:onsetPeriod.end.extension",
-        "path": "Condition.onset[x].end.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "rules": "open"
-        }
       },
       {
         "id": "Condition.onset[x]:onsetPeriod.end.extension:lebensphase-bis",
