@@ -40,7 +40,7 @@
 
 - name: naming-convention-title
   status: "Checking if all resource titles follow the naming convention"
-  predicate: title.exists() implies title.matches('^MII_(PR|EX|LM|VS|CS|CM|SM|NS|SP|CPS|OD|IG|EXA)_Diagnose')
+  predicate: title.exists() implies title.matches('^MII (PR|EX|LM|VS|CS|CM|SM|NS|SP|CPS|OD|IG|EXA) Diagnose')
   error-message: "resource name naming convention mismatch"
   files:
     - /**/*.xml
