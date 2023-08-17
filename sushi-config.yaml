@@ -2,10 +2,10 @@ canonical: https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose
 fhirVersion: 4.0.1
 FSHOnly: false
 applyExtensionMetadataToRoot: false
-id: mii-ig-diagnose-de-2
+id: mii-ig-diagnose-de-v2024
 name: MII_IG_Diagnose_DE
 status: active
-version: "2.0.0-alpha3"
+version: "2024.0.0"
 packageId: de.medizininformatikinitiative.kerndatensatz.diagnose
 copyrightYear: 2019+
 releaseLabel: ci-build
