@@ -2,10 +2,10 @@
   name: include-recommended
 
 - name: version-filled
-  filter: (StructureDefinition or ValueSet or CodeSystem or CapabilityStatement or SearchParameter or ConceptMap or ImplementationGuide).exists()
+  filter: (StructureDefinition or ValueSet or CodeSystem or ConceptMap or StructureMap or NamingSystem or SearchParameter or CapabilityStatement or OperationDefinition or ImplementationGuide).exists()
   # Excluding NamingSystem as they have no version
   status: "Checking if all resources have version filled"
-  predicate: version.exists() and (version in ('2.0.0-ballot2') or version in ('1.0.4'))
+  predicate: version.exists() and (version in ('2.0.0') or version in ('1.0.4') or version in ('2024.0.0'))
   error-message: "version not filled (correctly)"
   files:
     - /**/*.xml
@@ -29,6 +29,7 @@
     - "!/**/CodeSystemICD10GM*.json"
 
 - name: naming-convention-name
+  filter: (StructureDefinition or ValueSet or CodeSystem or ConceptMap or StructureMap or NamingSystem or SearchParameter or CapabilityStatement or OperationDefinition or ImplementationGuide).exists()
   status: "Checking if all resource names follow the naming convention"
   predicate: name.exists() implies name.matches('^MII_(PR|EX|LM|VS|CS|CM|SM|NS|SP|CPS|OD|IG|EXA)_Diagnose')
   error-message: "resource name naming convention mismatch"
@@ -39,6 +40,7 @@
     - "!/**/CodeSystemICD10GM*.json"
 
 - name: naming-convention-title
+  filter: (StructureDefinition or ValueSet or CodeSystem or ConceptMap or StructureMap or NamingSystem or SearchParameter or CapabilityStatement or OperationDefinition or ImplementationGuide).exists()
   status: "Checking if all resource titles follow the naming convention"
   predicate: title.exists() implies title.matches('^MII (PR|EX|LM|VS|CS|CM|SM|NS|SP|CPS|OD|IG|EXA) Diagnose')
   error-message: "resource name naming convention mismatch"
@@ -49,6 +51,7 @@
     - "!/**/CodeSystemICD10GM*.json"
 
 - name: naming-convention-url
+  filter: (StructureDefinition or ValueSet or CodeSystem or ConceptMap or StructureMap or NamingSystem or SearchParameter or CapabilityStatement or OperationDefinition or ImplementationGuide).exists()
   status: "Checking if all resource urls follow the naming convention"
   predicate: url.exists() implies url.matches('^https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/')
   error-message: "resource url naming convention mismatch"
