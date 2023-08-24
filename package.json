@@ -1,25 +1,34 @@
 {
   "name": "de.medizininformatikinitiative.kerndatensatz.diagnose",
-  "version": "1.0.4",
+  "version": "2024.0.0",
   "description": "Medizininformatik Initiative - Modul Diagnose",
   "author": "alexanderzautke",
   "fhirVersions": [
     "4.0.1"
   ],
-  "devDependencies": null,
-  "canonicals": null,
-  "keywords": null,
-  "license": null,
-  "homepage": null,
-  "directories": null,
-  "title": null,
-  "fhir-version-list": null,
-  "maintainers": null,
-  "canonical": null,
-  "url": null,
-  "jurisdiction": null,
+  "keywords": [
+    "MII",
+    "KDS",
+    "Diagnose"
+  ],
+  "license": "CC0-1.0",
+  "homepage": "https://www.medizininformatik-initiative.de/",
+  "directories" : {
+    "lib" : "package",
+    "example" : "examples"
+  },
+  "title": "MII IG Diagnose",
+  "maintainers" : [
+    {
+      "name" : "Medizininformatik Initiative",
+      "url" : "https://www.medizininformatik-initiative.de/"
+    }
+  ],
+  "canonical": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ImplementationGuide/mii-ig-diagnose-de-2024",
+  "url": "https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Diagnose/IGMIIKDSModulDiagnose.html",
+  "jurisdiction": "http://unstats.un.org/unsd/methods/m49/m49.htm#276",
   "dependencies": {
-    "de.basisprofil.r4": "1.0.0",
+    "de.basisprofil.r4": "1.4.0",
     "de.medizininformatikinitiative.kerndatensatz.meta": "1.0.3"
   }
 }

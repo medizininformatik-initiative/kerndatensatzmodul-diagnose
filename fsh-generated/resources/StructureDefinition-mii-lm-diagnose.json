@@ -1,0 +1,408 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-lm-diagnose",
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/LogicalModel/Diagnose",
+  "version": "2024.0.0",
+  "name": "MII_LM_Diagnose",
+  "title": "MII LM Diagnose",
+  "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Logische Repräsentation des Basismoduls Diagnose",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/LogicalModel/Diagnose",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Diagnose",
+        "path": "Diagnose",
+        "short": "Das Basismodul Diagnosen enthält Diagnosen als Behandlungsbegründungen und abrechnungsbasiertes Gliederungsmerkmal, z.B. als Hauptdiagnose, Nebendiagnose, Quartalsdiagnose etc.",
+        "definition": "Logische Repräsentation des Basismoduls Diagnose"
+      },
+      {
+        "id": "Diagnose.ICD10GMDiagnoseKodiert",
+        "path": "Diagnose.ICD10GMDiagnoseKodiert",
+        "short": "Im Bereich der administrativen und statistischen Auswertung wird die Diagnose mit Hilfe von Codiersystemen verschlüsselt. So wird z.B. bei der Abrechnung nach §301 und §295 SGB V die Codierung von Diagnosen mittels ICD-10 GM gesetzlich vorgeschrieben. Weitere Codiersysteme sind z.B. die „Alpha-ID\", SNOMED CT und ID MACS. Die Kodierung einer Diagnose mittels verschiedener Codesysteme sollte möglich sein.",
+        "definition": "Im Bereich der administrativen und statistischen Auswertung wird die Diagnose mit Hilfe von Codiersystemen verschlüsselt. So wird z.B. bei der Abrechnung nach §301 und §295 SGB V die Codierung von Diagnosen mittels ICD-10 GM gesetzlich vorgeschrieben. Weitere Codiersysteme sind z.B. die „Alpha-ID\", SNOMED CT und ID MACS. Die Kodierung einer Diagnose mittels verschiedener Codesysteme sollte möglich sein.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.ICD10GMDiagnoseKodiert.VollstaendigerDiagnosekode",
+        "path": "Diagnose.ICD10GMDiagnoseKodiert.VollstaendigerDiagnosekode",
+        "short": "Primärcode mit ggf. Sekundärcodes, Codesystem und Katalogtext",
+        "definition": "Primärcode mit ggf. Sekundärcodes, Codesystem und Katalogtext",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.ICD10GMDiagnoseKodiert.Aetiologiekode",
+        "path": "Diagnose.ICD10GMDiagnoseKodiert.Aetiologiekode",
+        "short": "Ätiologie (Auslöser), z. B. welcher Erreger. Der Code für die Ätiologie einer Erkrankung wird in der ICD-Codierung mit einem Kreuz (†) gekennzeichnet",
+        "definition": "Ätiologie (Auslöser), z. B. welcher Erreger. Der Code für die Ätiologie einer Erkrankung wird in der ICD-Codierung mit einem Kreuz (†) gekennzeichnet",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.ICD10GMDiagnoseKodiert.Manifestationskode",
+        "path": "Diagnose.ICD10GMDiagnoseKodiert.Manifestationskode",
+        "short": "Zusatzangabe zum Ätiologiecode ICD-10: Organmanifestationen. Der Code für die Organmanifestation einer Erkrankung wird in der ICD-Codierung mit einem Stern (*) gekennzeichnet",
+        "definition": "Zusatzangabe zum Ätiologiecode ICD-10: Organmanifestationen. Der Code für die Organmanifestation einer Erkrankung wird in der ICD-Codierung mit einem Stern (*) gekennzeichnet",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.ICD10GMDiagnoseKodiert.Ausrufezeichenkode",
+        "path": "Diagnose.ICD10GMDiagnoseKodiert.Ausrufezeichenkode",
+        "short": "Diese Zusatzcodes dienen zur näheren Beschreibung einer Krankeit/ Abgrenzung des Schweregrades",
+        "definition": "Diese Zusatzcodes dienen zur näheren Beschreibung einer Krankeit/ Abgrenzung des Schweregrades",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.ICD10GMDiagnoseKodiert.Diagnosesicherheit",
+        "path": "Diagnose.ICD10GMDiagnoseKodiert.Diagnosesicherheit",
+        "short": "Die Diagnosensicherheit, d.h. wie sicher die Diagnose im Einzelfall zu werten ist, kann unterschiedlich angegeben werden. Für Abrechnungszwecke in der ambulanten Versorgung muss obligatorisch ein Zusatzkennzeichen für die Diagnosensicherheit (A, G, V oder Z) angegeben werden, d. h. die Angabe ist obligatorisch. In der stationären Versorgung sind diese Zusatzkennzeichen für die Angabe der Diagnosensicherheit für Abrechnungszwecke dagegen nicht zulässig.",
+        "definition": "Die Diagnosensicherheit, d.h. wie sicher die Diagnose im Einzelfall zu werten ist, kann unterschiedlich angegeben werden. Für Abrechnungszwecke in der ambulanten Versorgung muss obligatorisch ein Zusatzkennzeichen für die Diagnosensicherheit (A, G, V oder Z) angegeben werden, d. h. die Angabe ist obligatorisch. In der stationären Versorgung sind diese Zusatzkennzeichen für die Angabe der Diagnosensicherheit für Abrechnungszwecke dagegen nicht zulässig.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.ICD10GMDiagnoseKodiert.Seitenlokalisation",
+        "path": "Diagnose.ICD10GMDiagnoseKodiert.Seitenlokalisation",
+        "short": "Zusatzkennzeichen der ICD-10 für die Seitigkeit einer Diagnose (R, L, B)",
+        "definition": "Zusatzkennzeichen der ICD-10 für die Seitigkeit einer Diagnose (R, L, B)",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.ALPHAIDKodiert",
+        "path": "Diagnose.ALPHAIDKodiert",
+        "short": "Kodierung einer Diagnose mit Alpha-ID",
+        "definition": "Kodierung einer Diagnose mit Alpha-ID",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.ALPHAIDKodiert.VollstaendigerDiagnosekode",
+        "path": "Diagnose.ALPHAIDKodiert.VollstaendigerDiagnosekode",
+        "short": "AlphaID, Codesystem und Katalogtext",
+        "definition": "AlphaID, Codesystem und Katalogtext",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.ORPHANETDiagnoseKodiert",
+        "path": "Diagnose.ORPHANETDiagnoseKodiert",
+        "short": "Für die Kodierung von Seltenen Krankheiten ist die Orpha-Kennnummer erforderlich.",
+        "definition": "Für die Kodierung von Seltenen Krankheiten ist die Orpha-Kennnummer erforderlich.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.ORPHANETDiagnoseKodiert.VollstaendigerDiagnosekode",
+        "path": "Diagnose.ORPHANETDiagnoseKodiert.VollstaendigerDiagnosekode",
+        "short": "Orpha-Kennnummer, Codesystem und Krankheitsname",
+        "definition": "Orpha-Kennnummer, Codesystem und Krankheitsname",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.SNOMEDDiagnoseKodiert",
+        "path": "Diagnose.SNOMEDDiagnoseKodiert",
+        "short": "Ermöglicht die Kodierung einer Diagnose mit SNOMED-CT",
+        "definition": "Ermöglicht die Kodierung einer Diagnose mit SNOMED-CT",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.SNOMEDDiagnoseKodiert.VollstaendigerDiagnosekode",
+        "path": "Diagnose.SNOMEDDiagnoseKodiert.VollstaendigerDiagnosekode",
+        "short": "SNOMED-CT Kode, Codesystem und präferierter Name",
+        "definition": "SNOMED-CT Kode, Codesystem und präferierter Name",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.WeitereKodiersysteme",
+        "path": "Diagnose.WeitereKodiersysteme",
+        "short": "Bei Bedarf ist die Aufnahme weiterer Klassifikationen und Terminologien möglich.",
+        "definition": "Bei Bedarf ist die Aufnahme weiterer Klassifikationen und Terminologien möglich.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.WeitereKodiersysteme.VollstaendigerDiagnosekode",
+        "path": "Diagnose.WeitereKodiersysteme.VollstaendigerDiagnosekode",
+        "short": "Angabe des Kodes, Codesystems und des Katalogtextes",
+        "definition": "Angabe des Kodes, Codesystems und des Katalogtextes",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.Koerperstelle",
+        "path": "Diagnose.Koerperstelle",
+        "short": "Über die Körperstelle kann angegeben werden, in welchem Bereich des Körpers eine Krankheit diagnostiziert wurde (Topografische Informatiomn)",
+        "definition": "Über die Körperstelle kann angegeben werden, in welchem Bereich des Körpers eine Krankheit diagnostiziert wurde (Topografische Informatiomn)",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.Freitextbeschreibung",
+        "path": "Diagnose.Freitextbeschreibung",
+        "short": "Diagnose im Klartext. Im Bereich der medizinischen Dokumentation sollte die Textbeschreibung obligatorisch sein. Bei der sekundären Übernahme einer kodierten Diagonse aus der Primärdokumentation kann eine Freitextbeschreibung fehlen.",
+        "definition": "Diagnose im Klartext. Im Bereich der medizinischen Dokumentation sollte die Textbeschreibung obligatorisch sein. Bei der sekundären Übernahme einer kodierten Diagonse aus der Primärdokumentation kann eine Freitextbeschreibung fehlen.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.Diagnoseerlaeuterung",
+        "path": "Diagnose.Diagnoseerlaeuterung",
+        "short": "Damit soll dem Arzt die Möglichkeit gegeben werden, umfangreichere Angaben zusätzlich zu einer Diagnose abzufassen.",
+        "definition": "Damit soll dem Arzt die Möglichkeit gegeben werden, umfangreichere Angaben zusätzlich zu einer Diagnose abzufassen.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.KlinischerStatus",
+        "path": "Diagnose.KlinischerStatus",
+        "short": "Status einer Diagnose: active, inactive, ...",
+        "definition": "Status einer Diagnose: active, inactive, ...",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.KlinischRelevanterZeitraum",
+        "path": "Diagnose.KlinischRelevanterZeitraum",
+        "short": "Hier kann der Klinisch Relevante Zeitraum beziehungsweise die Lebensphase einer Erkrankung angegeben werden. Datumsangaben zu Diagnosen können in unterschiedlicher Präzision vorhanden sein.",
+        "definition": "Hier kann der Klinisch Relevante Zeitraum beziehungsweise die Lebensphase einer Erkrankung angegeben werden. Datumsangaben zu Diagnosen können in unterschiedlicher Präzision vorhanden sein.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.KlinischRelevanterZeitraum.Zeitraum",
+        "path": "Diagnose.KlinischRelevanterZeitraum.Zeitraum",
+        "short": "klinisch relevanter Zeitraum",
+        "definition": "Der Zeitraum wird durch zwei Datumsangaben beschrieben, das heißt, von wann bis wann ein Patient an der diagnostizierten Krankheit litt. Über den Zeitraum kann auch ausgedrückt werden, seit wann ein Patient an einer Krankheit leidet, indem nur das Startdatum des Zeitraums angegeben wird. Das Startdatum des Zeitraums kann abweichen von dem Diagnosedatum. Datumsangaben zu Diagnosen können in unterschiedlicher Präzision vorhanden sein.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.KlinischRelevanterZeitraum.Zeitraum.von",
+        "path": "Diagnose.KlinischRelevanterZeitraum.Zeitraum.von",
+        "short": "Startdatum",
+        "definition": "Startdatum",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.KlinischRelevanterZeitraum.Zeitraum.bis",
+        "path": "Diagnose.KlinischRelevanterZeitraum.Zeitraum.bis",
+        "short": "Enddatum",
+        "definition": "Enddatum",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.KlinischRelevanterZeitraum.Lebensphase",
+        "path": "Diagnose.KlinischRelevanterZeitraum.Lebensphase",
+        "short": "Lebensphase, in der die Erkrankung aufgetreten ist",
+        "definition": "Lebensphase, in der die Erkrankung aufgetreten ist",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.KlinischRelevanterZeitraum.Lebensphase.von",
+        "path": "Diagnose.KlinischRelevanterZeitraum.Lebensphase.von",
+        "short": "In welcher Lebensphase die Krankheit began",
+        "definition": "In welcher Lebensphase die Krankheit began",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.KlinischRelevanterZeitraum.Lebensphase.bis",
+        "path": "Diagnose.KlinischRelevanterZeitraum.Lebensphase.bis",
+        "short": "In welcher Lebensphase die Krankheit endete",
+        "definition": "In welcher Lebensphase die Krankheit endete",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.Feststellungsdatum",
+        "path": "Diagnose.Feststellungsdatum",
+        "short": "Das Datum ist der Zeitpunkt, an dem eine Krankheit z. B. durch einen Arzt festgestellt wurde. Dies wird im Folgenden mit Diagnosedatum bezeichnet.",
+        "definition": "Das Datum ist der Zeitpunkt, an dem eine Krankheit z. B. durch einen Arzt festgestellt wurde. Dies wird im Folgenden mit Diagnosedatum bezeichnet.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Diagnose.Dokumentationsdatum",
+        "path": "Diagnose.Dokumentationsdatum",
+        "short": "Das Datum ist der Zeitpunkt, an dem eine Krankheit z. B. durch einen Arzt dokumentiert wurde. Hinweis: Wenn zwischen Feststellung der Diagnose und Dokumentationsdatum nicht unterschieden werden muss, ist das Datum der Feststellung der Diagnose (Diagnosedatum) anzugeben.",
+        "definition": "Das Datum ist der Zeitpunkt, an dem eine Krankheit z. B. durch einen Arzt dokumentiert wurde. Hinweis: Wenn zwischen Feststellung der Diagnose und Dokumentationsdatum nicht unterschieden werden muss, ist das Datum der Feststellung der Diagnose (Diagnosedatum) anzugeben.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      }
+    ]
+  }
+}

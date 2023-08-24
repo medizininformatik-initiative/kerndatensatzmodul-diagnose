@@ -6,9 +6,9 @@ name: CI (FHIR Validation)
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
+    branches: [ master, main ]
   pull_request:
-    branches: [ master ]
+    branches: [ master, main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -23,31 +23,25 @@ jobs:
     
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+        
       - name: Checkout code
         uses: actions/checkout@v2
         
-      # Install .NET runtime
-      - name: Setup .NET Core SDK
-        uses: actions/setup-dotnet@v1.7.2
-        with:
-          dotnet-version: 3.1.x
-      
-      # Install Java runtime (only needed if you want to run the offical HL7 Java validator)
-      - name: Setup Java JDK
-        uses: actions/setup-java@v1.4.3
-        with:
-          java-version: 1.8
+      # Java and .NET are already installed on ubuntu-latest
         
       - name: Firely.Terminal (GitHub Actions)
-        uses: FirelyTeam/firely-terminal-pipeline@v0.2.0
+        uses: FirelyTeam/firely-terminal-pipeline@v0.4.0
         with:
-          PATH_TO_CONFORMANCE_RESOURCES: terminologie/CodeSystem terminologie/ValueSet ressourcen-profile logical-models
-          PATH_TO_EXAMPLES: beispiele
+          PATH_TO_CONFORMANCE_RESOURCES: fsh-generated/resources
+          PATH_TO_EXAMPLES: fsh-generated/resources
+          PATH_TO_QUALITY_CONTROL_RULES: qc/custom
           DOTNET_VALIDATION_ENABLED: true
-          JAVA_VALIDATION_ENABLED: true
+          JAVA_VALIDATION_ENABLED: false
           OUTPUT_FORMAT: RAW
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
+          # SUSHI_ENABLED: false
+          JAVA_VALIDATOR_VERSION: 6.0.23
           
           # The Coding provided (http://fhir.de/CodeSystem/bfarm/icd-10-gm#XX.X) is not in the value set http://fhir.de/ValueSet/bfarm/icd-10-gm, and a code is required from this value set.
           EXPECTED_FAILS: VALIDATION_EXAMPLES_JAVA

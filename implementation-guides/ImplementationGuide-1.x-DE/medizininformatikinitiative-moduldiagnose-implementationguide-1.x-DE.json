@@ -1,0 +1,83 @@
+{
+	"resourceType": "ImplementationGuide",
+	"id": "mii-ig-diagnose-de-v1",
+	"url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ImplementationGuide/mii-ig-diagnose-de-v1",
+	"version": "1.0.4",
+	"name": "MII_IG_Diagnose_DE_v1",
+	"title": "MII IG Diagnose DE v1",
+	"status": "active",
+	"description": "[DE] Modul Diagnose - Version 1 - IG",
+	"fhirVersion": [
+		"4.0.1"
+	],
+	"definition": {
+		"page": {
+			"nameUrl": "implementation-guides/ImplementationGuide-1.x-DE/IGMIIKDSModulDiagnose.md",
+			"title": "IG MII KDS Modul Diagnose",
+			"generation": "markdown",
+			"page": [
+				{
+					"nameUrl": "implementation-guides/ImplementationGuide-1.x-DE/BeschreibungModul.guide.md",
+					"title": "Beschreibung Modul",
+					"generation": "markdown"
+				},
+				{
+					"nameUrl": "implementation-guides/ImplementationGuide-1.x-DE/KontextimGesamtprojektBezgezuanderenModulen.guide.md",
+					"title": "Kontext im Gesamtprojekt / Bezüge zu anderen Modulen",
+					"generation": "markdown"
+				},
+				{
+					"nameUrl": "implementation-guides/ImplementationGuide-1.x-DE/Referenzen.guide.md",
+					"title": "Referenzen",
+					"generation": "markdown"
+				},
+				{
+					"nameUrl": "implementation-guides/ImplementationGuide-1.x-DE/AnwendungsflleInformationsmodell/AnwendungsflleInformationsmodell.md",
+					"title": "Anwendungsfälle / Informationsmodell",
+					"generation": "markdown",
+					"page": [
+						{
+							"nameUrl": "implementation-guides/ImplementationGuide-1.x-DE/AnwendungsflleInformationsmodell/BeschreibungvonSzenarienfrdieAnwendungderModule.guide.md",
+							"title": "Beschreibung von Szenarien für die Anwendung der Module",
+							"generation": "markdown"
+						},
+						{
+							"nameUrl": "implementation-guides/ImplementationGuide-1.x-DE/AnwendungsflleInformationsmodell/Datenstzeinkl.Beschreibungen.guide.md",
+							"title": "Datensätze inkl. Beschreibungen",
+							"generation": "markdown"
+						},
+						{
+							"nameUrl": "implementation-guides/ImplementationGuide-1.x-DE/AnwendungsflleInformationsmodell/UML.guide.md",
+							"title": "UML",
+							"generation": "markdown"
+						}
+					]
+				},
+				{
+					"nameUrl": "implementation-guides/ImplementationGuide-1.x-DE/TechnischeImplementierung/TechnischeImplementierung.md",
+					"title": "Technische Implementierung",
+					"generation": "markdown",
+					"page": [
+						{
+							"nameUrl": "implementation-guides/ImplementationGuide-1.x-DE/TechnischeImplementierung/FHIRProfile/FHIRProfile.md",
+							"title": "FHIR Profile",
+							"generation": "markdown",
+							"page": [
+								{
+									"nameUrl": "implementation-guides/ImplementationGuide-1.x-DE/TechnischeImplementierung/FHIRProfile/Condition.guide.md",
+									"title": "Condition",
+									"generation": "markdown"
+								}
+							]
+						},
+						{
+							"nameUrl": "implementation-guides/ImplementationGuide-1.x-DE/TechnischeImplementierung/Terminologien.md",
+							"title": "Terminologien",
+							"generation": "markdown"
+						}
+					]
+				}
+			]
+		}
+	}
+}
