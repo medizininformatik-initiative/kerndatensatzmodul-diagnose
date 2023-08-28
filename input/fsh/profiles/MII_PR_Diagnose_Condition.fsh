@@ -11,12 +11,8 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * meta MS
 * meta.source MS
 * meta.profile MS
-* extension ^slicing.discriminator.type = #value
-* extension ^slicing.discriminator.path = "url"
-* extension ^slicing.rules = #open
 * extension contains $condition-related named ReferenzPrimaerdiagnose 0..1 MS
 * clinicalStatus MS
-* clinicalStatus ^min = 0
 * code 1.. MS
 * code.coding 1.. MS
 * code.coding ^slicing.discriminator.type = #pattern
@@ -60,24 +56,11 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * encounter MS
 * onset[x] only dateTime or Period
 * onset[x] MS
-* onset[x] ^slicing.discriminator.type = #type
-* onset[x] ^slicing.discriminator.path = "$this"
-* onset[x] ^slicing.rules = #closed
-* onsetPeriod only Period
 * onsetPeriod MS
-* onsetPeriod ^sliceName = "onsetPeriod"
 * onsetPeriod.start MS
-* onsetPeriod.start.extension ^slicing.discriminator.type = #value
-* onsetPeriod.start.extension ^slicing.discriminator.path = "url"
-* onsetPeriod.start.extension ^slicing.rules = #open
 * onsetPeriod.start.extension contains ExtensionLebensphase named lebensphase-von 0..1 MS
 * onsetPeriod.end MS
-* onsetPeriod.end.extension ^slicing.discriminator.type = #value
-* onsetPeriod.end.extension ^slicing.discriminator.path = "url"
-* onsetPeriod.end.extension ^slicing.rules = #open
 * onsetPeriod.end.extension contains ExtensionLebensphase named lebensphase-bis 0..1 MS
-* onsetDateTime only dateTime
 * onsetDateTime MS
-* onsetDateTime ^sliceName = "onsetDateTime"
 * recordedDate 1.. MS
 * note MS

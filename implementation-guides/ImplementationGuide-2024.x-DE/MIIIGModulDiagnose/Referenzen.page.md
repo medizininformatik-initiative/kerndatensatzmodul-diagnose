@@ -1,3 +1,6 @@
+---
+parent: 
+---
 ## Referenzen
 
 Die Modellierung des Datensatzes zum Modul DIAGNOSE enthält Referenzen zu folgenden Projekten:
