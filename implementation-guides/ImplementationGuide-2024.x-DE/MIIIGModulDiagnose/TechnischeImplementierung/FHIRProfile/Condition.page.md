@@ -8,15 +8,16 @@ subject: https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/St
 
 Dieses Profil beschreibt eine Diagnose in der Medizininformatik-Initiative.
 
-<fql​>
+@```
   from 
     StructureDefinition 
   where 
     url = 'https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose' 
   select 
-    Name: name, 
+    Name: title, 
+    Status: status,
     Canonical: url
-</fql​>
+```
 
 ---
 
