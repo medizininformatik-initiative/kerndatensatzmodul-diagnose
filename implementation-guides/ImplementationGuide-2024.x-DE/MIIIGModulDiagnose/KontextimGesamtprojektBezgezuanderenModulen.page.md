@@ -1,3 +1,6 @@
+---
+parent: 
+---
 ## Kontext im Gesamtprojekt / Bezüge zu anderen Modulen
 
 Diagnosen stellen die zentrale Entität bei der Beschreibung von Gesundheit und Krankheit in allen Use Cases der MII dar. Unter 'Beschreibung von Szenarien für die Anwendung der Module' findet sich die Beschreibung der Anwendung des Moduls DIAGNOSE in den einzelnen Konsortien.

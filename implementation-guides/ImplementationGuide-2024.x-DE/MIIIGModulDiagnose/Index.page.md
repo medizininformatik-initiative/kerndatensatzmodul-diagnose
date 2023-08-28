@@ -1,3 +1,6 @@
+---
+parent: 
+---
 # Kerndatensatz Modul Diagnose
 
 | Note | Under Construction! |

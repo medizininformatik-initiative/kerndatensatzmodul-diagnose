@@ -1,3 +1,6 @@
+---
+parent: 
+---
 ## Datensätze inkl. Beschreibungen
 
 Die offizielle und abgenommene Version des Informationsmodels für das Modul DIAGNOSE findet sich auf [ART-DECOR](https://art-decor.org/art-decor/decor-datasets--mide-?id=&effectiveDate=&conceptId=&conceptEffectiveDate=). 

@@ -1,3 +1,6 @@
+---
+parent: 
+---
 ## **Beschreibung Modul DIAGNOSE**
 
 {{render:implementation-guides/ImplementationGuide-Common/images/1_Abbildung_Diagnose_de.jpg}}
