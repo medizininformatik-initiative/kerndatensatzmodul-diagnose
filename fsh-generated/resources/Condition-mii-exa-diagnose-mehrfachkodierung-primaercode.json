@@ -6,25 +6,10 @@
       "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose"
     ]
   },
-  "clinicalStatus": {
-    "coding": [
-      {
-        "code": "active",
-        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
-      }
-    ]
-  },
-  "verificationStatus": {
-    "coding": [
-      {
-        "code": "confirmed",
-        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
-      }
-    ]
-  },
   "code": {
     "coding": [
       {
+        "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
         "extension": [
           {
             "url": "http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit",
@@ -49,10 +34,31 @@
             }
           }
         ],
-        "version": "2020",
         "code": "A54.4",
-        "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+        "version": "2020",
         "display": "Gonokokkeninfektion des Muskel-Skelett-Systems"
+      },
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/alpha-id",
+        "code": "I97525",
+        "version": "2020",
+        "display": "Bursitis gonorrhoica"
+      }
+    ]
+  },
+  "clinicalStatus": {
+    "coding": [
+      {
+        "code": "active",
+        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+      }
+    ]
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "code": "confirmed",
+        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
       }
     ]
   },

@@ -5,10 +5,9 @@ Usage: #example
 * extension.valueReference = Reference(mii-exa-diagnose-mehrfachkodierung-primaercode)
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
-* code.coding.extension.url = "http://fhir.de/StructureDefinition/icd-10-gm-mehrfachcodierungs-kennzeichen"
-* code.coding.extension.valueCoding = $icd-10-gm-mehrfachcodierungs-kennzeichen#*
-* code.coding.version = "2020"
-* code.coding = $icd-10-gm#M73.04 "Bursitis gonorrhoica[A54.4] : Hand"
+* code.coding[icd10-gm].extension.url = "http://fhir.de/StructureDefinition/icd-10-gm-mehrfachcodierungs-kennzeichen"
+* code.coding[icd10-gm].extension.valueCoding = $icd-10-gm-mehrfachcodierungs-kennzeichen#*
+* code.coding[icd10-gm] = $icd-10-gm|2020#M73.04 "Bursitis gonorrhoica[A54.4] : Hand"
 * subject = Reference(Patient/12345)
 * encounter = Reference(Patient/12345)
 * onsetPeriod.start = "2019-09-26T12:45:00+01:00"

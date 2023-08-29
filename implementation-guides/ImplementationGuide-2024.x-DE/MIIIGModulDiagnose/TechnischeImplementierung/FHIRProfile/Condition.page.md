@@ -8,6 +8,11 @@ subject: https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/St
 
 Dieses Profil beschreibt eine Diagnose in der Medizininformatik-Initiative.
 
+**Mehrfachkodierung und Condition-Ressourcen**
+
+Bei der Kombination von ICD-10-Codes mit dem Kreuz-Stern-System wird für jeden ICD-10-Code (Ätiologie, Manifestation, Zusatzinformation) eine Condition-Ressource instanziiert. Die Condition-Ressourcen der Sekundärdiagnosen (Manifestation, Zusatzinformation) nutzen die [Extension Condition Related](http://hl7.org/fhir/R4/extension-condition-related.html), um auf die Primärdiagnose (Ätiologie) zu referenzieren. Zusätzlich zu kombinierten ICD-10-Codes gemappte Alpha-IDs oder Orpha-Codes, werden nur in der Condition-Ressource der Primärdiagnose angegeben. Bei abweichenden Diagnosesicherheiten zwischen Primär- und Sekundärdiagnose muss sichergestellt werden, dass die Diagnosesicherheit der Primärcondition auf die assoziierte Alpha-ID zutrifft. Das Vorgehen wird anhand der [Beispielressourcen](#beispiel-2) exemplarisch für Alpha-ID `I97525` und ICD-10-GM `A54.4+` `M73.09*` dargestellt.
+
+
 @```
   from 
     StructureDefinition 
@@ -102,19 +107,20 @@ Es sind die Invarianten aus den Deutschen Basisprofilen zum Datentyp Profil ['Co
 
 **Beispiele**
 
-Beispiel ICD-10-GM & SNOMED CT:
+### Beispiel 1
+ICD-10-GM & SNOMED CT:
 
 {{json:fsh-generated/resources/Condition-mii-exa-diagnose-condition-minimal.json}}
 
-
-Beispiel (ICD-10-GM Diagnose mit Kreuz-Stern-System und Zusatzkennzeichen):
+### Beispiel 2
+ICD-10-GM Diagnose mit Kreuz-Stern-System und Zusatzkennzeichen plus Alpha-ID:
 
 {{json:fsh-generated/resources/Condition-mii-exa-diagnose-mehrfachkodierung-primaercode.json}}
 
 {{json:fsh-generated/resources/Condition-mii-exa-diagnose-mehrfachkodierung-sekundaercode.json}}
 
-
-Beispiel (Alpha-ID und Orpha-Kennnummer):
+### Beispiel 3 
+Alpha-ID und Orpha-Kennnummer:
 
 {{json:fsh-generated/resources/Condition-mii-exa-diagnose-multiple-kodierungen.json}}
 
