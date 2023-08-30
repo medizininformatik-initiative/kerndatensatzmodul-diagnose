@@ -1,5 +1,6 @@
 {
     "resourceType": "CodeSystem",
+    "id": "CodeSystemICDO3ZweiteRevision",
     "url": "http://terminology.hl7.org/CodeSystem/icd-o-3",
     "identifier": [
         {

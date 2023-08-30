@@ -11,7 +11,7 @@
     - /**/*.xml
     - /**/*.json
     - "!package.json"
-    - "!/**/CodeSystemICD10GM*.json"
+    - "!/**/CodeSystemICD*.json"
 
 - action: Check for valid ids
   # See https://github.com/FirelyTeam/firely-net-sdk/issues/1773
@@ -26,7 +26,7 @@
     - /**/*.xml
     - /**/*.json
     - "!package.json"
-    - "!/**/CodeSystemICD10GM*.json"
+    - "!/**/CodeSystemICD*.json"
 
 - name: naming-convention-name
   filter: (StructureDefinition or ValueSet or CodeSystem or ConceptMap or StructureMap or NamingSystem or SearchParameter or CapabilityStatement or OperationDefinition or ImplementationGuide).exists()
@@ -37,7 +37,7 @@
     - /**/*.xml
     - /**/*.json
     - "!package.json"
-    - "!/**/CodeSystemICD10GM*.json"
+    - "!/**/CodeSystemICD*.json"
 
 - name: naming-convention-title
   filter: (StructureDefinition or ValueSet or CodeSystem or ConceptMap or StructureMap or NamingSystem or SearchParameter or CapabilityStatement or OperationDefinition or ImplementationGuide).exists()
@@ -48,7 +48,7 @@
     - /**/*.xml
     - /**/*.json
     - "!package.json"
-    - "!/**/CodeSystemICD10GM*.json"
+    - "!/**/CodeSystemICD*.json"
 
 - name: naming-convention-url
   filter: (StructureDefinition or ValueSet or CodeSystem or ConceptMap or StructureMap or NamingSystem or SearchParameter or CapabilityStatement or OperationDefinition or ImplementationGuide).exists()
@@ -59,4 +59,4 @@
     - /**/*.xml
     - /**/*.json
     - "!package.json"
-    - "!/**/CodeSystemICD10GM*.json"
+    - "!/**/CodeSystemICD*.json"
