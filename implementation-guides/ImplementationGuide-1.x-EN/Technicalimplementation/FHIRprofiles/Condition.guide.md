@@ -87,17 +87,14 @@ The invariants of the German Basic Profiles for the data type Profile ['Coding P
 
 ICD-10-GM & SNOMED CT:
 
-{{json:medizininformatikinitiative-moduldiagnosen/Condition-example}}
+{{json:Condition/ExampleCondition}}
 
 
 ICD-10-GM diagnosis with 'Kreuz-Stern-System' and 'Zusatzkennzeichen':
 
-{{json:medizininformatikinitiative-moduldiagnosen/exampleconditionmehrfachkodierungprimaercode}}
-
-{{json:medizininformatikinitiative-moduldiagnosen/exampleconditionmehrfachkodierungsekundaercode}}
-
+{{json:Condition/ExampleConditionDuplicate2}}
 
 Alpha-ID and Orpha-Kennnummer:
 
-{{json:medizininformatikinitiative-moduldiagnosen/exampleconditionmultiplekodierungen}}
+{{json:Condition/ExampleConditionDuplicate3}}
 

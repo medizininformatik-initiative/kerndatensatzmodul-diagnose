@@ -9,8 +9,8 @@ Usage: #example
 * code.coding.extension[=].valueCoding = $KBV_CS_SFHIR_ICD_SEITENLOKALISATION#L "links"
 * code.coding.extension[+].url = "http://fhir.de/StructureDefinition/icd-10-gm-mehrfachcodierungs-kennzeichen"
 * code.coding.extension[=].valueCoding = $icd-10-gm-mehrfachcodierungs-kennzeichen#†
-* code.coding.version = "2020"
-* code.coding = $icd-10-gm#A54.4 "Gonokokkeninfektion des Muskel-Skelett-Systems"
+* code.coding[icd10-gm] = $icd-10-gm|2020#A54.4 "Gonokokkeninfektion des Muskel-Skelett-Systems"
+* code.coding[alpha-id] = $alpha-id|2020#I97525 "Bursitis gonorrhoica"
 * subject = Reference(Patient/12345)
 * encounter = Reference(Patient/12345)
 * onsetPeriod.start = "2019-09-26T12:45:00+01:00"

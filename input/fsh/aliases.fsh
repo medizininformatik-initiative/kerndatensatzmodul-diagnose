@@ -9,3 +9,4 @@ Alias: $orpha = http://www.orpha.net
 Alias: $sct = http://snomed.info/sct
 Alias: $condition-related = http://hl7.org/fhir/StructureDefinition/condition-related
 Alias: $MII-Reference = https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference
+Alias: $icd-o-3 = http://terminology.hl7.org/CodeSystem/icd-o-3

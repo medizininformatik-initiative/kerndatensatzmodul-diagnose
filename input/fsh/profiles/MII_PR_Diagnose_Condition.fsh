@@ -22,7 +22,8 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
     icd10-gm 0..1 MS and
     alpha-id 0..1 MS and
     sct 0..1 MS and
-    orphanet 0..1 MS
+    orphanet 0..1 MS and
+    icd-o-3 0..1 MS
 * code.coding[icd10-gm] only CodingICD10GM
 * code.coding[icd10-gm] from ICD10GM (required)
 * code.coding[icd10-gm] ^patternCoding.system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
@@ -41,15 +42,26 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * code.coding[orphanet] ^patternCoding.system = "http://www.orpha.net"
 * code.coding[orphanet].system 1.. MS
 * code.coding[orphanet].code 1.. MS
+* code.coding[icd-o-3] ^short = "ICD-O-3 Morphologie"
+* code.coding[icd-o-3] ^patternCoding.system = "http://terminology.hl7.org/CodeSystem/icd-o-3"
+* code.coding[icd-o-3].system 1.. MS
+* code.coding[icd-o-3].version MS
+* code.coding[icd-o-3].code 1.. MS
 * bodySite MS
 * bodySite.coding MS
 * bodySite.coding ^slicing.discriminator.type = #pattern
 * bodySite.coding ^slicing.discriminator.path = "system"
 * bodySite.coding ^slicing.rules = #open
-* bodySite.coding contains snomed-ct 1..1 MS
+* bodySite.coding contains 
+    snomed-ct 1..1 MS and
+    icd-o-3 0..1 MS
 * bodySite.coding[snomed-ct].system 1.. MS
 * bodySite.coding[snomed-ct].system = "http://snomed.info/sct"
-* bodySite.coding[snomed-ct].code 1..
+* bodySite.coding[snomed-ct].code 1.. MS
+* bodySite.coding[icd-o-3] ^short = "ICD-O-3 Topographie"
+* bodySite.coding[icd-o-3].system 1.. MS
+* bodySite.coding[icd-o-3].system = "http://terminology.hl7.org/CodeSystem/icd-o-3"
+* bodySite.coding[icd-o-3].code 1.. MS 
 * subject 1.. MS
 * subject only $MII-Reference
 * encounter only $MII-Reference

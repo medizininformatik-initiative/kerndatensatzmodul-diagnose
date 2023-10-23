@@ -83,19 +83,16 @@ Es sind die Invarianten aus den Deutschen Basisprofilen zum Datentyp Profil ['Co
 
 Beispiel ICD-10-GM & SNOMED CT:
 
-{{json:medizininformatikinitiative-moduldiagnosen/Condition-example}}
+{{json:Condition/ExampleCondition}}
 
 
 Beispiel (ICD-10-GM Diagnose mit Kreuz-Stern-System und Zusatzkennzeichen):
 
-{{json:medizininformatikinitiative-moduldiagnosen/exampleconditionmehrfachkodierungprimaercode}}
-
-{{json:medizininformatikinitiative-moduldiagnosen/exampleconditionmehrfachkodierungsekundaercode}}
-
+{{json:Condition/ExampleConditionDuplicate2}}
 
 Beispiel (Alpha-ID und Orpha-Kennnummer):
 
-{{json:medizininformatikinitiative-moduldiagnosen/exampleconditionmultiplekodierungen}}
+{{json:Condition/ExampleConditionDuplicate3}}
 
 
 
