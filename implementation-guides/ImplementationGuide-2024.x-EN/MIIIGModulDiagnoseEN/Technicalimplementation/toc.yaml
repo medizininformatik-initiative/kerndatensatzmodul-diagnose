@@ -1,0 +1,6 @@
+- name: Index
+  filename: Index.guide.md
+- name: FHIR Profiles
+  filename: FHIRprofiles
+- name: Terminologies
+  filename: Terminologies.guide.md
