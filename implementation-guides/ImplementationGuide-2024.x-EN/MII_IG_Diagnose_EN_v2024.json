@@ -1,10 +1,10 @@
 {
 	"resourceType": "ImplementationGuide",
-  "id": "mii-ig-diagnose-en-v2024",
+	"id": "mii-ig-diagnose-en-v2024",
 	"url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ImplementationGuide/mii-ig-diagnose-en-v2024",
 	"version": "2024.0.0",
 	"name": "MII_IG_Diagnose_EN_v2024",
-  "title": "MII IG Diagnose EN v2024",
+	"title": "MII IG Diagnose EN v2024",
 	"status": "active",
 	"description": "[EN] Modul Diagnose - Version 2024 - IG",
 	"fhirVersion": [
