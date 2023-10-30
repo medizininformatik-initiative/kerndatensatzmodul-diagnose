@@ -28,6 +28,6 @@ Es ist zu beachten, dass die nachfolgenden ValueSets keine Expansion beinhalten.
 
 ### CodesSystems
 
-Das CodeSystem mit der Canonical http://fhir.de/CodeSystem/dimdi/icd-10-gm wird innerhalb des Moduls Diagnose, gemäß [Lizenzbedingungen](https://www.dimdi.de/static/.downloads/deutsch/downloadbedhilfe.pdf), publiziert.
+Das CodeSystem mit der Canonical http://fhir.de/CodeSystem/bfarm/icd-10-gm wird innerhalb des Moduls Diagnose, gemäß [Lizenzbedingungen](https://www.bfarm.de/DE/Kodiersysteme/Klassifikationen/ICD/ICD-10-GM/_node.html), publiziert.
 
 --- 

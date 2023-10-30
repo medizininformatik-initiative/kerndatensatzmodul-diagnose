@@ -24,4 +24,4 @@ It should be noted that the following ValueSets do not include an expansion. To 
 
 ### CodesSystems
 
-The CodeSystem with the Canonical http://fhir.de/CodeSystem/dimdi/icd-10-gm is published within the Diagnostics module, according to [License Terms](https://www.dimdi.de/static/.downloads/deutsch/downloadbedhilfe.pdf).
+The CodeSystem with the Canonical http://fhir.de/CodeSystem/bfarm/icd-10-gm is published within the Diagnostics module, according to [License Terms](https://www.bfarm.de/EN/Code-systems/Classifications/ICD/ICD-10-GM/_node.html).
