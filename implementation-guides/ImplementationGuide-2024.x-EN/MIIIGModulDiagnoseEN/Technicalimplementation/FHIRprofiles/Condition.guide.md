@@ -1,31 +1,59 @@
 ---
 topic: DiagnoseCondition
 subject: https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose
+canonical: https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose
+expand: 1
 ---
 
 ## Condition
 
+---
+
+## {{link}}
+
+**Description**
+
 This profile describes a diagnosis within the Medical Informatics Initiative.
 
 @```
-from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose' select Name: name, Canonical: url
+from 
+    StructureDefinition 
+where 
+    url = 'https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose' 
+select 
+    Name: name, Status: status, Version: version, Canonical: url, Base: baseDefinition
 ```
 
----
+### Content
 
 <tabs>
-    <tab title="snap" active="true">
-      {{tree:https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose, snap}}
-    </tab>
-    <tab title="diff">
-      {{tree:https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose, diff}}
-    </tab>
-    <tab title="hybrid">
-      {{tree:https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose, hybrid}}
-    </tab>
-    <tab title="JSON">
-      {{json:https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose}}
-    </tab>
+  <tab title="Visualization">{{tree, buttons}}</tab>
+  <tab title="Description"> 
+        @```
+        from
+	        StructureDefinition
+        where
+	        url = 'https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose'
+        select
+	        Description: description
+        with
+            no header
+        ```
+        @```
+        from 
+            StructureDefinition 
+        where 
+            url = 'https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose' 
+        for 
+            differential.element 
+            where 
+                mustSupport = true 
+            select Fieldname: id, Shortdescription: short, Comment: comment
+        ```
+  </tab>
+  <tab title="XML">{{xml}}</tab>
+  <tab title="JSON">{{json}}</tab>
+  <tab title="Link">{{link}}</tab>
 </tabs>
 
 ---

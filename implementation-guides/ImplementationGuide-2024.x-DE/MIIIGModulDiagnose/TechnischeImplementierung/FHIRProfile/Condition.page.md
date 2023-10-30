@@ -2,9 +2,17 @@
 parent: 
 topic: DiagnoseCondition
 subject: https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose
+canonical: https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose
+expand: 1
 ---
 
 ### Condition
+
+---
+
+## {{link}}
+
+**Beschreibung**
 
 Dieses Profil beschreibt eine Diagnose in der Medizininformatik-Initiative.
 
@@ -14,31 +22,44 @@ Bei der Kombination von ICD-10-Codes mit dem Kreuz-Stern-System wird für jeden 
 
 
 @```
-  from 
+from 
     StructureDefinition 
-  where 
+where 
     url = 'https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose' 
-  select 
-    Name: title, 
-    Status: status,
-    Canonical: url
+select 
+    Name: name, Status: status, Version: version, Canonical: url, Basis: baseDefinition
 ```
 
----
+### Inhalt
 
 <tabs>
-    <tab title="snap" active="true">
-      {{tree:https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose, snap}}
-    </tab>
-    <tab title="diff">
-      {{tree:https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose, diff}}
-    </tab>
-    <tab title="hybrid">
-      {{tree:https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose, hybrid}}
-    </tab>
-    <tab title="JSON">
-      {{json:https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose}}
-    </tab>
+  <tab title="Darstellung">{{tree, buttons}}</tab>
+  <tab title="Beschreibung"> 
+        @```
+        from
+	        StructureDefinition
+        where
+	        url = 'https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose'
+        select
+	        Beschreibung: description
+        with
+            no header
+        ```
+        @```
+        from 
+            StructureDefinition 
+        where 
+            url = 'https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose' 
+        for 
+            differential.element 
+            where 
+                mustSupport = true 
+            select Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+        ```
+  </tab>
+  <tab title="XML">{{xml}}</tab>
+  <tab title="JSON">{{json}}</tab>
+  <tab title="Link">{{link}}</tab>
 </tabs>
 
 ---
