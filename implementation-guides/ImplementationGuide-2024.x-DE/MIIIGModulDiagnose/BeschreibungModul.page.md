@@ -21,14 +21,14 @@ Aufgrund der MII-Priorität der Sekundärnutzung von Real-World-Data des Versorg
 
 Einen kleinen Beitrag zur Überwindung der Restriktionen versuchen die Autoren des Moduls DIAGNOSE gleichwohl zu leisten, indem sie Wegmarken für eine angemessenere Dokumentation im deutschen Gesundheitssystem setzen.
 
-In erster Linie ist zu nennen, dass der Einsatz [**weiterer Kataloge**](#weitereKataloge) antizipiert wird. Für internationale - oder  spezielle Projekte (z.B. Seltene Erkrankungen) ist die parallele Verfügbarkeit ergänzender Diagnosenkataloge erforderlich (siehe auch unten [Nationale und internationale Interoperabilität](#destinationLinkName)). Hervorgehoben werden können: 
+In erster Linie ist zu nennen, dass der Einsatz [weiterer Kataloge](#weitereKataloge) antizipiert wird. Für internationale - oder  spezielle Projekte (z.B. Seltene Erkrankungen) ist die parallele Verfügbarkeit ergänzender Diagnosenkataloge erforderlich (siehe auch unten [Nationale und internationale Interoperabilität](#NatIntIOP)). Hervorgehoben werden können: 
 * die [Orpha-Kennnummern](https://www.orpha.net/consor/cgi-bin/Disease.php?lng=DE) für seltene Erkrankungen 
 * die Nomenklatur [SNOMED CT](http://www.snomed.org/snomed-ct/five-step-briefing) (Systematized Nomenclature of Human and Veterinary Medicine – Clinical Terms) für ein breites Anwendungsspektrum mit internationaler Interoperabilität
-* die [Alpha-ID](https://www.dimdi.de/dynamic/de/klassifikationen/downloads/?dir=alpha-id/), die auf dem Alphabetischen Verzeichnis zur ICD-10-GM basiert.
+* die [Alpha-ID](https://www.bfarm.de/DE/Kodiersysteme/Terminologien/Alpha-ID-SE/_node.html), die auf dem Alphabetischen Verzeichnis zur ICD-10-GM basiert.
 
-Ab sofort ist auch die 11. Revision der ICD zu berücksichtigen,   deren Einführung von den nachgeordneten [BMG](https://www.bundesgesundheitsministerium.de)-Behörden [DIMDI](https://www.dimdi.de/dynamic/de/startseite) und [BfArM](https://www.bfarm.de/DE/Home/home_node.html) vorbereitet wird.
+Ab sofort ist auch die 11. Revision der ICD zu berücksichtigen,   deren Einführung von der nachgeordneten [BMG](https://www.bundesgesundheitsministerium.de)-Behörde [BfArM](https://www.bfarm.de/DE/Home/home_node.html) vorbereitet wird.
 
-Angestrebt wird beispielsweise auch die Nutzung der ICD-O, die eine differenziertere Beschreibung von Krebserkrankungen erlaubt. Dies wird aber nicht im Basismodul DIAGNOSE, sondern im Erweiterungsmodul ONKOLOGIE eröffnet. Des Weiteren soll die Nutzung von Symptom- und Phänotyp-Terminologien wie der Human Phenotype Ontology standardisiert werden. Dies erfolgt jedoch auch nicht über das Basismodul DIAGNOSE, sondern über ein Erweiterungsmodul mit dem Arbeitstitel "KLINIK/SYMPTOM/PHÄNOTYP".
+Angestrebt wird beispielsweise auch die Nutzung der ICD-O, die eine differenziertere Beschreibung von Krebserkrankungen erlaubt. Dies wird aber nicht im Basismodul DIAGNOSE, sondern im Erweiterungsmodul ONKOLOGIE eröffnet. Des Weiteren soll die Nutzung von Symptom- und Phänotyp-Terminologien wie der Human Phenotype Ontology standardisiert werden. Dies erfolgt jedoch auch nicht über das Basismodul DIAGNOSE, sondern über ein Erweiterungsmodul mit dem Arbeitstitel "SYMPTOM/PHÄNOTYP".
 
 ---
 
@@ -64,7 +64,7 @@ Dies erfordert im ersten Schritt, Diagnosen mit Hilfe von international abgestim
 
 ### [ICD-10-GM](#ICD)
 Die Internationale Klassifikation der Krankheiten und verwandter Gesundheitszustände (ICD) liegt mittlerweile in der 10. Revision (=> ICD-10) vor und hat sich für viele Fragestellungen weitgehend bewährt. 
-So ist sind gemäß [§ 301](https://www.sozialgesetzbuch-sgb.de/sgbv/301.html) und [§ 295](https://www.sozialgesetzbuch-sgb.de/sgbv/295.html) SGB V bei der stationären und der ambulanten Abrechnung die Angabe von Diagnosen und deren Kodierung mit der jährlich von der BMG-Behörde [DIMDI](https://www.dimdi.de/dynamic/de/startseite)  beziehungsweise seit 2020 vom Bundesamt für Arzneimittel und Medizinprodukte (BfArM) herausgegebenen Version ICD-10-GM (German Modification) gesetzlich vorgeschrieben. Sie beruht auf der ICD-10 der [WHO](https://www.who.int). Diese und andere Gesetzesvorgaben  prägen die Kodierung der Diagnosen im deutschen Gesundheitswesen durch die ICD-10-GM an fast jeder Stelle.
+So ist sind gemäß [§ 301](https://www.sozialgesetzbuch-sgb.de/sgbv/301.html) und [§ 295](https://www.sozialgesetzbuch-sgb.de/sgbv/295.html) SGB V bei der stationären und der ambulanten Abrechnung die Angabe von Diagnosen und deren Kodierung mit der jährlich vom Bundesamt für Arzneimittel und Medizinprodukte (BfArM) herausgegebenen Version ICD-10-GM (German Modification) gesetzlich vorgeschrieben. Sie beruht auf der ICD-10 der [WHO](https://www.who.int). Diese und andere Gesetzesvorgaben  prägen die Kodierung der Diagnosen im deutschen Gesundheitswesen durch die ICD-10-GM an fast jeder Stelle.
 
 Für viele Zwecke ist die Klassifizierung und Kodierung mit der ICD-10-GM sinnvoll (beispielsweise Sterbeurkunden für die Todesursachenstatistik, Arbeitsunfähigkeitsbescheinigungen, Abrechnungsdatensätze für die Leistungshonorierung).
 Allerdings ist sie für viele andere Fragestellungen **nicht aussagekräftig** genug und somit nicht hinreichend (siehe beispielsweise [Kodierung von Seltenen Erkrankungen](https://www.bundesgesundheitsministerium.de/fileadmin/Dateien/5_Publikationen/Gesundheit/Berichte/Kodierung-von-Seltenen-Erkrankungen_Kurzbericht.pdf)). 
@@ -104,7 +104,7 @@ Die direkte Korrespondenz der Module DIAGNOSE und PERSON soll zum Ausdruck bring
 
 Ganz erreichen lässt sich das Ideal der Versorger-, Sektoren- und Zeitneutralität des Moduls DIAGNOSE als Brücke zur Mehrfachnutzbarkeit nicht nur bei den definitiv unterschiedlichen, weil sektorenabhängigen *Abrechnungsfällen* (FHIR-Kategorie *Account*) nicht, sondern auch bei den *Versorgungskontakten* (FHIR-Kategorie *Encounter*) nicht. 
 
-Es beginnt damit, dass der gebräuchliche Katalog, die [ICD-10-GM](https://www.dimdi.de/dynamic/de/klassifikationen/icd/icd-10-gm/), nicht primär nach medizinischen Erfordernissen - beispielsweise der Identifizierung von häufigen wie seltenen Erkrankungen -, sondern nach statistischen und abrechnungstechnischen Prioritäten gepflegt wird. Dabei ist zu beachten, dass die ICD-10-GM als Hauptkatalog des Moduls DIAGNOSE jährlich fortgeschrieben wird, wir es also de facto mit **jährlich wechselnden Katalogen** zu tun haben (dabei unter Umständen mit Bedeutungsänderungen einiger vier- und fünfstelliger Kodes). Eindeutig ist so immer nur das Triple aus Diagnosename, Diagnosekode und Diagnosekatalog. Jahresgrenzen überschreitende Zeitreihen sind daher zuverlässig nur für die dreistelligen stabilen Kategorien möglich, nicht aber für die vier- und fünfstelligen Subkategorien.
+Es beginnt damit, dass der gebräuchliche Katalog, die [ICD-10-GM](https://www.bfarm.de/DE/Kodiersysteme/Klassifikationen/ICD/ICD-10-GM/_node.html), nicht primär nach medizinischen Erfordernissen - beispielsweise der Identifizierung von häufigen wie seltenen Erkrankungen -, sondern nach statistischen und abrechnungstechnischen Prioritäten gepflegt wird. Dabei ist zu beachten, dass die ICD-10-GM als Hauptkatalog des Moduls DIAGNOSE jährlich fortgeschrieben wird, wir es also de facto mit **jährlich wechselnden Katalogen** zu tun haben (dabei unter Umständen mit Bedeutungsänderungen einiger vier- und fünfstelliger Kodes). Eindeutig ist so immer nur das Triple aus Diagnosename, Diagnosekode und Diagnosekatalog. Jahresgrenzen überschreitende Zeitreihen sind daher zuverlässig nur für die dreistelligen stabilen Kategorien möglich, nicht aber für die vier- und fünfstelligen Subkategorien.
 
 Als weitere Herausforderung bei der Mehrfachnutzung von Diagnosenangaben aus dem Versorgungskontext ist vorstehend bereits die dominante Rolle der Abrechnungserfordernisse und der nach deren Paradigmen ausgerichteten Deutschen Kodierrichtliniene bei der Dokumentation in den Krankenhausinformationssystemen angesprochen worden. Diese (vermeintlichen) Abrechnungserfordernisse haben die erste Digitalisierungswelle in den deutschen Krankenhäusern um die Jahrtausendwende getrieben und aus der medizinischen Perspektive betrachtet zu einer partiellen Fehldigitalisierung geführt. Die entstandenen Widersprüche müssen im Kerndatensatz der Medizininformatik-Initiative durch die unterschiedlichen Relationen der Diagnosen zu den *Versorgungsstellenkontakten* und der *Einrichtungskontakte* zu den Diagnosen so gut wie möglich kompensiert werden - was einen längeren Lern- und kontinuierlichen Verbesserungprozess erfordern wird.
 Exemplarisch können ausgewählte Widersprüche zwischen Diagnosen bei *Abrechnungsfällen* und bei *Einrichtungskontakten* (siehe [Modul FALL](https://simplifier.net/MedizininformatikInitiative-ModulFall/)) genannt werden, selbst wenn beide Fallvarianten eine an sich identische Konstellation beschreiben (z.B. stationärer Aufenthalt zwischen Aufnahme und Entlassung):
@@ -170,11 +170,6 @@ Die Angabe des Enddatums (*bis*) ist bei beiden Angaben nicht obligatorisch, den
 Als weiteres Merkmal lässt das Informationsmodell die Ergänzung eines klinischen Status (aktiv, nicht aktiv) in Verbindung mit einem definierten Zeitpunkt zu. Diese Angaben sind eher im ambulanten Sektor im Gebrauch.
 
 ---
-
-
----
-
-
 
 ### **Weitere Merkmale im Einzelnen** 
 
@@ -321,7 +316,7 @@ Der *Vollständige Diagnosekode* umfasst den **SNOMED CT Kode**, das entsprechen
 
 [{{render:implementation-guides/ImplementationGuide-Common/images/WeitereKodiersysteme.jpg}}](https://art-decor.org/art-decor/decor-datasets--mide-?id=&effectiveDate=&conceptId=&conceptEffectiveDate=)
 
-Bei Bedarf ist die Aufnahme weiterer Klassifikationen und Terminologien möglich. Die Aufnahme der ICD-11 als weiteres Kodesysteme befindet sich in Vorbereitung. <br> Einige Anwendungsbereiche für die Diagnosedokumentation, wie beispielsweise die [ICD-0](https://www.dimdi.de/static/de/klassifikationen/icd/icd-o-3/icdo3rev1html/) im Bereich der Onkologie, werden in die entsprechenden Erweiterungsmodule ausgelagert.
+Bei Bedarf ist die Aufnahme weiterer Klassifikationen und Terminologien möglich. Die Aufnahme der ICD-11 als weiteres Kodesysteme befindet sich in Vorbereitung. <br> Einige Anwendungsbereiche für die Diagnosedokumentation, wie beispielsweise die [ICD-O](https://www.bfarm.de/DE/Kodiersysteme/Klassifikationen/ICD/ICD-O-3/_node.html) im Bereich der Onkologie, werden in die entsprechenden Erweiterungsmodule ausgelagert.
 
 --- 
 
@@ -334,7 +329,6 @@ Die Angabe der *Körperstelle* sollte nicht mit dem ICD-Zusatzkennzeichen *(Seit
 
 ### **Ergänzende Aspekte**
 
-
 Zusätzlich zu der Katalog-/Terminologie-basierten Klassifizierung und Kodierung besteht in dem Modul DIAGNOSE die Möglichkeit durch Freitextfelder beispielsweise nähere Angaben zu einer Diagnose machen zu können. 
 
 #### Freitextbeschreibung
@@ -346,21 +340,6 @@ Für die medizinschen Dokumentation ist die *Freitextbeschreibung* obligatorisch
 
 Durch die *Diagnoseerläuterung* soll dem Arzt die Möglichkeit gegeben werden, umfangreichere Angaben zusätzlich zu einer Diagnose abzufassen.
 
-
-
 ---
 
 Abschließend erlauben sich die Autoren zu erinnern, dass beim Modul DIAGNOSE in Verbindung mit dem Modul PERSON wegen der Sensibilität der Daten in besonderem Maße auf die Umsetzung organisatorischer und technischer Maßnahmen sowie Implementierung von Sicherheitskonzepten und einen sorgsamen Umgang für den Datenschutz zu achten ist.
-
-
-
-
-
-
-
-
-
-
-
-
-

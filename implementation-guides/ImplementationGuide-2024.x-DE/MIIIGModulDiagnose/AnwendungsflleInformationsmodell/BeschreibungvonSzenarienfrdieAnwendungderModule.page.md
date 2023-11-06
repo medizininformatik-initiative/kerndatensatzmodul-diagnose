@@ -3,10 +3,9 @@ parent:
 ---
 ## Beschreibung von Szenarien für die Anwendung des Moduls DIAGNOSE
 
-Die Modellierung und die FHIR-Profilierung der Basismodule des MII Kerndatensatzes einschließlich des Moduls  DIAGNOSE zielen darauf, möglischst generische Informationsmodelle für ein breites Spektrum von Anwendungsszenarien zu erzeugen. Prioritäre Berücksichtigung haben die konsortialen Use Cases der vier Konsortien der [Medizininformatik-Initiative](https://www.medizininformatik-initiative.de) (MII) [DIFUTURE](https://difuture.de), [HiGHmed](https://www.highmed.org), [MIRACUM](https://www.miracum.org) und [SMITH](https://www.smith.care/konsortium/) und der beiden transkonsortialen Verbundvorhaben [CORD-MI](https://www.medizininformatik-initiative.de/CORD) und [POLAR-MI](https://www.medizininformatik-initiative.de/POLAR) gefunden. Einen großen Einfluss auf die Gestaltung hat auch gehabt, dass  die digital gespeicherten (oder zu speichernden) Patientendaten aus den Versorgungsprozessen in den beteiligten 34 Universitätsklinika die wesentliche Grundlage der Medizininformatik-Initiative bilden.
+Die Modellierung und die FHIR-Profilierung der Basismodule des MII Kerndatensatzes einschließlich des Moduls  DIAGNOSE zielen darauf, möglischst generische Informationsmodelle für ein breites Spektrum von Anwendungsszenarien zu erzeugen. Prioritäre Berücksichtigung haben die konsortialen Use Cases der vier Konsortien der [Medizininformatik-Initiative](https://www.medizininformatik-initiative.de) (MII) [DIFUTURE](https://difuture.de), [HiGHmed](https://www.highmed.org), [MIRACUM](https://www.miracum.org) und [SMITH](https://www.smith.care/de/) und der beiden transkonsortialen Verbundvorhaben [CORD-MI](https://www.medizininformatik-initiative.de/CORD) und [POLAR-MI](https://www.medizininformatik-initiative.de/POLAR) gefunden. Einen großen Einfluss auf die Gestaltung hat auch gehabt, dass  die digital gespeicherten (oder zu speichernden) Patientendaten aus den Versorgungsprozessen in den beteiligten 34 Universitätsklinika die wesentliche Grundlage der Medizininformatik-Initiative bilden.
 
 Zum Modul DIAGNOSE: In jedem Use Case der MII spielen Diagnosen eine zentrale Rolle.
-
 
 ---
 

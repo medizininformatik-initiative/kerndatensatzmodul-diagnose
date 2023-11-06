@@ -58,7 +58,7 @@ Es ergeben sich folgende Diagnosetypen für die Datenübermittlung nach §301 SG
 
 * Haupt- und Nebendiagnosen (im Wesentlichen abrechnungstechnisch definiert) sowie Primär- und Sekundär¬diagnose werden über zusätzliche Attribute abgebildet.
 
-Das Attribut Diagnosetyp wird laut den [Deutschen Basisprofilen](https://simplifier.net/guide/basisprofil-de-r4/Ressourcen-DiagnosenCondition#Diagnose-Typen) als Eigenschaft des Encounters modelliert und ist somit nicht Teil des Diagnoseprofils.
+Das Attribut Diagnosetyp wird laut den [Deutschen Basisprofilen](https://ig.fhir.de/basisprofile-de/1.4.0/Ressourcen-DiagnosenCondition.html#Diagnose-Typen) als Eigenschaft des Encounters modelliert und ist somit nicht Teil des Diagnoseprofils.
 
 ### *Vorhanden-bei-Aufnahme* und *Vorhanden-bei-Entlassung*
 
