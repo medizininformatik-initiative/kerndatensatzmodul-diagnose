@@ -11,7 +11,7 @@
     "version": "Zweite Revision",
     "name": "CodeSystemICDO3ZweiteRevision",
     "title": "CodeSystem ICD-O-3 (Zweite Revision)",
-    "status": "draft",
+    "status": "active",
     "experimental": true,
     "description": "Internationale Klassifikation der Krankheiten für die Onkologie",
     "caseSensitive": true,
