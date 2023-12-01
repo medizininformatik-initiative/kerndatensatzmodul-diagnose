@@ -9,7 +9,7 @@ Usage: #example
 * code.coding[icd10-gm].extension.valueCoding = $icd-10-gm-mehrfachcodierungs-kennzeichen#*
 * code.coding[icd10-gm] = $icd-10-gm|2020#M73.04 "Bursitis gonorrhoica[A54.4] : Hand"
 * subject = Reference(Patient/12345)
-* encounter = Reference(Patient/12345)
+* encounter = Reference(Encounter/12345)
 * onsetPeriod.start = "2019-09-26T12:45:00+01:00"
 * onsetPeriod.end = "2020-03-25T13:00:00+01:00"
 * recordedDate = "2020-01-05T12:53:00+01:00"
