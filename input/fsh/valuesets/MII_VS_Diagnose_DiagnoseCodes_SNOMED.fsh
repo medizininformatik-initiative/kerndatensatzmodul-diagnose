@@ -7,7 +7,7 @@ Description: "Enthaelt alle SNOMED Clinical finding, Event und Situation with ex
 * insert Publisher
 * ^status = #active
 * ^experimental = true
-* ^date = "2021-08-25"
-* include codes from system SNOMED_CT where concept is-a #404684003
-* include codes from system SNOMED_CT where concept is-a #272379006
-* include codes from system SNOMED_CT where concept is-a #243796009
+* ^date = "2024-02-08"
+* include codes from system $sct where concept is-a #404684003
+* include codes from system $sct where concept is-a #272379006
+* include codes from system $sct where concept is-a #243796009

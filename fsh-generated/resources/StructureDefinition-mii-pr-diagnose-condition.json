@@ -2,10 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-diagnose-condition",
   "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose",
-  "version": "2024.0.0-ballot",
+  "version": "2024.0.0",
   "name": "MII_PR_Diagnose_Condition",
   "title": "MII PR Diagnose Condition",
   "status": "active",
+  "date": "2024-02-08",
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {
@@ -213,6 +214,11 @@
         "mustSupport": true
       },
       {
+        "id": "Condition.code.coding:sct.version",
+        "path": "Condition.code.coding.version",
+        "mustSupport": true
+      },
+      {
         "id": "Condition.code.coding:sct.code",
         "path": "Condition.code.coding.code",
         "min": 1,
@@ -303,6 +309,11 @@
         "path": "Condition.bodySite.coding.system",
         "min": 1,
         "patternUri": "http://snomed.info/sct",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.bodySite.coding:snomed-ct.version",
+        "path": "Condition.bodySite.coding.version",
         "mustSupport": true
       },
       {
