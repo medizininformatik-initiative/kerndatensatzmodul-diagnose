@@ -4,3 +4,5 @@
 fsh-generated/includes
 .DS_Store
 fsh-generated/resources/ImplementationGuide-mii-ig-diagnose*
+fsh-index.json
+fsh-index.txt
