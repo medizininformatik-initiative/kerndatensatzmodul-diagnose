@@ -38,6 +38,7 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * code.coding[sct] from MII_VS_Diagnose_DiagnoseCodes_SNOMED (required)
 * code.coding[sct] ^patternCoding.system = "http://snomed.info/sct"
 * code.coding[sct].system 1.. MS
+* code.coding[sct].version MS
 * code.coding[sct].code 1.. MS
 * code.coding[orphanet] ^patternCoding.system = "http://www.orpha.net"
 * code.coding[orphanet].system 1.. MS
@@ -57,6 +58,7 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
     icd-o-3 0..1 MS
 * bodySite.coding[snomed-ct].system 1.. MS
 * bodySite.coding[snomed-ct].system = "http://snomed.info/sct"
+* bodySite.coding[snomed-ct].version MS
 * bodySite.coding[snomed-ct].code 1.. MS
 * bodySite.coding[icd-o-3] ^short = "ICD-O-3 Topographie"
 * bodySite.coding[icd-o-3].system 1.. MS

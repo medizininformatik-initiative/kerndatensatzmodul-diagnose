@@ -213,6 +213,11 @@
         "mustSupport": true
       },
       {
+        "id": "Condition.code.coding:sct.version",
+        "path": "Condition.code.coding.version",
+        "mustSupport": true
+      },
+      {
         "id": "Condition.code.coding:sct.code",
         "path": "Condition.code.coding.code",
         "min": 1,
@@ -303,6 +308,11 @@
         "path": "Condition.bodySite.coding.system",
         "min": 1,
         "patternUri": "http://snomed.info/sct",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.bodySite.coding:snomed-ct.version",
+        "path": "Condition.bodySite.coding.version",
         "mustSupport": true
       },
       {
