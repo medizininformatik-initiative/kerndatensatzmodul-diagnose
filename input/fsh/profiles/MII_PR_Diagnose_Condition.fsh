@@ -7,6 +7,7 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
+* ^date = "2024-02-08"
 * id MS
 * meta MS
 * meta.source MS

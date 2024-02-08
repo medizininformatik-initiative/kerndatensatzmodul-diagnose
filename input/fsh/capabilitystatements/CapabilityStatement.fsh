@@ -40,7 +40,7 @@ Usage: #definition
 * title = "MII CPS Diagnose CapabilityStatement"
 * status = #active
 * experimental = false
-* date = "2023-10-31"
+* date = "2024-02-08"
 * description = "Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss, um das Modul Diagnose der Medizininformatik Initiative zu implementieren."
 * jurisdiction = urn:iso:std:iso:3166#DE "Germany"
 * kind = #requirements
