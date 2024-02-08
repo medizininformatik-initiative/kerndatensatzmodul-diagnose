@@ -3,12 +3,6 @@ parent:
 ---
 # Kerndatensatz Modul Diagnose
 
-| Note | Under Construction! |
-|---------|---------------------|
-| {{render:implementation-guides/ImplementationGuide-Common/images/Warning.jpg}} | This Implementation Guide represents the current working version of the module 'DIAGNOSIS'. The respective version published for productive use can be found on [this page of the Medical Informatics Initiative](https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Diagnose/IGMIIKDSModulDiagnose.html).|
-
-
-
 Die vorliegende Spezifikation beschreibt die FHIR Repräsentation des Moduls 'Diagnose' im Kerndatensatz der Medizininformatik-Initiative. 
 
 Im Folgenden werden die Use-Cases des Moduls, sowie die dazugehörigen FHIR-Profile und Terminologie-Ressourcen in ihrer verbindlichen Form beschrieben.
@@ -16,7 +10,7 @@ Im Folgenden werden die Use-Cases des Moduls, sowie die dazugehörigen FHIR-Prof
 | Veröffentlichung   |   |
 |---------|---|
 | Datum   | 31.10.2023  |
-| Version | 2.0.0-ballot (2024.0.0-ballot)         |
+| Version | 2.0.0 (2024.0.0)         |
 | Status  | Active       |
 | Realm   | DE          | 
 
