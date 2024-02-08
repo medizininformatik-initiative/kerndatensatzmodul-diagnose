@@ -5,7 +5,7 @@ applyExtensionMetadataToRoot: false
 id: mii-ig-diagnose-de-v2024
 name: MII_IG_Diagnose_DE
 status: active
-version: "2024.0.0-ballot"
+version: "2024.0.0"
 packageId: de.medizininformatikinitiative.kerndatensatz.diagnose
 copyrightYear: 2019+
 releaseLabel: ci-build
