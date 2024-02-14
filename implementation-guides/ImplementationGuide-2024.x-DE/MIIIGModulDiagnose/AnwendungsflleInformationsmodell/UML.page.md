@@ -3,8 +3,8 @@ parent:
 ---
 ### UML
 
-Als abstraktere Version eines Informationsmodells und zur besseren Verdeutlichung von Beziehungen der fachlichen Konzepte untereinander wurde ein UML-Klassendiagramm erstellt. In ART-DECOR als Gruppen abgebildete Konzepte werden als eigene Klassen modelliert, die hier Assoziationsbeziehungen zueinander haben. Eigenschaften der Person und des Falls sind farblich von den anderen Eigenschaften der Diagnose abgehoben.
+Die offizielle und abgenommene Version des Informationsmodells für das Modul DIAGNOSE ist nachfolgend als FHIR Logical Model abgebildet:
 
-{{render:implementation-guides/ImplementationGuide-Common/images/diagnoseUML.png}}
+{{render:implementation-guides/ImplementationGuide-Common/images/KDS_Diagnose_UML_v2.png}}
 
 
