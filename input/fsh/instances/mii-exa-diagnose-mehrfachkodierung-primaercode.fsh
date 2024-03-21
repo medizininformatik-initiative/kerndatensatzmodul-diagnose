@@ -1,6 +1,7 @@
 Instance: mii-exa-diagnose-mehrfachkodierung-primaercode
 InstanceOf: MII_PR_Diagnose_Condition
 Usage: #example
+* meta.profile[0] = "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2024.0.0"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * code.coding.extension[0].url = "http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit"

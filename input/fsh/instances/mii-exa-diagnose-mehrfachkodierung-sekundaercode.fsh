@@ -1,6 +1,7 @@
 Instance: mii-exa-diagnose-mehrfachkodierung-sekundaercode
 InstanceOf: MII_PR_Diagnose_Condition
 Usage: #example
+* meta.profile[0] = "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2024.0.0"
 * extension.url = "http://hl7.org/fhir/StructureDefinition/condition-related"
 * extension.valueReference = Reference(mii-exa-diagnose-mehrfachkodierung-primaercode)
 * clinicalStatus = $condition-clinical#active

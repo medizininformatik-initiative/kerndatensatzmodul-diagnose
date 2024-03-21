@@ -1,6 +1,7 @@
 Instance: mii-exa-diagnose-multiple-kodierungen
 InstanceOf: MII_PR_Diagnose_Condition
 Usage: #example
+* meta.profile[0] = "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2024.0.0"
 * clinicalStatus = $condition-clinical#active
 * code.coding[0].version = "2020"
 * code.coding[=] = $icd-10-gm#H83.8 "Sonstige näher bezeichnete Krankheiten des Innenohres"
@@ -15,6 +16,7 @@ Usage: #example
 Instance: mii-exa-diagnose-multiple-kodierungen-2
 InstanceOf: MII_PR_Diagnose_Condition
 Usage: #example
+* meta.profile[0] = "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2024.0.0"
 * clinicalStatus = $condition-clinical#active
 * code.coding[icd10-gm].version = "2022"
 * code.coding[icd10-gm] = $icd-10-gm#C50.1 "Zentraler Drüsenkörper der Brustdrüse"
