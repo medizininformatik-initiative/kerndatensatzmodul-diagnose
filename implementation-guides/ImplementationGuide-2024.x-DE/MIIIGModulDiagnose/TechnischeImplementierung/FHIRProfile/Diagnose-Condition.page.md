@@ -20,6 +20,7 @@ Dieses Profil beschreibt eine Diagnose in der Medizininformatik-Initiative.
 
 Bei der Kombination von ICD-10-Codes mit dem Kreuz-Stern-System wird für jeden ICD-10-Code (Ätiologie, Manifestation, Zusatzinformation) eine Condition-Ressource instanziiert. Die Condition-Ressourcen der Sekundärdiagnosen (Manifestation, Zusatzinformation) nutzen die [Extension Condition Related](http://hl7.org/fhir/R4/extension-condition-related.html), um auf die Primärdiagnose (Ätiologie) zu referenzieren. Zusätzlich zu kombinierten ICD-10-Codes gemappte Alpha-IDs oder Orpha-Codes, werden nur in der Condition-Ressource der Primärdiagnose angegeben. Bei abweichenden Diagnosesicherheiten zwischen Primär- und Sekundärdiagnose MUSS sichergestellt werden, dass die Diagnosesicherheit der Primärcondition auf die assoziierte Alpha-ID zutrifft. Das Vorgehen wird anhand der [Beispielressourcen](#beispiel-2) exemplarisch für Alpha-ID `I97525` und ICD-10-GM `A54.4+` `M73.09*` dargestellt.
 
+Gegebenenfalls vorhandene Mehrfachkodierungskennzeichen (`*`, `†`, `!`) werden von den jeweiligen ICD-10-Codes abgetrennt und in die Extension 'Mehrfachkodierungs-Kennzeichen' gesetzt. Das Element `Condition.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/icd-10-gm').code`, in dem der ICD-10-GM-Code abgebildet wird, SOLLTE NICHT ein Mehrfachkodierungskennzeichen oder Zusatzkennzeichen (z.B. Seitenlokalisation oder Diagnosesicherheit) enthalten. Siehe [Beispielressourcen](#beispiel-2).
 
 @```
 from 
