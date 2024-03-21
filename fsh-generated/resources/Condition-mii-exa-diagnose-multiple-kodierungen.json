@@ -6,6 +6,12 @@
       "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2024.0.0"
     ]
   },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+      "valueDateTime": "2020-02-13"
+    }
+  ],
   "clinicalStatus": {
     "coding": [
       {

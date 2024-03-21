@@ -12,7 +12,9 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * meta MS
 * meta.source MS
 * meta.profile MS
-* extension contains $condition-related named ReferenzPrimaerdiagnose 0..1 MS
+* extension contains 
+    $condition-related named ReferenzPrimaerdiagnose 0..1 MS and
+    $condition-assertedDate named Feststellungsdatum 0..1 MS
 * clinicalStatus MS
 * code 1.. MS
 * code.coding 1.. MS
@@ -104,4 +106,5 @@ Source: MII_PR_Diagnose_Condition
 * onsetPeriod.end -> "KlinischRelevanterZeitraum.Zeitraum.bis"
 * onsetPeriod.end.extension[lebensphase-bis].valueCodeableConcept -> "KlinischRelevanterZeitraum.Lebensphase.bis"
 * recordedDate -> "Dokumentationsdatum"
+* extension[Feststellungsdatum] -> "Feststellungsdatum"
 * note -> "Diagnoseerlaeuterung"
