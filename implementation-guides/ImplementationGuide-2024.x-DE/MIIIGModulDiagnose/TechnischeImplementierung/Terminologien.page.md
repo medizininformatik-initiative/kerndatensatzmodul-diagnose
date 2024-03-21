@@ -14,7 +14,7 @@ Da die ICD-10-GM aber für viele Fragenstellungen nicht aussagekräftig genug is
 
 ### ValueSets
 
-Es ist zu beachten, dass die nachfolgenden ValueSets keine Expansion beinhalten. Zur Verwendung für Validationszwecke muss diese per FHIR-Terminologieserver erstellt werden.
+Es ist zu beachten, dass die nachfolgenden ValueSets keine Expansion beinhalten. Zur Verwendung für Validationszwecke MUSS diese per FHIR-Terminologieserver erstellt werden.
 
 | diagnoses-sct | |
 |--|--|

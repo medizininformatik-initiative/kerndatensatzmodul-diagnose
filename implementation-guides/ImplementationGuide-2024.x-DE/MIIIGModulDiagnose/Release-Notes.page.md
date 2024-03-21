@@ -13,3 +13,4 @@
     - Siehe auch Beschreibung und Beispiele unter {{pagelink: DiagnoseCondition, text: Diagnose (Condition), hint: MII_PR_Diagnose_Condition}}.
 - Im Profil {{pagelink: DiagnoseCondition, text: Diagnose (Condition), hint: MII_PR_Diagnose_Condition}} wurden die Elemente `Condition.code.coding` und `Condition.bodySite.coding` jeweils um ein optionales Slice für ICD-O-3 erweitert.
 - Ressourcen verwenden in diesem Release modulübergreifend SNOMED CT in der Version `http://snomed.info/sct/900000000000207008/version/20230731`, um eine stabile [ValueSet-Expansion](http://hl7.org/fhir/R4/valueset.html#expansion) sicherzustellen.
+- Die {{pagelink: FHIRProfile, text: Anforderungsdokumentation, hint: Anforderungsdokumentation}} verwendet nun Schlüsselwörter nach [RFC-2119](https://datatracker.ietf.org/doc/html/rfc2119).

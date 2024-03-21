@@ -18,7 +18,7 @@ Dieses Profil beschreibt eine Diagnose in der Medizininformatik-Initiative.
 
 **Mehrfachkodierung und Condition-Ressourcen**
 
-Bei der Kombination von ICD-10-Codes mit dem Kreuz-Stern-System wird für jeden ICD-10-Code (Ätiologie, Manifestation, Zusatzinformation) eine Condition-Ressource instanziiert. Die Condition-Ressourcen der Sekundärdiagnosen (Manifestation, Zusatzinformation) nutzen die [Extension Condition Related](http://hl7.org/fhir/R4/extension-condition-related.html), um auf die Primärdiagnose (Ätiologie) zu referenzieren. Zusätzlich zu kombinierten ICD-10-Codes gemappte Alpha-IDs oder Orpha-Codes, werden nur in der Condition-Ressource der Primärdiagnose angegeben. Bei abweichenden Diagnosesicherheiten zwischen Primär- und Sekundärdiagnose muss sichergestellt werden, dass die Diagnosesicherheit der Primärcondition auf die assoziierte Alpha-ID zutrifft. Das Vorgehen wird anhand der [Beispielressourcen](#beispiel-2) exemplarisch für Alpha-ID `I97525` und ICD-10-GM `A54.4+` `M73.09*` dargestellt.
+Bei der Kombination von ICD-10-Codes mit dem Kreuz-Stern-System wird für jeden ICD-10-Code (Ätiologie, Manifestation, Zusatzinformation) eine Condition-Ressource instanziiert. Die Condition-Ressourcen der Sekundärdiagnosen (Manifestation, Zusatzinformation) nutzen die [Extension Condition Related](http://hl7.org/fhir/R4/extension-condition-related.html), um auf die Primärdiagnose (Ätiologie) zu referenzieren. Zusätzlich zu kombinierten ICD-10-Codes gemappte Alpha-IDs oder Orpha-Codes, werden nur in der Condition-Ressource der Primärdiagnose angegeben. Bei abweichenden Diagnosesicherheiten zwischen Primär- und Sekundärdiagnose MUSS sichergestellt werden, dass die Diagnosesicherheit der Primärcondition auf die assoziierte Alpha-ID zutrifft. Das Vorgehen wird anhand der [Beispielressourcen](#beispiel-2) exemplarisch für Alpha-ID `I97525` und ICD-10-GM `A54.4+` `M73.09*` dargestellt.
 
 
 @```
@@ -66,15 +66,17 @@ select
 
 | FHIR-Element | Erklärung |
 |--------------|-----------|
-|Condition.id  | Must-support, jedoch optional              |
-|Condtion.meta              |  Must-support, jedoch optional          |
-| Condtion.clinicalStatus             | Keine Einschränkungen, Kompletter Diagnose-Workflow wird unterstützt. Das Element ist optional, da es nicht routinemäßig erfasst wird. Zudem wird der Status bei der Entlassung meist nicht erfasst.|
-| Condtion.code             | Min. 1 kodierte Diagnose muss enthalten sein. System frei aus Alpha-ID, SNOMED CT, Orpahanet und ICD-10 GM wählbar.          |
-| Condtion.code.coding:icd10-gm.extension             | Innerhalb der Extensions "AusrufezeichenCode", "ManifestationsCode" und "Primaercode", sollten die jeweiligen Code-Bestandteile ohne jeweilige Sonderzeichen (z.B. "!", "+" oder "*") kodiert werden.|
-| Condtion.bodySite             | Falls dieses optionale Element verwendet wird, muss die Körperstelle min. mit einem SNOMED-CT Code kodiert werden. Hierbei ist nicht die Lateralität anzugeben, diese sollte per Condition.code.coding:icd10-gm.extenison:Seitenlokalisation angegeben werden. Feld dient dazu zusätzliche Angaben (über den Code hinausgehend) zur Manifestation zu dokumentieren. |
-| Condtion.subject             | Die Referenz zum Modul Person ist stets gegeben.|
-|Condition.encounter|Es ist zu beachten, dass in den meisten Fällen dieses Feld **nicht** zur Verknüpfung des Falls und der Diagnose verwendet werden sollte. Dieses Element dient zur Verknüpfung der Diagnose mit dem Fall / Kontakt in dem die Diagnose festgestellt wird (immer ein Kontakt mit einer konkreten Versorgungsstelle!). Generell sollte die Verknüpfung über Encounter.diagnosis erfolgen.|
-| Condtion.onset[x]             | In Anlehnung an die IPS als Period oder dateTime kodierbar. Lebensphasen können zusätzlich angegeben falls genaue Zeitpunkte nicht bekannt sind.|
+|Condition.id  | Must-support, jedoch OPTIONAL              |
+|Condtion.meta              |  Must-support, jedoch OPTIONAL          |
+| Condtion.clinicalStatus             | Keine Einschränkungen, Kompletter Diagnose-Workflow wird unterstützt. Das Element ist OPTIONAL, da es nicht routinemäßig erfasst wird. Zudem wird der Status bei der Entlassung meist nicht erfasst.|
+| Condtion.code             | Min. eine kodierte Diagnose MUSS enthalten sein. System frei aus Alpha-ID, SNOMED CT, Orpahanet und ICD-10-GM wählbar.          |
+| Condition.code.coding:icd10-gm.extension:Mehrfachcodierungs-Kennzeichen | Innerhalb der Extension "Mehrfachcodierungs-Kennzeichen" SOLLEN die jeweiligen Sonderzeichen ("!", "+" oder "*") vom ICD-10-GM-Code getrennt erfasst werden. |
+| Condition.code.coding:icd10-gm.extension:Seitenlokalisation | Die Extension "Seitenlokalisation" SOLL zur Angabe der Seitenlokalisation in der ICD-10-GM-Codierung verwendet werden. |
+| Condition.code.coding:icd10-gm.extension:Diagnosesicherheit | Die Extension "Diagnosesicherheit" SOLL zur Angabe der Diagnosesicherung in ICD-10-GM-Codierung verwendet werden. |
+| Condtion.bodySite             | OPTIONAL. Falls dieses optionale Element verwendet wird, MUSS die Körperstelle min. mit einem SNOMED-Code kodiert werden. Hierbei DARF NICHT die Lateralität angegeben werden. Diese SOLL per Condition.code.coding:icd10-gm.extension:Seitenlokalisation angegeben werden. Das Element dient dazu, zusätzliche Angaben (über den Code hinausgehend) zur Manifestation zu dokumentieren. |
+| Condtion.subject             | Die Referenz zum Modul Person MUSS stets gegeben sein.|
+| Condition.encounter | Dieses Element SOLLTE NICHT zur Verknüpfung des Falls und der Diagnose verwendet werden. Ausnahme: Das Element KANN zur Verknüpfung der Diagnose mit dem Fall / Kontakt in dem die Diagnose festgestellt wird (immer ein Kontakt mit einer konkreten Versorgungsstelle!) verwendet werden. Generell SOLLTE die Verknüpfung über Encounter.diagnosis erfolgen.|
+| Condtion.onset[x]             | KANN als Period oder dateTime erfasst werden. OPTIONAL zusätzlich Angabe von Lebensphase als Code mittels Extension, falls genaue Zeitpunkte nicht bekannt sind.|
 | Condtion.recordedDate             | Dient der zeitlichen Einordnung der Diagnose (Anstelle der Abfragen auf des initialen Abteilungsfall der Feststellung der Diagnose) |
 | Condtion.note             | Zusätzliche Erläuterung der Diagnose |
 
