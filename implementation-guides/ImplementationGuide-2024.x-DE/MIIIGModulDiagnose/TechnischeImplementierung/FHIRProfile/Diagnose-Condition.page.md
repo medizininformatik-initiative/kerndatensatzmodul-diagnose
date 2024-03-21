@@ -89,35 +89,18 @@ select
 
 <br>
 
-| FHIR Element | Logischer Datensatz |
-|--------------|-----------|
-|Condition.code:icd-10gm         | Diagnose.ICD10GMDiagnoseKodiert         |
-|Condition.code:icd-10gm.coding.code         |  Diagnose.ICD10GMDiagnoseKodiert.VollständigerDiagnosecode     |
-|Condition.code:icd-10gm.coding:extension:Primaercode        |  Diagnose.ICD10GMDiagnoseKodiert.Ätiologiekode |
-| Condition.code:icd-10gm.coding:extension:ManifestationsCode     |  Diagnose.ICD10GMDiagnoseKodiert.Manifestationskode |
-| Condition.code:icd-10gm.coding:extension:AusrufezeichenCode        |  Diagnose.ICD10GMDiagnoseKodiert.Ausrufezeichenkode |
-| Condition.code:icd-10gm.coding:extension:Diagnosesicherheit       |  Diagnose.ICD10GMDiagnoseKodiert.Diagnosesicherheit |
-| Condition.code:icd-10gm.coding:extension:Seitenlokalisation        |  Diagnose.ICD10GMDiagnoseKodiert.Seitenlokalisation |
-|Condition.code:alpha-id         |  Diagnose.ALPHAIDDiagnoseKodiert |
-|Condition.code:alpha-id (coding.system, coding.value)        |  Diagnose.ALPHAIDDiagnoseKodiert.VollständigerDiagnosecode|
-|Condition.code:orphanet        |  Diagnose.ORPHANETDiagnoseKodiert        |
-| Condition.code:orphanet (coding.system, coding.value)     |  Diagnose.ORPHANETDiagnoseKodiert.VollständigerDiagnosecode        |
-|Condition.code:sct         |  Diagnose.SNOMEDDiagnoseKodiert        |
-|Condition.code:sct (coding.system, coding.value)         |  Diagnose.SNOMEDDiagnoseKodiert.VollständigerDiagnosecode        |
-|Condition.code         |  Diagnose.WeitereKodiersysteme        |
-|Condition.code (coding.system, coding.value)        |  Diagnose.WeitereKodesysteme.VollständigerDiagnosecode      |
-|Condition.bodySite         |  Diagnose.Körperstelle        |
-|Condition.code.text         |  Diagnose.Freitextbeschreibung |
-|Condition.note         |  Diagnose.Diagnoseerläuterung |
-|Condition.recordedDate         |  Diagnose.Dokumentationsdatum |
-|Condition.clinicalStatus         |  Diagnose.KlinscherStatus        |
-|Condition.onset[x]         |  Diagnose.KlinischRelevanterZeitraum |
-|Condition.onsetPeriod         |  Diagnose.KlinischRelevanterZeitraum.Zeitraum |
-|Condition.onsetPeriod.start         |  Diagnose.KlinischRelevanterZeitraum.Zeitraum.von-am |
-|Condition.onsetPeriod.end         |  Diagnose.KlinischRelevanterZeitraum.Zeitraum.bis |
-|n.A.        |  Diagnose.KlinischRelevanterZeitraum.Lebensphase |
-|Condition.onsetPeriod.start.extension:lebensphase-start          |  Diagnose.KlinischRelevanterZeitraum.Lebensphase.von |
-|Condition.onsetPeriod.end.extension:lebensphase-ende         |  Diagnose.KlinischRelevanterZeitraum.Lebensphase.bis |
+Mapping Logischer Datensatz zu FHIR Diagnose-Profil 
+
+@```
+from StructureDefinition 
+where url = 'https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose'  
+    for differential.element
+    where mapping.identity='LogicalModel'
+    select 
+        FHIR: id,
+        LogischerDatensatz: mapping.map,
+        Definition: mapping.comment
+```
 
 <br>
 
