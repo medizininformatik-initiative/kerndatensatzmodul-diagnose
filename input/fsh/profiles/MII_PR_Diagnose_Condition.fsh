@@ -79,3 +79,29 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * onsetDateTime MS
 * recordedDate 1.. MS
 * note MS
+
+Mapping: FHIR-LogicalModel
+Id: LogicalModel
+Title: "FHIR-Profil zu LogicalModel Mapping"
+Source: MII_PR_Diagnose_Condition
+* clinicalStatus -> "KlinischerStatus"
+* code.coding[icd10-gm] -> "ICD10GMDiagnoseKodiert"
+* code.coding[icd10-gm].code -> "ICD10GMDiagnoseKodiert.Diagnosecode"
+* code.coding[alpha-id] -> "ALPHAIDKodiert"
+* code.coding[alpha-id].code -> "ALPHAIDKodiert.Diagnosecode"
+* code.coding[sct] -> "SNOMEDDiagnoseKodiert"
+* code.coding[sct].code -> "SNOMEDDiagnoseKodiert.Diagnosecode"
+* code.coding[orphanet] -> "ORPHANETDiagnoseKodiert"
+* code.coding[orphanet].code -> "ORPHANETDiagnoseKodiert.Diagnosecode"
+* code.coding -> "WeitereKodiersysteme"
+* code.coding.code -> "WeitereKodiersysteme.Diagnosecode"
+* code.text -> "Freitextbeschreibung"
+* bodySite -> "Koerperstelle"
+* onset[x] -> "KlinischRelevanterZeitraum"
+* onsetPeriod -> "KlinischRelevanterZeitraum.Zeitraum"
+* onsetPeriod.start -> "KlinischRelevanterZeitraum.Zeitraum.von"
+* onsetPeriod.start.extension[lebensphase-von].valueCodeableConcept -> "KlinischRelevanterZeitraum.Lebensphase.von"
+* onsetPeriod.end -> "KlinischRelevanterZeitraum.Zeitraum.bis"
+* onsetPeriod.end.extension[lebensphase-bis].valueCodeableConcept -> "KlinischRelevanterZeitraum.Lebensphase.bis"
+* recordedDate -> "Dokumentationsdatum"
+* note -> "Diagnoseerlaeuterung"
