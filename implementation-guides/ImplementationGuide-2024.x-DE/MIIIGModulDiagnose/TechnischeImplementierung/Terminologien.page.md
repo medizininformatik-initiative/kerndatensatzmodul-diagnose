@@ -16,10 +16,12 @@ Da die ICD-10-GM aber für viele Fragenstellungen nicht aussagekräftig genug is
 
 Es ist zu beachten, dass die nachfolgenden ValueSets keine Expansion beinhalten. Zur Verwendung für Validationszwecke MUSS diese per FHIR-Terminologieserver erstellt werden.
 
-| diagnoses-sct | |
+**Diagnosen SNOMED CT**
+
+| Diagnose Codes SNOMED| |
 |--|--|
 |Canonical ValueSet | https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct  |
-| Binding | ([required](http://hl7.org/fhir/terminologies.html#required)) {{pagelink:DiagnoseCondition, text:Observation.code}}|
+| Binding | ([required](http://hl7.org/fhir/terminologies.html#required)) {{pagelink:DiagnoseCondition, text:Condition.code}}|
 | Beschreibung | Das ValueSet 'diagnoses-sct' beinhaltet alle Codes welche für Condition.code:sct verwendet werden dürfen. |
 
 {{render:https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct}}
