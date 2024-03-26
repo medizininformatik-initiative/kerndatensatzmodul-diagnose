@@ -112,6 +112,24 @@ Es sind die Invarianten aus den Deutschen Basisprofilen zum Datentyp Profil ['Co
 
 ---
 
+**Terminology Bindings**
+
+@```
+from StructureDefinition
+where url in ('https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose' )
+for differential.element
+select
+Path: path,
+join binding.where(valueSet.exists())
+{
+  Name: valueSet.substring((9 + valueSet.indexOf('ValueSet/'))),
+  Strength: strength,
+  URL: valueSet
+}
+```
+
+---
+
 **Suchparameter**
 
 Folgende Suchparameter sind für das Modul Person relevant, auch in Kombination:

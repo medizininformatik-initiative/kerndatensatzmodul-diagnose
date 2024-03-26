@@ -24,6 +24,33 @@ Es ist zu beachten, dass die nachfolgenden ValueSets keine Expansion beinhalten.
 
 {{render:https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct}}
 
+---
+
+**Lebensphase**
+
+Das Lebensphase-ValueSet wird von HL7 Deutschland e.V. publiziert und in diesem Modul verwendet.
+
+| ValueSetLebensphaseDe | |
+|--|--|
+|Canonical ValueSet | http://fhir.de/ValueSet/lebensphase-de  |
+| Binding | ([required](http://hl7.org/fhir/terminologies.html#required)) {{pagelink:DiagnoseCondition, text:Condition.onset[x]:onsetPeriod.start.extension:lebensphase-von.value[x]:valueCodeableConcept.coding}} <br> ([required](http://hl7.org/fhir/terminologies.html#required)) {{pagelink:DiagnoseCondition, text:Condition.onset[x]:onsetPeriod.end.extension:lebensphase-bis.value[x]:valueCodeableConcept.coding}} |
+| Beschreibung | Das ValueSet 'ValueSetLebensphaseDe' beinhaltet SNOMED-Codes zur Angabe der Lebensphase |
+
+{{render:http://fhir.de/ValueSet/lebensphase-de}}
+
+Unter den im ValueSet als SNOMED-Codes enthaltenen Konzepten sind folgende Altersgruppen zu verstehen:
+
+@```
+from
+	CodeSystem
+where
+	url='https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/CodeSystem/mii-cs-diagnose-lebensphase-supplement-snomed'
+for
+	concept
+select
+	Code: code, Display: display, Description: property[0].value
+```
+
 ----------------------------------------------------
 
 ### CodesSystems
