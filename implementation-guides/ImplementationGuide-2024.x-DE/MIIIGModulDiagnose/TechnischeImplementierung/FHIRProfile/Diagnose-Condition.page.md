@@ -112,6 +112,24 @@ Es sind die Invarianten aus den Deutschen Basisprofilen zum Datentyp Profil ['Co
 
 ---
 
+**Terminology Bindings**
+
+@```
+from StructureDefinition
+where url in ('https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose' )
+for differential.element
+select
+Path: path,
+join binding.where(valueSet.exists())
+{
+  Name: valueSet.substring((9 + valueSet.indexOf('ValueSet/'))),
+  Strength: strength,
+  URL: valueSet
+}
+```
+
+---
+
 **Suchparameter**
 
 Folgende Suchparameter sind für das Modul Person relevant, auch in Kombination:
@@ -155,6 +173,54 @@ Folgende Suchparameter sind für das Modul Person relevant, auch in Kombination:
     ```GET [base]/Condition?patient=Patient/test```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "Condition.subject" finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+
+1. Der Suchparameter "icd10gm-diagnosesicherheit" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/Condition?icd10gm-diagnosesicherheit=https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_DIAGNOSESICHERHEIT|G```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "Condition.code.coding.extension.where(url='http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit').value" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+
+1. Der Suchparameter "icd10gm-diagnosesicherheit" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/Condition?icd10gm-code-diagnosesicherheit=http://fhir.de/CodeSystem/bfarm/icd-10-gm|B05.3$https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_DIAGNOSESICHERHEIT|G```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "Condition.code und Condition.code.coding.extension.where(url='http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit').value" finden sich in der [FHIR-Basisspezifikation - Abschnitt "composite"](http://hl7.org/fhir/R4/search.html#composite).
+
+1. Der Suchparameter "icd10gm-mehrfachcodierung" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/Condition?icd10gm-mehrfachcodierung=http://fhir.de/CodeSystem/icd-10-gm-mehrfachcodierungs-kennzeichen|†```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "Condition.code.coding.extension.where(url='http://fhir.de/StructureDefinition/icd-10-gm-mehrfachcodierungs-kennzeichen').value" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+
+1. Der Suchparameter "icd10gm-code-mehrfachcodierung" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/Condition?icd10gm-code-mehrfachcodierung=http://fhir.de/CodeSystem/bfarm/icd-10-gm|B05.3$http://fhir.de/CodeSystem/icd-10-gm-mehrfachcodierungs-kennzeichen|†```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "Condition.code und Condition.code.coding.extension.where(url='http://fhir.de/StructureDefinition/icd-10-gm-mehrfachcodierungs-kennzeichen').value" finden sich in der [FHIR-Basisspezifikation - Abschnitt "composite"](http://hl7.org/fhir/R4/search.html#composite).
+
+1. Der Suchparameter "icd10gm-seitenlokalisation" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/Condition?icd10gm-seitenlokalisation=https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_SEITENLOKALISATION|B```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "Condition.code.coding.extension.where(url = 'http://fhir.de/StructureDefinition/seitenlokalisation').value" finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+
+1. Der Suchparameter "icd10gm-diagnosesicherheit" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/Condition?icd10gm-code-seitenlokalisation=http://fhir.de/CodeSystem/bfarm/icd-10-gm|B05.3$https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_SEITENLOKALISATION|B```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach "Condition.code und Condition.code.coding.extension.where(url = 'http://fhir.de/StructureDefinition/seitenlokalisation').value" finden sich in der [FHIR-Basisspezifikation - Abschnitt "composite"](http://hl7.org/fhir/R4/search.html#composite).
 
 ---
 
