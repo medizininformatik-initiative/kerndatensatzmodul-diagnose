@@ -357,17 +357,6 @@
               ]
             },
             {
-              "name": "icd10gm-code-diagnosesicherheit",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/SearchParameter/Condition-code-icd10gm-code-diagnosesicherheit",
-              "type": "composite",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
               "name": "icd10gm-mehrfachcodierung",
               "definition": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/SearchParameter/Condition-code-icd10gm-mehrfachcodierung",
               "type": "token",
@@ -379,31 +368,9 @@
               ]
             },
             {
-              "name": "icd10gm-code-mehrfachcodierung",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/SearchParameter/Condition-code-icd10gm-code-mehrfachcodierung",
-              "type": "composite",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
               "name": "icd10gm-seitenlokalisation",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/SearchParameter/Condition-code-coding-icd10gm-extension-seitenlokalisation",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/SearchParameter/Condition-code-icd10gm-extension-seitenlokalisation",
               "type": "token",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
-              "name": "icd10gm-code-seitenlokalisation",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/SearchParameter/Condition-code-icd10gm-code-seitenlokalisation",
-              "type": "composite",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
