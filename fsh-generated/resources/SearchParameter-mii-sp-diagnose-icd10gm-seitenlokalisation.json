@@ -1,7 +1,7 @@
 {
   "resourceType": "SearchParameter",
   "id": "mii-sp-diagnose-icd10gm-seitenlokalisation",
-  "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/SearchParameter/Condition-code-coding-icd10gm-extension-seitenlokalisation",
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/SearchParameter/Condition-code-icd10gm-extension-seitenlokalisation",
   "version": "2024.0.0",
   "publisher": "Medizininformatik Initiative",
   "contact": [
