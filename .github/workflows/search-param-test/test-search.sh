@@ -28,16 +28,16 @@ E="http://fhir.de/CodeSystem/icd-10-gm-mehrfachcodierungs-kennzeichen|†"
 test "A54.4 count" "$(search "code=$A54_4")" "1"
 test "M73.04 count" "$(search "code=$M73_04")" "1"
 
-# Suchparameter: icd10gm-code-diagnosesicherheit
-test "A54.4/A count" "$(search "icd10gm-code-diagnosesicherheit=$A54_4\$$A")" "0"
-test "A54.4/G count" "$(search "icd10gm-code-diagnosesicherheit=$A54_4\$$G")" "1"
+# Suchparameter: icd10gm-diagnosesicherheit
+test "A54.4/A count" "$(search "code=$A54_4&icd10gm-diagnosesicherheit=$A")" "0"
+test "A54.4/G count" "$(search "code=$A54_4&icd10gm-diagnosesicherheit=$G")" "1"
 
-# Suchparameter: icd10gm-code-seitenlokalisation
-test "A54.4/L count" "$(search "icd10gm-code-seitenlokalisation=$A54_4\$$L")" "1"
-test "A54.4/R count" "$(search "icd10gm-code-seitenlokalisation=$A54_4\$$R")" "0"
+# Suchparameter: icd10gm-seitenlokalisation
+test "A54.4/L count" "$(search "code=$A54_4&icd10gm-seitenlokalisation=$L")" "1"
+test "A54.4/R count" "$(search "code=$A54_4&icd10gm-seitenlokalisation=$R")" "0"
 
-# Suchparameter: icd10gm-code-mehrfachcodierung
-test "A54.4/M count" "$(search "icd10gm-code-mehrfachcodierung=$A54_4\$$M")" "0"
-test "A54.4/E count" "$(search "icd10gm-code-mehrfachcodierung=$A54_4\$$E")" "1"
-test "M73.04/M count" "$(search "icd10gm-code-mehrfachcodierung=$M73_04\$$M")" "1"
-test "M73.04/E count" "$(search "icd10gm-code-mehrfachcodierung=$M73_04\$$E")" "0"
+# Suchparameter: icd10gm-mehrfachcodierung
+test "A54.4/M count" "$(search "code=$A54_4&icd10gm-mehrfachcodierung=$M")" "0"
+test "A54.4/E count" "$(search "code=$A54_4&icd10gm-mehrfachcodierung=$E")" "1"
+test "M73.04/M count" "$(search "code=$M73_04&icd10gm-mehrfachcodierung=$M")" "1"
+test "M73.04/E count" "$(search "code=$M73_04&icd10gm-mehrfachcodierung=$E")" "0"
