@@ -10,8 +10,8 @@ Das vorliegende Projekt beschreibt die FHIR-Spezifikation des Basismoduls 'Diagn
 
 ### Status:
 
-Aktuelle stabile Version: [1.0.4](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.diagnose/1.0.4) </br>
-Vorschauversion: [2024.0.0-ballot](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.diagnose/2024.0.0-ballot)
+Aktuelle stabile Version: [2024.0.0](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.diagnose/2024.0.0)
+
 <!-- Reifegrad: -->
 
 Alle veröffentlichen FHIR Artefakte innerhalb des Projektes verfügen über einen Status, durch welchen der jeweilige Reifegrad abgeleitet werden kann.
