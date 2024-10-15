@@ -2,7 +2,7 @@
   "resourceType": "CapabilityStatement",
   "id": "mii-cps-diagnose-capabilitystatement",
   "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/CapabilityStatement/metadata",
-  "version": "2024.0.0",
+  "version": "2025.0.0",
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {
@@ -59,7 +59,7 @@
             ]
           },
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-condition|2024.0.0"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-condition|2025.0.0"
           ],
           "_supportedProfile": [
             {
