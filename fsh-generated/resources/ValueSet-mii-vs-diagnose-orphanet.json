@@ -1,0 +1,36 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Diagnose_Orphanet",
+  "id": "mii-vs-diagnose-orphanet",
+  "title": "MII VS Diagnose Orphanet",
+  "description": "Enthaelt alle Orpha-Kennnummern (ORPHAcodes)",
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-orphanet",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "copyright": "INSERM US14 (Institut national de la santé et de la recherche médicale)",
+  "version": "2025.0.0",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "experimental": true,
+  "date": "2024-10-18",
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.orpha.net"
+      }
+    ]
+  }
+}

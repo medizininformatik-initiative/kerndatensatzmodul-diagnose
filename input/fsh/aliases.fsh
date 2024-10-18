@@ -5,6 +5,7 @@ Alias: $KBV_CS_SFHIR_ICD_SEITENLOKALISATION = https://fhir.kbv.de/CodeSystem/KBV
 Alias: $icd-10-gm-mehrfachcodierungs-kennzeichen = http://fhir.de/CodeSystem/icd-10-gm-mehrfachcodierungs-kennzeichen
 Alias: $icd-10-gm = http://fhir.de/CodeSystem/bfarm/icd-10-gm
 Alias: $alpha-id = http://fhir.de/CodeSystem/bfarm/alpha-id
+Alias: $alpha-id-vs = http://fhir.de/ValueSet/bfarm/alpha-id
 Alias: $orpha = http://www.orpha.net
 Alias: $sct = http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20230731
 Alias: $condition-related = http://hl7.org/fhir/StructureDefinition/condition-related

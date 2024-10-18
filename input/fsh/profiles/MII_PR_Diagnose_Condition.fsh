@@ -45,8 +45,8 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
     icd10-gm 0..1 MS and
     alpha-id 0..1 MS and
     sct 0..1 MS and
-    orphanet 0..1 MS and
-    icd-o-3 0..1 MS
+    orphanet 0..1 MS //and
+    //icd-o-3 0..1 MS
 * code.coding[icd10-gm] only CodingICD10GM
 * code.coding[icd10-gm] from ICD10GM (required)
 * code.coding[icd10-gm] ^patternCoding.system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
@@ -54,7 +54,7 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * code.coding[icd10-gm].version 1.. MS
 * code.coding[icd10-gm].code 1.. MS
 * code.coding[alpha-id] only CodingAlphaID
-* code.coding[alpha-id] from AlphaId (required)
+* code.coding[alpha-id] from $alpha-id-vs (required)
 * code.coding[alpha-id] ^patternCoding.system = "http://fhir.de/CodeSystem/bfarm/alpha-id"
 * code.coding[alpha-id].system 1.. MS
 * code.coding[alpha-id].code 1.. MS
@@ -63,6 +63,7 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * code.coding[sct].system 1.. MS
 * code.coding[sct].version MS
 * code.coding[sct].code 1.. MS
+* code.coding[orphanet] from mii-vs-diagnose-orphanet (required)
 * code.coding[orphanet] ^patternCoding.system = "http://www.orpha.net"
 * code.coding[orphanet].system 1.. MS
 * code.coding[orphanet].code 1.. MS
