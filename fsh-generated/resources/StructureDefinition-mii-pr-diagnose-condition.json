@@ -750,34 +750,11 @@
       {
         "id": "Condition.subject",
         "path": "Condition.subject",
-        "type": [
-          {
-            "code": "Reference",
-            "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference"
-            ],
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Patient",
-              "http://hl7.org/fhir/StructureDefinition/Group"
-            ]
-          }
-        ],
         "mustSupport": true
       },
       {
         "id": "Condition.encounter",
         "path": "Condition.encounter",
-        "type": [
-          {
-            "code": "Reference",
-            "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference"
-            ],
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Encounter"
-            ]
-          }
-        ],
         "mustSupport": true,
         "_short": {
           "extension": [
@@ -976,14 +953,8 @@
         "mustSupport": true
       },
       {
-        "id": "Condition.onset[x]:onsetPeriod.start.extension:lebensphase-von.value[x]:valueCodeableConcept",
+        "id": "Condition.onset[x]:onsetPeriod.start.extension:lebensphase-von.value[x]",
         "path": "Condition.onset[x].start.extension.value[x]",
-        "sliceName": "valueCodeableConcept",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "mapping": [
           {
             "identity": "LogicalModel",
@@ -1019,14 +990,8 @@
         "mustSupport": true
       },
       {
-        "id": "Condition.onset[x]:onsetPeriod.end.extension:lebensphase-bis.value[x]:valueCodeableConcept",
+        "id": "Condition.onset[x]:onsetPeriod.end.extension:lebensphase-bis.value[x]",
         "path": "Condition.onset[x].end.extension.value[x]",
-        "sliceName": "valueCodeableConcept",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "mapping": [
           {
             "identity": "LogicalModel",

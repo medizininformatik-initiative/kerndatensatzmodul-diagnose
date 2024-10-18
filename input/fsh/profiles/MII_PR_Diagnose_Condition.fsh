@@ -94,8 +94,8 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 //* bodySite.coding[icd-o-3].system = "http://terminology.hl7.org/CodeSystem/icd-o-3"
 //* bodySite.coding[icd-o-3].code 1.. MS 
 * subject 1.. MS
-* subject only $MII-Reference
-* encounter only $MII-Reference
+//* subject only $MII-Reference
+//* encounter only $MII-Reference
 * encounter MS
 * insert Translation(encounter ^short, de-DE, Fall oder Kontakt)
 * insert Translation(encounter ^short, en-US, Encounter)
