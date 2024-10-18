@@ -18,7 +18,7 @@
   "title": "MII CPS Diagnose CapabilityStatement",
   "status": "active",
   "experimental": false,
-  "date": "2024-03-27",
+  "date": "2024-10-18",
   "description": "Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss, um das Modul Diagnose der Medizininformatik Initiative zu implementieren.",
   "jurisdiction": [
     {
@@ -59,7 +59,7 @@
             ]
           },
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-condition|2025.0.0"
+            "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2025.0.0"
           ],
           "_supportedProfile": [
             {
@@ -347,7 +347,7 @@
             },
             {
               "name": "icd10gm-diagnosesicherheit",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/SearchParameter/Condition-code-icd10gm-diagnosesicherheit",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-condition-icd10gm-diagnosesicherheit",
               "type": "token",
               "extension": [
                 {
@@ -358,7 +358,7 @@
             },
             {
               "name": "icd10gm-mehrfachcodierung",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/SearchParameter/Condition-code-icd10gm-mehrfachcodierung",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-condition-icd10gm-mehrfachcodierung",
               "type": "token",
               "extension": [
                 {
@@ -369,7 +369,7 @@
             },
             {
               "name": "icd10gm-seitenlokalisation",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/SearchParameter/Condition-code-icd10gm-extension-seitenlokalisation",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-condition-icd10gm-seitenlokalisation",
               "type": "token",
               "extension": [
                 {

@@ -11,7 +11,7 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
-* ^date = "2024-10-15"
+* ^date = "2024-10-18"
 * id MS
 * meta MS
 * meta.source MS
@@ -45,8 +45,8 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
     icd10-gm 0..1 MS and
     alpha-id 0..1 MS and
     sct 0..1 MS and
-    orphanet 0..1 MS and
-    icd-o-3 0..1 MS
+    orphanet 0..1 MS //and
+    //icd-o-3 0..1 MS
 * code.coding[icd10-gm] only CodingICD10GM
 * code.coding[icd10-gm] from ICD10GM (required)
 * code.coding[icd10-gm] ^patternCoding.system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
@@ -54,7 +54,7 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * code.coding[icd10-gm].version 1.. MS
 * code.coding[icd10-gm].code 1.. MS
 * code.coding[alpha-id] only CodingAlphaID
-* code.coding[alpha-id] from AlphaId (required)
+* code.coding[alpha-id] from $alpha-id-vs (required)
 * code.coding[alpha-id] ^patternCoding.system = "http://fhir.de/CodeSystem/bfarm/alpha-id"
 * code.coding[alpha-id].system 1.. MS
 * code.coding[alpha-id].code 1.. MS
@@ -63,14 +63,15 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * code.coding[sct].system 1.. MS
 * code.coding[sct].version MS
 * code.coding[sct].code 1.. MS
+* code.coding[orphanet] from mii-vs-diagnose-orphanet (required)
 * code.coding[orphanet] ^patternCoding.system = "http://www.orpha.net"
 * code.coding[orphanet].system 1.. MS
 * code.coding[orphanet].code 1.. MS
-* code.coding[icd-o-3] ^short = "ICD-O-3 Morphologie"
-* code.coding[icd-o-3] ^patternCoding.system = "http://terminology.hl7.org/CodeSystem/icd-o-3"
-* code.coding[icd-o-3].system 1.. MS
-* code.coding[icd-o-3].version MS
-* code.coding[icd-o-3].code 1.. MS
+//* code.coding[icd-o-3] ^short = "ICD-O-3 Morphologie"
+//* code.coding[icd-o-3] ^patternCoding.system = "http://terminology.hl7.org/CodeSystem/icd-o-3"
+//* code.coding[icd-o-3].system 1.. MS
+//* code.coding[icd-o-3].version MS
+//* code.coding[icd-o-3].code 1.. MS
 * bodySite MS
 * insert Translation(bodySite ^short, de-DE, Körperstelle)
 * insert Translation(bodySite ^short, en-US, Body site)
@@ -81,19 +82,20 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * bodySite.coding ^slicing.discriminator.path = "system"
 * bodySite.coding ^slicing.rules = #open
 * bodySite.coding contains 
-    snomed-ct 1..1 MS and
-    icd-o-3 0..1 MS
+    snomed-ct 1..1 MS //and
+    //icd-o-3 0..1 MS
+* bodySite.coding[snomed-ct] from mii-vs-diagnose-bodystructure-snomed (required)
 * bodySite.coding[snomed-ct].system 1.. MS
 * bodySite.coding[snomed-ct].system = "http://snomed.info/sct"
 * bodySite.coding[snomed-ct].version MS
 * bodySite.coding[snomed-ct].code 1.. MS
-* bodySite.coding[icd-o-3] ^short = "ICD-O-3 Topographie"
-* bodySite.coding[icd-o-3].system 1.. MS
-* bodySite.coding[icd-o-3].system = "http://terminology.hl7.org/CodeSystem/icd-o-3"
-* bodySite.coding[icd-o-3].code 1.. MS 
+//* bodySite.coding[icd-o-3] ^short = "ICD-O-3 Topographie"
+//* bodySite.coding[icd-o-3].system 1.. MS
+//* bodySite.coding[icd-o-3].system = "http://terminology.hl7.org/CodeSystem/icd-o-3"
+//* bodySite.coding[icd-o-3].code 1.. MS 
 * subject 1.. MS
-* subject only $MII-Reference
-* encounter only $MII-Reference
+//* subject only $MII-Reference
+//* encounter only $MII-Reference
 * encounter MS
 * insert Translation(encounter ^short, de-DE, Fall oder Kontakt)
 * insert Translation(encounter ^short, en-US, Encounter)

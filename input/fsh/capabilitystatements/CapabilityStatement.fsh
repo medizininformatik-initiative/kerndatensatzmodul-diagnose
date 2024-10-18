@@ -40,7 +40,7 @@ Usage: #definition
 * title = "MII CPS Diagnose CapabilityStatement"
 * status = #active
 * experimental = false
-* date = "2024-03-27"
+* date = "2024-10-18"
 * description = "Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss, um das Modul Diagnose der Medizininformatik Initiative zu implementieren."
 * jurisdiction = urn:iso:std:iso:3166#DE "Germany"
 * kind = #requirements
@@ -52,7 +52,7 @@ Usage: #definition
 // Condition requirements
 * insert SupportResource(Condition, #SHALL)
 * insert Profile(http://hl7.org/fhir/StructureDefinition/Condition, #SHALL)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/ext/modul-symptom/StructureDefinition/finding-condition|2025.0.0, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2025.0.0, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
@@ -78,6 +78,6 @@ Usage: #definition
 * insert SupportSearchParam(stage, http://hl7.org/fhir/SearchParameter/Condition-stage, #token, #SHALL)
 * insert SupportSearchParam(subject, http://hl7.org/fhir/SearchParameter/Condition-subject, #reference, #SHALL)
 * insert SupportSearchParam(verification-status, http://hl7.org/fhir/SearchParameter/Condition-verification-status, #token, #SHALL)
-* insert SupportSearchParam(icd10gm-diagnosesicherheit, https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/SearchParameter/Condition-code-icd10gm-diagnosesicherheit, #token, #SHALL)
-* insert SupportSearchParam(icd10gm-mehrfachcodierung, https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/SearchParameter/Condition-code-icd10gm-mehrfachcodierung, #token, #SHALL)
-* insert SupportSearchParam(icd10gm-seitenlokalisation, https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/SearchParameter/Condition-code-icd10gm-extension-seitenlokalisation, #token, #SHALL)
+* insert SupportSearchParam(icd10gm-diagnosesicherheit, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-condition-icd10gm-diagnosesicherheit, #token, #SHALL)
+* insert SupportSearchParam(icd10gm-mehrfachcodierung, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-condition-icd10gm-mehrfachcodierung, #token, #SHALL)
+* insert SupportSearchParam(icd10gm-seitenlokalisation, https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-condition-icd10gm-seitenlokalisation, #token, #SHALL)

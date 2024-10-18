@@ -36,7 +36,7 @@
     ]
   },
   "status": "active",
-  "date": "2024-10-15",
+  "date": "2024-10-18",
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {
@@ -592,6 +592,10 @@
           "system": "http://www.orpha.net"
         },
         "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-orphanet"
+        },
         "mapping": [
           {
             "identity": "LogicalModel",
@@ -616,35 +620,6 @@
             "map": "ORPHANETDiagnoseKodiert.Diagnosecode"
           }
         ]
-      },
-      {
-        "id": "Condition.code.coding:icd-o-3",
-        "path": "Condition.code.coding",
-        "sliceName": "icd-o-3",
-        "short": "ICD-O-3 Morphologie",
-        "min": 0,
-        "max": "1",
-        "patternCoding": {
-          "system": "http://terminology.hl7.org/CodeSystem/icd-o-3"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "Condition.code.coding:icd-o-3.system",
-        "path": "Condition.code.coding.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Condition.code.coding:icd-o-3.version",
-        "path": "Condition.code.coding.version",
-        "mustSupport": true
-      },
-      {
-        "id": "Condition.code.coding:icd-o-3.code",
-        "path": "Condition.code.coding.code",
-        "min": 1,
-        "mustSupport": true
       },
       {
         "id": "Condition.code.text",
@@ -748,7 +723,11 @@
         "sliceName": "snomed-ct",
         "min": 1,
         "max": "1",
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-bodystructure-snomed"
+        }
       },
       {
         "id": "Condition.bodySite.coding:snomed-ct.system",
@@ -769,58 +748,13 @@
         "mustSupport": true
       },
       {
-        "id": "Condition.bodySite.coding:icd-o-3",
-        "path": "Condition.bodySite.coding",
-        "sliceName": "icd-o-3",
-        "short": "ICD-O-3 Topographie",
-        "min": 0,
-        "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "Condition.bodySite.coding:icd-o-3.system",
-        "path": "Condition.bodySite.coding.system",
-        "min": 1,
-        "patternUri": "http://terminology.hl7.org/CodeSystem/icd-o-3",
-        "mustSupport": true
-      },
-      {
-        "id": "Condition.bodySite.coding:icd-o-3.code",
-        "path": "Condition.bodySite.coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
         "id": "Condition.subject",
         "path": "Condition.subject",
-        "type": [
-          {
-            "code": "Reference",
-            "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference"
-            ],
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Patient",
-              "http://hl7.org/fhir/StructureDefinition/Group"
-            ]
-          }
-        ],
         "mustSupport": true
       },
       {
         "id": "Condition.encounter",
         "path": "Condition.encounter",
-        "type": [
-          {
-            "code": "Reference",
-            "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference"
-            ],
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Encounter"
-            ]
-          }
-        ],
         "mustSupport": true,
         "_short": {
           "extension": [
@@ -1019,14 +953,8 @@
         "mustSupport": true
       },
       {
-        "id": "Condition.onset[x]:onsetPeriod.start.extension:lebensphase-von.value[x]:valueCodeableConcept",
+        "id": "Condition.onset[x]:onsetPeriod.start.extension:lebensphase-von.value[x]",
         "path": "Condition.onset[x].start.extension.value[x]",
-        "sliceName": "valueCodeableConcept",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "mapping": [
           {
             "identity": "LogicalModel",
@@ -1062,14 +990,8 @@
         "mustSupport": true
       },
       {
-        "id": "Condition.onset[x]:onsetPeriod.end.extension:lebensphase-bis.value[x]:valueCodeableConcept",
+        "id": "Condition.onset[x]:onsetPeriod.end.extension:lebensphase-bis.value[x]",
         "path": "Condition.onset[x].end.extension.value[x]",
-        "sliceName": "valueCodeableConcept",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "mapping": [
           {
             "identity": "LogicalModel",
