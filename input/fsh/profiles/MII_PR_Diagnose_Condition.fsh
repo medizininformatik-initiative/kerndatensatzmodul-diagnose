@@ -84,6 +84,7 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * bodySite.coding contains 
     snomed-ct 1..1 MS //and
     //icd-o-3 0..1 MS
+* bodySite.coding[snomed-ct] from mii-vs-diagnose-bodystructure-snomed (required)
 * bodySite.coding[snomed-ct].system 1.. MS
 * bodySite.coding[snomed-ct].system = "http://snomed.info/sct"
 * bodySite.coding[snomed-ct].version MS
