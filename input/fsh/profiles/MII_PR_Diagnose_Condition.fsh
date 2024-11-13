@@ -19,22 +19,30 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * extension contains 
     $condition-related named ReferenzPrimaerdiagnose 0..1 MS and
     $condition-assertedDate named Feststellungsdatum 0..1 MS
+* extension[Feststellungsdatum] ^short = "Feststellungsdatum"
 * insert Translation(extension[Feststellungsdatum] ^short, de-DE, Feststellungsdatum)
 * insert Translation(extension[Feststellungsdatum] ^short, en-US, Asserted date)
+* extension[Feststellungsdatum] ^definition = "Datum, an dem die Diagnose erstmals festgestellt wurde"
 * insert Translation(extension[Feststellungsdatum] ^definition, de-DE, Datum\, an dem die Diagnose erstmals festgestellt wurde)
 * insert Translation(extension[Feststellungsdatum] ^definition, en-US, Date the condition was first asserted)
 * clinicalStatus MS
+* clinicalStatus ^short = "Klinischer Status"
 * insert Translation(clinicalStatus ^short, de-DE, Klinischer Status)
 * insert Translation(clinicalStatus ^short, en-US, Clinical status)
+* clinicalStatus ^definition = "aktiv | Rezidiv | Rückfall | inaktiv | Remission | abgeklungen"
 * insert Translation(clinicalStatus ^definition, de-DE, aktiv | Rezidiv | Rückfall | inaktiv | Remission | abgeklungen)
 * insert Translation(clinicalStatus ^definition, en-US, active | recurrence | relapse | inactive | remission | resolved)
+* verificationStatus ^short = "Verifizierungsstatus"
 * insert Translation(verificationStatus ^short, de-DE, Verifizierungsstatus)
 * insert Translation(verificationStatus ^short, en-US, Verification status)
+* verificationStatus ^definition = "unbestätigt | vorläufig | differential | bestätigt | widerlegt | fehlerhafte Eingabe"
 * insert Translation(verificationStatus ^definition, de-DE, unbestätigt | vorläufig | differential | bestätigt | widerlegt | fehlerhafte Eingabe)
 * insert Translation(verificationStatus ^definition, en-US, unconfirmed | provisional | differential | confirmed | refuted | entered-in-error)
 * code 1.. MS
+* code ^short = "Code"
 * insert Translation(code ^short, de-DE, Code)
 * insert Translation(code ^short, en-US, Code)
+* code ^definition = "Ein ICD-10-, Alpha-ID-, SNOMED-, Orpha- oder anderer Code, der die Diagnose identifiziert."
 * insert Translation(code ^definition, de-DE, Ein ICD-10-\, Alpha-ID-\, SNOMED-\, Orpha- oder anderer Code\, der die Diagnose identifiziert.)
 * insert Translation(code ^definition, en-US, An ICD-10-\, Alpha-ID-\, SNOMED-\, Orpha- or other code that identifies the diagnosis.)
 * code.coding 1.. MS
@@ -47,22 +55,26 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
     sct 0..1 MS and
     orphanet 0..1 MS //and
     //icd-o-3 0..1 MS
+* insert AddIcd10CodingTranslation(code.coding[icd10-gm])
 * code.coding[icd10-gm] only CodingICD10GM
 * code.coding[icd10-gm] from ICD10GM (required)
 * code.coding[icd10-gm] ^patternCoding.system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
 * code.coding[icd10-gm].system 1.. MS
 * code.coding[icd10-gm].version 1.. MS
 * code.coding[icd10-gm].code 1.. MS
+* insert AddAlphaIdCodingTranslation(code.coding[alpha-id])
 * code.coding[alpha-id] only CodingAlphaID
 * code.coding[alpha-id] from $alpha-id-vs (required)
 * code.coding[alpha-id] ^patternCoding.system = "http://fhir.de/CodeSystem/bfarm/alpha-id"
 * code.coding[alpha-id].system 1.. MS
 * code.coding[alpha-id].code 1.. MS
+* insert AddSnomedCodingTranslation(code.coding[sct])
 * code.coding[sct] from MII_VS_Diagnose_DiagnoseCodes_SNOMED (required)
 * code.coding[sct] ^patternCoding.system = "http://snomed.info/sct"
 * code.coding[sct].system 1.. MS
 * code.coding[sct].version MS
 * code.coding[sct].code 1.. MS
+* insert AddOrphaCodingTranslation(code.coding[orphanet])
 * code.coding[orphanet] from mii-vs-diagnose-orphanet (required)
 * code.coding[orphanet] ^patternCoding.system = "http://www.orpha.net"
 * code.coding[orphanet].system 1.. MS
@@ -73,8 +85,10 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 //* code.coding[icd-o-3].version MS
 //* code.coding[icd-o-3].code 1.. MS
 * bodySite MS
+* bodySite ^short = "Körperstelle"
 * insert Translation(bodySite ^short, de-DE, Körperstelle)
 * insert Translation(bodySite ^short, en-US, Body site)
+* bodySite ^definition = "Die Körperstelle der Diagnose mittels SNOMED oder anderem Code."
 * insert Translation(bodySite ^definition, de-DE, Körperstelle der Diagnose mittels SNOMED oder anderem Code.)
 * insert Translation(bodySite ^definition, en-US, The body site of the diagnosis using SNOMED or other systems.)
 * bodySite.coding MS
@@ -84,6 +98,7 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * bodySite.coding contains 
     snomed-ct 1..1 MS //and
     //icd-o-3 0..1 MS
+* insert AddSnomedCodingTranslation(bodySite.coding[snomed-ct])
 * bodySite.coding[snomed-ct] from mii-vs-diagnose-bodystructure-snomed (required)
 * bodySite.coding[snomed-ct].system 1.. MS
 * bodySite.coding[snomed-ct].system = "http://snomed.info/sct"
@@ -97,30 +112,42 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 //* subject only $MII-Reference
 //* encounter only $MII-Reference
 * encounter MS
+* encounter ^short = "Fall oder Kontakt"
 * insert Translation(encounter ^short, de-DE, Fall oder Kontakt)
 * insert Translation(encounter ^short, en-US, Encounter)
+* encounter ^definition = "Fall oder Kontakt, bei dem die Diagnose festgestellt wurde."
 * insert Translation(encounter ^definition, de-DE, Fall oder Kontakt\, bei dem die Diagnose festgestellt wurde.)
 * insert Translation(encounter ^definition, en-US, Encounter during which the diagnosis was determined.)
 * onset[x] only dateTime or Period
 * onset[x] MS
+* onset[x] ^short = "Beginn"
 * insert Translation(onset[x] ^short, de-DE, Beginn)
 * insert Translation(onset[x] ^short, en-US, Onset)
+* onset[x] ^definition = "Geschätztes oder tatsächliches Datum oder Zeitraum, an dem die Erkrankung begonnen hat, nach Meinung des Klinikers."
 * insert Translation(onset[x] ^definition, de-DE, Geschätztes oder tatsächliches Datum oder Zeitraum\, an dem die Erkrankung begonnen hat\, nach Meinung des Klinikers.)
 * insert Translation(onset[x] ^definition, en-US, Estimated or actual date or date-time the condition began\, in the opinion of the clinician.)
 * onsetPeriod MS
+* onsetPeriod ^short = "Beginn Zeitraum"
+* onsetPeriod ^definition = "Der Zeitraum, in dem die Erkrankung begonnen hat, nach Meinung des Klinikers."
 * onsetPeriod.start MS
 * onsetPeriod.start.extension contains ExtensionLebensphase named lebensphase-von 0..1 MS
 * onsetPeriod.end MS
 * onsetPeriod.end.extension contains ExtensionLebensphase named lebensphase-bis 0..1 MS
 * onsetDateTime MS
+* onsetDateTime ^short = "Beginn Datum"
+* onsetDateTime ^definition = "Das Datum, an dem die Erkrankung begonnen hat, nach Meinung des Klinikers."
 * recordedDate 1.. MS
+* recordedDate ^short = "Aufzeichnungsdatum"
 * insert Translation(recordedDate ^short, de-DE, Aufzeichnungsdatum)
 * insert Translation(recordedDate ^short, en-US, Recorded date)
+* recordedDate ^definition = "Datum, an dem die Diagnose erstmals dokumentiert wurde."
 * insert Translation(recordedDate ^definition, de-DE, Datum\, an dem die Diagnose erstmals dokumentiert wurde.)
 * insert Translation(recordedDate ^definition, en-US, Date when the diagnosis was first recorded.)
 * note MS
+* note ^short = "Hinweis"
 * insert Translation(note ^short, de-DE, Hinweis)
 * insert Translation(note ^short, en-US, Note)
+* note ^definition = "Zusätzliche Informationen zur Diagnose als Freitext."
 * insert Translation(note ^definition, de-DE, Zusätzliche Informationen zur Diagnose als Freitext.)
 * insert Translation(note ^definition, en-US, Additional information about the diagnosis as free text.)
 
