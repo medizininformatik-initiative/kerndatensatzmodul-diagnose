@@ -2,8 +2,8 @@ canonical: https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose
 fhirVersion: 4.0.1
 FSHOnly: false
 applyExtensionMetadataToRoot: false
-id: mii-ig-diagnose-de-v2025
-name: MII_IG_Diagnose_DE
+id: mii-ig-diagnose
+name: MII_IG_Diagnose
 status: active
 version: "2025.0.0"
 packageId: de.medizininformatikinitiative.kerndatensatz.diagnose
@@ -14,4 +14,8 @@ publisher:
   url: https://www.medizininformatik-initiative.de/
 dependencies:
   de.basisprofil.r4: 1.5.0
-  de.medizininformatikinitiative.kerndatensatz.meta: 2025.0.0-alpha1
+  de.medizininformatikinitiative.kerndatensatz.meta: 2025.0.0-alpha4
+
+menu:
+  Home: index.html
+  Artifacts: artifacts.html
