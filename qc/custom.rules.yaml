@@ -8,7 +8,9 @@
     - /**/*.xml
     - /**/*.json
     - "!package.json"
-    - "!fhirpkg.lock.json"
+    - "!/**/fsh-index.json"
+    - "!/**/fhirpkg.lock.json"
+    - "!/**/menu.xml"
 
 - name: resource-validation
   status: "Validating resources against the FHIR standard and their profiles"
@@ -22,13 +24,17 @@
   filter: (StructureDefinition or ValueSet or CodeSystem or ConceptMap or StructureMap or NamingSystem or SearchParameter or CapabilityStatement or OperationDefinition or ImplementationGuide).exists()
   # Excluding NamingSystem as they have no version
   status: "Checking if all resources have version filled"
-  predicate: version.exists() and (version in ('1.0.4') or version in ('2024.0.0') or version in ('2025.0.0'))
+  predicate: version.exists() and (version in ('2025.0.0'))
   error-message: "version not filled (correctly)"
   files:
     - /**/*.xml
     - /**/*.json
     - "!package.json"
     - "!/**/CodeSystemICD*.json"
+    - "!/**/medizininformatikinitiative-moduldiagnose-implementationguide-1.x-DE.json"
+    - "!/**/medizininformatikinitiative-moduldiagnose-implementationguide-1.x-EN.json"
+    - "!/**/MII_IG_Diagnose_DE_v2024.json"
+    - "!/**/MII_IG_Diagnose_EN_v2024.json"
 
 - action: Check for valid ids
   # See https://github.com/FirelyTeam/firely-net-sdk/issues/1773
