@@ -5,7 +5,7 @@ Usage: #example
 * clinicalStatus = $condition-clinical#active
 * code.coding[0].version = "2020"
 * code.coding[=] = $icd-10-gm#S50.0 "Prellung des Ellenbogens"
-* code.coding[+] = $sct#91613004 "Contusion of elbow (disorder)"
+* code.coding[+] = $sct-no-ver#91613004 "Contusion of elbow (disorder)"
 * code.text = "Prellung des linken Ellenbogens"
 * subject = Reference(Patient/12345)
 * encounter = Reference(Encounter/12345)

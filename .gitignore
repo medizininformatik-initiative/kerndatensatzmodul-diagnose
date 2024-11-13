@@ -6,3 +6,15 @@ fsh-generated/includes
 fsh-generated/resources/ImplementationGuide-mii-ig-diagnose*
 fsh-index.json
 fsh-index.txt
+_updatePublisher.sh
+_updatePublisher.bat
+_genonce.sh
+_genonce.bat
+_gencontinuous.sh
+_gencontinuous.bat
+template
+temp
+output
+input-cache
+ig.ini 
+input/pagecontent/index.md 

@@ -24,11 +24,12 @@
       "url" : "https://www.medizininformatik-initiative.de/"
     }
   ],
-  "canonical": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ImplementationGuide/mii-ig-diagnose-de-v2025",
+  "canonical": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ImplementationGuide/mii-ig-diagnose",
   "url": "https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Diagnose/IGMIIKDSModulDiagnose.html",
   "jurisdiction": "http://unstats.un.org/unsd/methods/m49/m49.htm#276",
   "dependencies": {
+    "hl7.fhir.r4.core": "4.0.1",
     "de.basisprofil.r4": "1.5.0",
-    "de.medizininformatikinitiative.kerndatensatz.meta": "2025.0.0-alpha1"
+    "de.medizininformatikinitiative.kerndatensatz.meta": "2025.0.0-alpha4"
   }
 }

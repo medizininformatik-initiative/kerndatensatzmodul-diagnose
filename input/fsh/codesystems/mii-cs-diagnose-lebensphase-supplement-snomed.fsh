@@ -6,8 +6,9 @@ Description: "CodeSystem Supplement mit Definitionen zu den SNOMED-Konzepten fü
 * ^content = #supplement
 * insert PR_CS_VS_Version
 * ^experimental = true
-* ^date = "2024-03-26"
+* ^date = "2024-11-13"
 * insert Publisher
+* ^copyright = "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license."
 * ^supplements = "http://snomed.info/sct"
 * ^property[0].code = #comment
 * ^property[0].uri = "http://hl7.org/fhir/concept-properties#comment"
