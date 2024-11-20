@@ -32,6 +32,7 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * clinicalStatus ^definition = "aktiv | Rezidiv | Rückfall | inaktiv | Remission | abgeklungen"
 * insert Translation(clinicalStatus ^definition, de-DE, aktiv | Rezidiv | Rückfall | inaktiv | Remission | abgeklungen)
 * insert Translation(clinicalStatus ^definition, en-US, active | recurrence | relapse | inactive | remission | resolved)
+* verificationStatus MS
 * verificationStatus ^short = "Verifizierungsstatus"
 * insert Translation(verificationStatus ^short, de-DE, Verifizierungsstatus)
 * insert Translation(verificationStatus ^short, en-US, Verification status)

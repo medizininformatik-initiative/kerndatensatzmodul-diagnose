@@ -350,7 +350,8 @@
               ]
             }
           ]
-        }
+        },
+        "mustSupport": true
       },
       {
         "id": "Condition.code",
