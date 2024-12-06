@@ -10,12 +10,7 @@ Das vorliegende Projekt beschreibt die FHIR-Spezifikation des Basismoduls 'Diagn
 
 ### Status:
 
-Aktuelle stabile Version: [2024.0.0](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.diagnose/2024.0.0)
-
-<!-- Reifegrad: -->
-
-Alle veröffentlichen FHIR Artefakte innerhalb des Projektes verfügen über einen Status, durch welchen der jeweilige Reifegrad abgeleitet werden kann.
-Profile mit dem Status 'Draft' wurden noch nicht ballotiert und können noch diversen und substantiellen Änderungen unterliegen. Verpflichtende und ballotierte Ergebnisse sind unter dem Tab 'Packages' zu finden.
+Siehe [Übersicht der Versionen der Kerndatensatz-Module](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/%C3%9Cbersicht-%C3%BCber-Versionen-der-Kerndatensatz%E2%80%90Module)
 
 ### Mitwirkungs- und Kommentierungsmöglichkeiten
 
@@ -32,7 +27,6 @@ In diesem Modul sind krankheitenbeschreibende und ergänzende Merkmale von PERSO
 ### Wichtige Dokumente und Links
 * [Beschreibung des MII-Kerndatensatzes in der Version 1.0 vom 10.3.2017 (PDF)](https://www.medizininformatik-initiative.de/sites/default/files/inline-files/MII_04_Kerndatensatz_1-0.pdf)
 * [Datenmodellbeschreibung des MII-Kerndatensatzes in ART-DECOR](https://art-decor.org/art-decor/decor-project--mide-)
-* [GitHub Repository](https://github.com/medizininformatik-initiative/kerndatensatzmodul-diagnose)
 * [Diagnosenleitfaden HL7 Deutschland](https://wiki.hl7.de/index.php?title=IG:Diagnoseleitfaden)
 
 ### Autoren und Ansprechpartner
