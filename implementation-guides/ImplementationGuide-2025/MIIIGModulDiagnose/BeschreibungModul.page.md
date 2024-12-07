@@ -9,11 +9,11 @@ parent:
 ---
 
 ## **Einleitung**
-Diagnosen spielen eine sehr wichtige Rolle in vielen unterschiedlichen Fragestellungen, Therapieentscheidungen und Geschäftsprozessen des deutschen Gesundheitswesens - und somit auch in den Anwendungsszenarien (Use Cases) der Medizininformatik-Initiative ([MII](https://www.medizininformatik-initiative.de)). 
+Diagnosen spielen eine sehr wichtige Rolle in vielen unterschiedlichen Fragestellungen, Therapieentscheidungen und Geschäftsprozessen des deutschen Gesundheitswesens - und somit auch in den Anwendungsszenarien (Use Cases) der Medizininformatik-Initiative (MII). 
 
 Die Zielsetzung der einrichtungs- und konsortienübergreifenden Unterstützung und Ermöglichung der Use Cases in der MII steht im Vordergrund der Modellierung des Moduls DIAGNOSE und der Gestaltung der FHIR-Profile. So weit wie möglich, aber auch so fokussiert wie nötig, werden weitere Nutzungsoptionen antizipiert. 
 
-Im Modul DIAGNOSE werden krankheitenbeschreibende und ergänzende Merkmale zu Personen abgebildet, die im [Modul PERSON](https://simplifier.net/medizininformatikinitiative-modulperson)
+Im Modul DIAGNOSE werden krankheitenbeschreibende und ergänzende Merkmale zu Personen abgebildet, die im Modul PERSON.
 erfasst sind. Jede Person kann zu einem Zeitpunkt oder im Laufe der Zeit eine oder mehrere Krankheiten haben, die mit Hilfe von Diagnosen mit unterschiedlicher Genauigkeit beschrieben werden. 
 
 

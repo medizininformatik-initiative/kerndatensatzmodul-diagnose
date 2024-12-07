@@ -22,6 +22,8 @@ Bei der Kombination von ICD-10-Codes mit dem Kreuz-Stern-System wird für jeden 
 
 Gegebenenfalls vorhandene Mehrfachkodierungskennzeichen (`*`, `†`, `!`) werden von den jeweiligen ICD-10-Codes abgetrennt und in die Extension 'Mehrfachkodierungs-Kennzeichen' gesetzt. Das Element `Condition.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/icd-10-gm').code`, in dem der ICD-10-GM-Code abgebildet wird, SOLLTE NICHT ein Mehrfachkodierungskennzeichen oder Zusatzkennzeichen (z.B. Seitenlokalisation oder Diagnosesicherheit) enthalten. Siehe [Beispielressourcen](#beispiel-2).
 
+---
+
 @```
 from 
     StructureDefinition 
