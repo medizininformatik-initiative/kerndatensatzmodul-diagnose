@@ -6,7 +6,7 @@ topic: Terminologien
 
 | Hinweis |  |
 |---------|---------------------|
-| {{render:implementation-guides/ImplementationGuide-Common/images/Warning.jpg}} | CodeSystem-Ressourcen für externe Terminologien (ICD-10-WHO), werden nicht mehr in diesem Modul veröffentlicht, sondern sollen bei der Service Unit Terminologische Dienste (SU-TermServ) bezogen werden: https://www.ontoserver.mii-termserv.de/ |
+| {{render:implementation-guides/ImplementationGuide-Common/images/Warning.jpg}} | CodeSystem-Ressourcen für externe Terminologien (ICD-10-GM), werden nicht mehr in diesem Modul veröffentlicht, sondern sollen bei der Service Unit Terminologische Dienste (SU-TermServ) bezogen werden: https://www.ontoserver.mii-termserv.de/ |
 
 Nach [§ 301](https://www.sozialgesetzbuch-sgb.de/sgbv/301.html) und [§ 295](https://www.sozialgesetzbuch-sgb.de/sgbv/295.html) SGB V ist die Kodierung bei der Abrechnung im deutschen Gesundheitswesen mit der Internationalen statistischen Klassifikation (ICD-10-GM) gesetzlich vorgeschrieben.
 

@@ -3,7 +3,7 @@
 **Version: 2025.0.0**
 
 - Dependency auf de.basisprofil.r4 aktualisiert auf [Version 1.5.0](https://simplifier.net/packages/de.basisprofil.r4/1.5.0). Die Änderung hat keine Auswirkung auf Implementierungen dieses Moduls.
-- `Condition.code` und `Condition.bodySite` ICD-O-3 Slices entfernt. Diese werden nun durch Modul Onkologie definiert.
+- `Condition.code` und `Condition.bodySite` ICD-O-3 Slices entfernt. Diese werden nun durch das Modul Onkologie definiert.
 - Profile enthalten zusätzliche Beschreibungen und Übersetzungen für Implementierer und das Forschungsdatenportal für Gesundheit (FDPG).
 - Suchparameter aus diesem Modul entfernt. SearchParameter-Ressourcen werden nun zentral im Modul Meta verwaltet.
 - Ressourcen verwenden in diesem Release modulübergreifend SNOMED CT in der Version `http://snomed.info/sct/900000000000207008/version/20240701`, um eine stabile [ValueSet-Expansion](http://hl7.org/fhir/R4/valueset.html#expansion) sicherzustellen.
