@@ -6,7 +6,8 @@ Description: "Logische Repräsentation des Basismoduls Diagnose"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/LogicalModel/Diagnose"
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^date = "2024-03-21"
+* insert LicenseCodeableCCBY40
+* ^date = "2024-12-09"
 * . ^short = "Das Basismodul Diagnosen enthält Diagnosen als Behandlungsbegründungen und abrechnungsbasiertes Gliederungsmerkmal, z.B. als Hauptdiagnose, Nebendiagnose, Quartalsdiagnose etc."
 * ICD10GMDiagnoseKodiert 0..1 BackboneElement "Im Bereich der administrativen und statistischen Auswertung wird die Diagnose mit Hilfe von Codiersystemen verschlüsselt. So wird z.B. bei der Abrechnung nach §301 und §295 SGB V die Codierung von Diagnosen mittels ICD-10-GM gesetzlich vorgeschrieben. Weitere Codiersysteme sind z.B. die Alpha-ID oder SNOMED CT. Die Kodierung einer Diagnose mittels verschiedener Codesysteme sollte möglich sein."
   * Diagnosecode 1..1 code "Diagnosecode ICD-10-GM" "Code ohne Zusatzkennzeichen"

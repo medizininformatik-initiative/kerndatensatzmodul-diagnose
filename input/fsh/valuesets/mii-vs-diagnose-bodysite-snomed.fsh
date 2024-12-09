@@ -6,7 +6,8 @@ Description: "Enthaelt alle SNOMED Body structure codes"
 * ^copyright = "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license."
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert LicenseCodeableCCBY40
 * ^status = #active
 * ^experimental = true
-* ^date = "2024-10-18"
+* ^date = "2024-12-09"
 * include codes from system $sct where concept descendent-of #123037004

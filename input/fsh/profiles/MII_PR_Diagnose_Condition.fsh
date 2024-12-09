@@ -10,8 +10,9 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * insert Translation(^description, en-US, A clinical diagnosis of a patient.)
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert LicenseCodeableCCBY40
 * ^status = #active
-* ^date = "2024-10-18"
+* ^date = "2024-12-09"
 * id MS
 * meta MS
 * meta.source MS

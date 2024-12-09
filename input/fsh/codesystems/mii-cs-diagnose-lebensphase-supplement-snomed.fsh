@@ -5,6 +5,7 @@ Description: "CodeSystem Supplement mit Definitionen zu den SNOMED-Konzepten fü
 * ^status = #active
 * ^content = #supplement
 * insert PR_CS_VS_Version
+* insert LicenseCodeableCCBY40
 * ^experimental = true
 * ^date = "2024-11-13"
 * insert Publisher
