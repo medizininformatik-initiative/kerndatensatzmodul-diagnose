@@ -36,6 +36,7 @@ Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/CapabilityStatement/metadata"
 * insert Version
 * insert SP_Publisher
+* insert LicenseCodeableCCBY40Instance
 * name = "MII_CPS_Diagnose_CapabilityStatement"
 * title = "MII CPS Diagnose CapabilityStatement"
 * status = #active
