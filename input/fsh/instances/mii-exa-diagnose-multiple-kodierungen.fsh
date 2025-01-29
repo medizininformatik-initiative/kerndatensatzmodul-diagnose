@@ -1,7 +1,7 @@
 Instance: mii-exa-diagnose-multiple-kodierungen
 InstanceOf: MII_PR_Diagnose_Condition
 Usage: #example
-* meta.profile[0] = "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2024.0.0"
+* meta.profile[0] = "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2025.0.0"
 * extension[Feststellungsdatum].valueDateTime = "2020-02-13"
 * clinicalStatus = $condition-clinical#active
 * code.coding[0].version = "2020"
