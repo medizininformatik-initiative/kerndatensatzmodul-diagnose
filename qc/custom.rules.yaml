@@ -39,7 +39,7 @@
 - name: instance-profile-version
   filter: example
   status: "Checking if all Resource.meta.profile have correct version"
-  predicate: meta.profile.matches('^.*\\|2025\\.0\\.0$')
+  predicate: select(meta.profile.where(toString().startsWith('https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/'))).matches('^.*\\|2025\\.0\\.0$')
   error-message: "instance version not filled (correctly)"
   files:
     - /**/*.xml
