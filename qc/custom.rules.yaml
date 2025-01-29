@@ -36,6 +36,16 @@
     - "!/**/MII_IG_Diagnose_DE_v2024.json"
     - "!/**/MII_IG_Diagnose_EN_v2024.json"
 
+- name: instance-profile-version
+  filter: example
+  status: "Checking if all Resource.meta.profile have correct version"
+  predicate: meta.profile.matches('^.*\\|2025\\.0\\.0$')
+  error-message: "instance version not filled (correctly)"
+  files:
+    - /**/*.xml
+    - /**/*.json
+    - "!package.json"
+
 - action: Check for valid ids
   # See https://github.com/FirelyTeam/firely-net-sdk/issues/1773
   predicate: id.matches('^[A-Za-z0-9\\-\\.]{1,64}$')
