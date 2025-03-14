@@ -59,7 +59,7 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
     //icd-o-3 0..1 MS
 * insert AddIcd10CodingTranslation(code.coding[icd10-gm])
 * code.coding[icd10-gm] only CodingICD10GM
-* code.coding[icd10-gm] from ICD10GM (required)
+* code.coding[icd10-gm] from mii-vs-diagnose-icd10gm (required)
 * code.coding[icd10-gm] ^patternCoding.system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
 * code.coding[icd10-gm].system 1.. MS
 * code.coding[icd10-gm].version 1.. MS
