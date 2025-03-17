@@ -66,7 +66,7 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * code.coding[icd10-gm].code 1.. MS
 * insert AddAlphaIdCodingTranslation(code.coding[alpha-id])
 * code.coding[alpha-id] only CodingAlphaID
-* code.coding[alpha-id] from $alpha-id-vs (required)
+* code.coding[alpha-id] from mii-vs-diagnose-alphaid (required)
 * code.coding[alpha-id] ^patternCoding.system = "http://fhir.de/CodeSystem/bfarm/alpha-id"
 * code.coding[alpha-id].system 1.. MS
 * code.coding[alpha-id].code 1.. MS
