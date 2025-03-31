@@ -98,7 +98,7 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * bodySite.coding ^slicing.discriminator.path = "system"
 * bodySite.coding ^slicing.rules = #open
 * bodySite.coding contains 
-    snomed-ct 1..1 MS //and
+    snomed-ct 0..1 MS //and
     //icd-o-3 0..1 MS
 * insert AddSnomedCodingTranslation(bodySite.coding[snomed-ct])
 * bodySite.coding[snomed-ct] from mii-vs-diagnose-bodystructure-snomed (required)
