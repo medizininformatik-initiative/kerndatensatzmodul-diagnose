@@ -12,7 +12,7 @@ RuleSet: Profile (profile, expectation)
 
 RuleSet: SupportProfile (profile, expectation)
 // This rule set must follow a SupportResource rule set, and applies to that resource.
-* rest.resource[=].supportedProfile[+] = "{profile}"
+* rest.resource[=].supportedProfile[+] = "{profile}|2025.0.1"
 * rest.resource[=].supportedProfile[=].extension[0].url = $exp
 * rest.resource[=].supportedProfile[=].extension[0].valueCode = {expectation}
 
@@ -41,7 +41,7 @@ Usage: #definition
 * title = "MII CPS Diagnose CapabilityStatement"
 * status = #active
 * experimental = false
-* date = "2024-10-18"
+* date = "2025-03-31"
 * description = "Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss, um das Modul Diagnose der Medizininformatik Initiative zu implementieren."
 * jurisdiction = urn:iso:std:iso:3166#DE "Germany"
 * kind = #requirements
@@ -53,7 +53,7 @@ Usage: #definition
 // Condition requirements
 * insert SupportResource(Condition, #SHALL)
 * insert Profile(http://hl7.org/fhir/StructureDefinition/Condition, #SHALL)
-* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2025.0.0, #SHALL)
+* insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)

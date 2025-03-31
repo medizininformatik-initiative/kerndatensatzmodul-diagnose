@@ -12,7 +12,7 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * insert Publisher
 * insert LicenseCodeableCCBY40
 * ^status = #active
-* ^date = "2024-12-09"
+* ^date = "2025-03-31"
 * id MS
 * meta MS
 * meta.source MS

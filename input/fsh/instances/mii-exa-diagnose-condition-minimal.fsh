@@ -1,7 +1,7 @@
 Instance: mii-exa-diagnose-condition-minimal
 InstanceOf: MII_PR_Diagnose_Condition
 Usage: #example
-* meta.profile[0] = "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2025.0.0"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose)
 * clinicalStatus = $condition-clinical#active
 * code.coding[0].version = "2020"
 * code.coding[=] = $icd-10-gm#S50.0 "Prellung des Ellenbogens"
