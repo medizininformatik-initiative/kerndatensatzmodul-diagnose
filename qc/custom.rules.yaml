@@ -36,11 +36,11 @@
     - "!/**/MII_IG_Diagnose_DE_v2024.json"
     - "!/**/MII_IG_Diagnose_EN_v2024.json"
 
-- name: instance-profile-version
-  filter: Condition
-  status: "Checking if all Resource.meta.profile have correct version"
-  predicate: select(meta.profile.where(toString().startsWith('https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/'))).matches('^.*\\|2025\\.0\\.0$')
-  error-message: "instance version not filled (correctly)"
+- name: instance-version-filled
+  category: example 
+  status: "Checking if all instances have correct version filled"
+  predicate: select(meta.profile).where($this.startsWith('https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/') and $this.endsWith('2025.0.1')).exists()
+  error-message: "version not filled (correctly)"
   files:
     - /**/*.xml
     - /**/*.json
