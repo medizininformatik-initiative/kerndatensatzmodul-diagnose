@@ -30,6 +30,13 @@ RuleSet: SupportSearchParam (name, canonical, type, expectation)
 * rest.resource[=].searchParam[=].extension[0].url = $exp
 * rest.resource[=].searchParam[=].extension[0].valueCode = {expectation}
 
+RuleSet: SupportSpecialSearchParam (name, type, expectation)
+// This rule set must follow a SupportResource rule set, and applies to that resource.
+* rest.resource[=].searchParam[+].name = "{name}"
+* rest.resource[=].searchParam[=].type = {type}
+* rest.resource[=].searchParam[=].extension[0].url = $exp
+* rest.resource[=].searchParam[=].extension[0].valueCode = {expectation}
+
 Instance: mii-cps-diagnose-capabilitystatement
 InstanceOf: CapabilityStatement
 Usage: #definition
@@ -56,6 +63,8 @@ Usage: #definition
 * insert SupportProfile(https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose, #SHALL)
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
+* insert SupportSpecialSearchParam(_count, #special, #SHALL)
+* insert SupportSpecialSearchParam(_summary, #special, #SHALL)
 * insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
 * insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHALL)
 * insert SupportSearchParam(_profile, http://hl7.org/fhir/SearchParameter/Resource-profile, #uri, #SHALL)

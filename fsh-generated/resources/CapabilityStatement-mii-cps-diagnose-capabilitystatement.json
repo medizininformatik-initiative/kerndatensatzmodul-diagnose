@@ -107,6 +107,26 @@
           ],
           "searchParam": [
             {
+              "name": "_count",
+              "type": "special",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "_summary",
+              "type": "special",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
               "name": "_id",
               "definition": "http://hl7.org/fhir/SearchParameter/Resource-id",
               "type": "token",
