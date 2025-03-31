@@ -9,6 +9,8 @@ Datum 31.03.2025
 
 **Version: 2025.0.0**
 
+Datum 09.12.2024
+
 - Dependency auf de.basisprofil.r4 aktualisiert auf [Version 1.5.0](https://simplifier.net/packages/de.basisprofil.r4/1.5.0). Die Änderung hat keine Auswirkung auf Implementierungen dieses Moduls.
 - `Condition.code` und `Condition.bodySite` ICD-O-3 Slices entfernt. Diese werden nun durch das Modul Onkologie definiert.
 - Profile enthalten zusätzliche Beschreibungen und Übersetzungen für Implementierer und das Forschungsdatenportal für Gesundheit (FDPG).
@@ -17,6 +19,8 @@ Datum 31.03.2025
 - `Condition.verificationStatus` hat neu MustSupport-Label. Siehe: https://github.com/medizininformatik-initiative/kerndatensatzmodul-diagnose/issues/64 
 
 **Version: 2024.0.0**
+
+Datum 16.04.2024
 
 - Die veröffentlichten FHIR-Packages verwenden nun [Calender Versioning (CalVer)](https://calver.org/) nach dem Schema YYYY.MINOR.PATCH. Damit wird ein Releasezyklus im Jahresrhythmus etabliert. Die Jahresversion (YYYY) zeigt das Jahr an, in dem das Kerndatensatzmodul angewendet wird. MINOR-Versionen werden bei Einführung neuer Funktionen, Erweiterungen oder substantieller Änderungen veröffentlicht. PATCH-Versionen umfassen Bugfixes oder textuelle Korrekturen.
 - Die Benennung der Conformance-Ressourcen und Beispielinstanzen folgt nun einheitlichen [MII-Namenskonventionen](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Namenskonventionen-f%C3%BCr-FHIR%E2%80%90Ressourcen-in-der-MII).
