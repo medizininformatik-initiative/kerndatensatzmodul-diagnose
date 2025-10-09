@@ -64,14 +64,6 @@
             }
           ],
           "profile": "http://hl7.org/fhir/StructureDefinition/Condition",
-          "_profile": {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                "valueCode": "SHALL"
-              }
-            ]
-          },
           "supportedProfile": [
             "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2025.0.1"
           ],
