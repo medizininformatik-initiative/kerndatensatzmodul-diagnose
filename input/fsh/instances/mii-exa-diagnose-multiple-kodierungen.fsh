@@ -8,7 +8,7 @@ Usage: #example
 * code.coding[=] = $icd-10-gm#H83.8 "Sonstige näher bezeichnete Krankheiten des Innenohres"
 * code.coding[+] = $alpha-id#I125918
 * code.coding[=].version = "2020"
-* code.coding[+] = $orpha#420402 "Bogengangsdehiszenz-Syndrom"
+* code.coding[+] = $orpha#420402 "Semicircular canal dehiscence syndrome"
 * subject = Reference(Patient/12345)
 * encounter = Reference(Encounter/12345)
 * onsetPeriod.start = "2020-02-13T16:56:00+01:00"
