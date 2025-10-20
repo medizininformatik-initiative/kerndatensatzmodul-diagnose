@@ -3,7 +3,7 @@ parent:
 ---
 ## Datensätze inkl. Beschreibungen
 
-Die offizielle und abgenommene Version des Informationsmodells für das Modul PERSON ist nachfolgend als FHIR Logical Model abgebildet:
+Die offizielle und abgenommene Version des Informationsmodells für das Modul DIAGNOSE ist nachfolgend als FHIR Logical Model abgebildet:
 
 {{tree:https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/LogicalModel/Diagnose}}
 

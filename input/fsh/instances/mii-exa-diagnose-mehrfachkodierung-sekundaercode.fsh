@@ -1,14 +1,14 @@
 Instance: mii-exa-diagnose-mehrfachkodierung-sekundaercode
 InstanceOf: MII_PR_Diagnose_Condition
 Usage: #example
-* meta.profile[0] = "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2024.0.0"
+* insert MetaProfile(https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose)
 * extension.url = "http://hl7.org/fhir/StructureDefinition/condition-related"
 * extension.valueReference = Reference(mii-exa-diagnose-mehrfachkodierung-primaercode)
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * code.coding[icd10-gm].extension.url = "http://fhir.de/StructureDefinition/icd-10-gm-mehrfachcodierungs-kennzeichen"
 * code.coding[icd10-gm].extension.valueCoding = $icd-10-gm-mehrfachcodierungs-kennzeichen#*
-* code.coding[icd10-gm] = $icd-10-gm|2020#M73.04 "Bursitis gonorrhoica[A54.4] : Hand"
+* code.coding[icd10-gm] = $icd-10-gm|2020#M73.04 "Bursitis gonorrhoica: Hand [Finger, Handwurzel, Mittelhand, Gelenke zwischen diesen Knochen]"
 * subject = Reference(Patient/12345)
 * encounter = Reference(Encounter/12345)
 * onsetPeriod.start = "2019-09-26T12:45:00+01:00"

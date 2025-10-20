@@ -12,6 +12,8 @@ _genonce.sh
 _genonce.bat
 _gencontinuous.sh
 _gencontinuous.bat
+_build.bat
+_build.sh
 template
 temp
 output

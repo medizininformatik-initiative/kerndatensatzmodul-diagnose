@@ -12,7 +12,7 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * insert Publisher
 * insert LicenseCodeableCCBY40
 * ^status = #active
-* ^date = "2024-12-09"
+* ^date = "2025-03-31"
 * id MS
 * meta MS
 * meta.source MS
@@ -59,14 +59,14 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
     //icd-o-3 0..1 MS
 * insert AddIcd10CodingTranslation(code.coding[icd10-gm])
 * code.coding[icd10-gm] only CodingICD10GM
-* code.coding[icd10-gm] from ICD10GM (required)
+* code.coding[icd10-gm] from mii-vs-diagnose-icd10gm (required)
 * code.coding[icd10-gm] ^patternCoding.system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
 * code.coding[icd10-gm].system 1.. MS
 * code.coding[icd10-gm].version 1.. MS
 * code.coding[icd10-gm].code 1.. MS
 * insert AddAlphaIdCodingTranslation(code.coding[alpha-id])
 * code.coding[alpha-id] only CodingAlphaID
-* code.coding[alpha-id] from $alpha-id-vs (required)
+* code.coding[alpha-id] from mii-vs-diagnose-alphaid (required)
 * code.coding[alpha-id] ^patternCoding.system = "http://fhir.de/CodeSystem/bfarm/alpha-id"
 * code.coding[alpha-id].system 1.. MS
 * code.coding[alpha-id].code 1.. MS
@@ -98,7 +98,7 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * bodySite.coding ^slicing.discriminator.path = "system"
 * bodySite.coding ^slicing.rules = #open
 * bodySite.coding contains 
-    snomed-ct 1..1 MS //and
+    snomed-ct 0..1 MS //and
     //icd-o-3 0..1 MS
 * insert AddSnomedCodingTranslation(bodySite.coding[snomed-ct])
 * bodySite.coding[snomed-ct] from mii-vs-diagnose-bodystructure-snomed (required)
@@ -120,7 +120,7 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * encounter ^definition = "Fall oder Kontakt, bei dem die Diagnose festgestellt wurde."
 * insert Translation(encounter ^definition, de-DE, Fall oder Kontakt\, bei dem die Diagnose festgestellt wurde.)
 * insert Translation(encounter ^definition, en-US, Encounter during which the diagnosis was determined.)
-* onset[x] only dateTime or Period
+* onset[x] only dateTime or Period or Age
 * onset[x] MS
 * onset[x] ^short = "Beginn"
 * insert Translation(onset[x] ^short, de-DE, Beginn)
@@ -138,6 +138,11 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * onsetDateTime MS
 * onsetDateTime ^short = "Beginn Datum"
 * onsetDateTime ^definition = "Das Datum, an dem die Erkrankung begonnen hat, nach Meinung des Klinikers."
+* onsetAge MS 
+* onsetAge ^short = "Erkrankungsbeginn als Alter"
+* onsetAge.extension contains ExtensionLebensphase named Lebensphase-Beginn 0..1
+* onsetAge.extension[Lebensphase-Beginn] ^short = "Lebensphase des Erkrankungsbeginns"
+* onsetAge.extension[Lebensphase-Beginn] ^comment = "Alternative Angabe, wenn genauere Eingrenzungen des Zeitraums nicht möglich sind, insbesondere im Kontext anamnestischer Diagnosen"
 * recordedDate 1.. MS
 * recordedDate ^short = "Aufzeichnungsdatum"
 * insert Translation(recordedDate ^short, de-DE, Aufzeichnungsdatum)

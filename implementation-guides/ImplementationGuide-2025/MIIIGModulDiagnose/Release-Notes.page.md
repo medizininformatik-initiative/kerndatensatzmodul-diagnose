@@ -1,6 +1,17 @@
 ## {{page-title}}
 
+**Version: 2025.0.1**
+
+Datum 20.10.2025
+
+- `Condition.onsetAge`: Unter `Condition.onset[x]` kann jetzt auch der Datentyp `Age` verwendet werden. Siehe: https://github.com/medizininformatik-initiative/kerndatensatzmodul-diagnose/issues/78
+- `Condtion.bodySite`: Änderung der Kardinalität des SNOMED-Coding Slice von 1..1 zu 0..1. Siehe: https://github.com/medizininformatik-initiative/kerndatensatzmodul-diagnose/issues/75 
+- Neu hinzugefügt wurden ValueSets und Bindings für ICD-10-GM (Canonical URL: `https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm`) und AlphaID (Canonical URL: `https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-alphaid`), die mit dem MII-Terminologieserver (https://www.ontoserver.mii-termserv.de/) expandiert werden können und somit erweiterte Validierung ermöglichen.
+- CapabilityStatement aktualisiert: das CapabilityStatement enthält nun Anforderungsdokumentation für Suchparameter `_count` und `_summary`.
+
 **Version: 2025.0.0**
+
+Datum 09.12.2024
 
 - Dependency auf de.basisprofil.r4 aktualisiert auf [Version 1.5.0](https://simplifier.net/packages/de.basisprofil.r4/1.5.0). Die Änderung hat keine Auswirkung auf Implementierungen dieses Moduls.
 - `Condition.code` und `Condition.bodySite` ICD-O-3 Slices entfernt. Diese werden nun durch das Modul Onkologie definiert.
@@ -10,6 +21,8 @@
 - `Condition.verificationStatus` hat neu MustSupport-Label. Siehe: https://github.com/medizininformatik-initiative/kerndatensatzmodul-diagnose/issues/64 
 
 **Version: 2024.0.0**
+
+Datum 16.04.2024
 
 - Die veröffentlichten FHIR-Packages verwenden nun [Calender Versioning (CalVer)](https://calver.org/) nach dem Schema YYYY.MINOR.PATCH. Damit wird ein Releasezyklus im Jahresrhythmus etabliert. Die Jahresversion (YYYY) zeigt das Jahr an, in dem das Kerndatensatzmodul angewendet wird. MINOR-Versionen werden bei Einführung neuer Funktionen, Erweiterungen oder substantieller Änderungen veröffentlicht. PATCH-Versionen umfassen Bugfixes oder textuelle Korrekturen.
 - Die Benennung der Conformance-Ressourcen und Beispielinstanzen folgt nun einheitlichen [MII-Namenskonventionen](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Namenskonventionen-f%C3%BCr-FHIR%E2%80%90Ressourcen-in-der-MII).

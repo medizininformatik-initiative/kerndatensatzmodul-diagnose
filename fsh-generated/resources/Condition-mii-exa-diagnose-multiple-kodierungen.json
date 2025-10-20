@@ -3,7 +3,7 @@
   "id": "mii-exa-diagnose-multiple-kodierungen",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2024.0.0"
+      "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2025.0.1-rc.1"
     ]
   },
   "extension": [
@@ -36,7 +36,7 @@
       {
         "code": "420402",
         "system": "http://www.orpha.net",
-        "display": "Bogengangsdehiszenz-Syndrom"
+        "display": "Semicircular canal dehiscence syndrome"
       }
     ]
   },

@@ -16,7 +16,7 @@
     }
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose",
-  "version": "2025.0.0",
+  "version": "2025.0.1-rc.1",
   "name": "MII_PR_Diagnose_Condition",
   "title": "MII PR Diagnose Condition",
   "_title": {
@@ -50,7 +50,7 @@
     ]
   },
   "status": "active",
-  "date": "2024-12-09",
+  "date": "2025-03-31",
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {
@@ -548,7 +548,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://fhir.de/ValueSet/bfarm/icd-10-gm"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm"
         },
         "mapping": [
           {
@@ -660,7 +660,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://fhir.de/ValueSet/bfarm/alpha-id"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-alphaid"
         },
         "mapping": [
           {
@@ -987,7 +987,6 @@
           ],
           "rules": "open"
         },
-        "min": 1,
         "mustSupport": true
       },
       {
@@ -1056,7 +1055,7 @@
             }
           ]
         },
-        "min": 1,
+        "min": 0,
         "max": "1",
         "mustSupport": true,
         "binding": {
@@ -1234,6 +1233,9 @@
             "code": "dateTime"
           },
           {
+            "code": "Age"
+          },
+          {
             "code": "Period"
           }
         ],
@@ -1354,6 +1356,37 @@
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "Condition.onset[x]:onsetAge",
+        "path": "Condition.onset[x]",
+        "sliceName": "onsetAge",
+        "short": "Erkrankungsbeginn als Alter",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Age"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.onset[x]:onsetAge.extension:Lebensphase-Beginn",
+        "path": "Condition.onset[x].extension",
+        "sliceName": "Lebensphase-Beginn",
+        "short": "Lebensphase des Erkrankungsbeginns",
+        "comment": "Alternative Angabe, wenn genauere Eingrenzungen des Zeitraums nicht möglich sind, insbesondere im Kontext anamnestischer Diagnosen",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/StructureDefinition/lebensphase"
+            ]
+          }
+        ]
       },
       {
         "id": "Condition.recordedDate",
