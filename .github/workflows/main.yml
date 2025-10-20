@@ -52,7 +52,14 @@ jobs:
           body: |
             ## MII IG Diagnose Release ${{ steps.prep-version.outputs.version }}
             
+            <!-- DELETE START -->
             Download the FHIR package from Simplifier and manually attach it to this release.
+            <!-- DELETE END -->
             
             ### Changes
+
+            <!-- DELETE START -->
+            Add your own release notes here.
+            <!-- DELETE END -->
+
             See the auto-generated release notes below.
