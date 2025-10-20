@@ -13,6 +13,6 @@ Nachfolgend wird aufgelistet, welche Inhalte verpflichtend im CapabilityStatemen
 
 Canonical: ```https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/CapabilityStatement/metadata```
 
-[Link Simplifier Profil Übersicht](https://simplifier.net/resolve?canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/CapabilityStatement/metadata&fhirVersion=R4&scope=de.medizininformatikinitiative.kerndatensatz.diagnose@2025.0.0)
+[Link Simplifier Profil Übersicht](https://simplifier.net/resolve?canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/CapabilityStatement/metadata&fhirVersion=R4&scope=de.medizininformatikinitiative.kerndatensatz.diagnose@2025.0.1)
 
 {{render:https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/CapabilityStatement/metadata}}

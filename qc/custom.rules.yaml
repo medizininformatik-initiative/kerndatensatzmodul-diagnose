@@ -24,7 +24,7 @@
   filter: (StructureDefinition or ValueSet or CodeSystem or ConceptMap or StructureMap or NamingSystem or SearchParameter or CapabilityStatement or OperationDefinition or ImplementationGuide).exists()
   # Excluding NamingSystem as they have no version
   status: "Checking if all resources have version filled"
-  predicate: version.exists() and (version in ('2025.0.1-rc.1'))
+  predicate: version.exists() and (version in ('2025.0.1'))
   error-message: "version not filled (correctly)"
   files:
     - /**/*.xml
@@ -39,7 +39,7 @@
 - name: instance-version-filled
   category: example 
   status: "Checking if all instances have correct version filled"
-  predicate: select(meta.profile).where($this.startsWith('https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/') and $this.endsWith('2025.0.1-rc.1')).exists()
+  predicate: select(meta.profile).where($this.startsWith('https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/') and $this.endsWith('2025.0.1')).exists()
   error-message: "version not filled (correctly)"
   files:
     - /**/*.xml

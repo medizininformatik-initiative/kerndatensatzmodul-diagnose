@@ -1,6 +1,6 @@
 {
   "name": "de.medizininformatikinitiative.kerndatensatz.diagnose",
-  "version": "2025.0.1-rc.1",
+  "version": "2025.0.1",
   "description": "Medizininformatik Initiative - Modul Diagnose",
   "author": "juliansass",
   "fhirVersions": [
