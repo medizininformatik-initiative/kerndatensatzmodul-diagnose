@@ -156,7 +156,7 @@ Folgende Suchparameter sind für das Modul Person relevant, auch in Kombination:
 
     Beispiele:
 
-    ```GET [base]/Condition?code=/Condition??code=http://fhir.de/CodeSystem/bfarm/icd-10-gm|A15.0```
+    ```GET [base]/Condition?code=http://fhir.de/CodeSystem/bfarm/icd-10-gm|A15.0```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "Condition.code" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
