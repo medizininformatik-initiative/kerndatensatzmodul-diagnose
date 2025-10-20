@@ -2,8 +2,9 @@
 
 **Version: 2025.0.1**
 
-Datum 31.03.2025
+Datum 20.10.2025
 
+- `Condition.onsetAge`: Unter `Condition.onset[x]` kann jetzt auch der Datentyp `Age` verwendet werden. Siehe: https://github.com/medizininformatik-initiative/kerndatensatzmodul-diagnose/issues/78
 - `Condtion.bodySite`: Änderung der Kardinalität des SNOMED-Coding Slice von 1..1 zu 0..1. Siehe: https://github.com/medizininformatik-initiative/kerndatensatzmodul-diagnose/issues/75 
 - Neu hinzugefügt wurden ValueSets und Bindings für ICD-10-GM (Canonical URL: `https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm`) und AlphaID (Canonical URL: `https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-alphaid`), die mit dem MII-Terminologieserver (https://www.ontoserver.mii-termserv.de/) expandiert werden können und somit erweiterte Validierung ermöglichen.
 - CapabilityStatement aktualisiert: das CapabilityStatement enthält nun Anforderungsdokumentation für Suchparameter `_count` und `_summary`.

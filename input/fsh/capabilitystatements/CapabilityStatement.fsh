@@ -18,7 +18,7 @@ RuleSet: Profile (profile)
 
 RuleSet: SupportProfile (profile, expectation)
 // This rule set must follow a SupportResource rule set, and applies to that resource.
-* rest.resource[=].supportedProfile[+] = "{profile}|2025.0.1"
+* rest.resource[=].supportedProfile[+] = "{profile}|2025.0.1-rc.1"
 * rest.resource[=].supportedProfile[=].extension[0].url = $exp
 * rest.resource[=].supportedProfile[=].extension[0].valueCode = {expectation}
 

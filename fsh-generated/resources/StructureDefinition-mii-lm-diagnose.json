@@ -16,7 +16,7 @@
     }
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/LogicalModel/Diagnose",
-  "version": "2025.0.1",
+  "version": "2025.0.1-rc.1",
   "name": "MII_LM_Diagnose",
   "title": "MII LM Diagnose",
   "status": "active",
