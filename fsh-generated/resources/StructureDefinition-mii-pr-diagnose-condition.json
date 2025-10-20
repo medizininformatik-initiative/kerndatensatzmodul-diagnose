@@ -128,20 +128,6 @@
         "mustSupport": true
       },
       {
-        "id": "Condition.extension",
-        "path": "Condition.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
         "id": "Condition.extension:ReferenzPrimaerdiagnose",
         "path": "Condition.extension",
         "sliceName": "ReferenzPrimaerdiagnose",
@@ -1294,20 +1280,6 @@
         ]
       },
       {
-        "id": "Condition.onset[x]:onsetPeriod.start.extension",
-        "path": "Condition.onset[x].start.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
         "id": "Condition.onset[x]:onsetPeriod.start.extension:lebensphase-von",
         "path": "Condition.onset[x].start.extension",
         "sliceName": "lebensphase-von",
@@ -1343,20 +1315,6 @@
             "map": "KlinischRelevanterZeitraum.Zeitraum.bis"
           }
         ]
-      },
-      {
-        "id": "Condition.onset[x]:onsetPeriod.end.extension",
-        "path": "Condition.onset[x].end.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
       },
       {
         "id": "Condition.onset[x]:onsetPeriod.end.extension:lebensphase-bis",
