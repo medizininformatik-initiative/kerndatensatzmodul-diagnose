@@ -120,7 +120,7 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * encounter ^definition = "Fall oder Kontakt, bei dem die Diagnose festgestellt wurde."
 * insert Translation(encounter ^definition, de-DE, Fall oder Kontakt\, bei dem die Diagnose festgestellt wurde.)
 * insert Translation(encounter ^definition, en-US, Encounter during which the diagnosis was determined.)
-* onset[x] only dateTime or Period
+* onset[x] only dateTime or Period or Age
 * onset[x] MS
 * onset[x] ^short = "Beginn"
 * insert Translation(onset[x] ^short, de-DE, Beginn)
@@ -138,6 +138,11 @@ Description: "Dieses Profil beschreibt eine Diagnose der Medizininformatik Initi
 * onsetDateTime MS
 * onsetDateTime ^short = "Beginn Datum"
 * onsetDateTime ^definition = "Das Datum, an dem die Erkrankung begonnen hat, nach Meinung des Klinikers."
+* onsetAge MS 
+* onsetAge ^short = "Erkrankungsbeginn als Alter"
+* onsetAge.extension contains ExtensionLebensphase named Lebensphase-Beginn 0..1
+* onsetAge.extension[Lebensphase-Beginn] ^short = "Lebensphase des Erkrankungsbeginns"
+* onsetAge.extension[Lebensphase-Beginn] ^comment = "Alternative Angabe, wenn genauere Eingrenzungen des Zeitraums nicht möglich sind, insbesondere im Kontext anamnestischer Diagnosen"
 * recordedDate 1.. MS
 * recordedDate ^short = "Aufzeichnungsdatum"
 * insert Translation(recordedDate ^short, de-DE, Aufzeichnungsdatum)
