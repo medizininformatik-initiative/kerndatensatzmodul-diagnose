@@ -3,7 +3,7 @@
   "id": "mii-exa-diagnose-multiple-kodierungen",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2025.0.1-rc.1"
+      "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2025.0.1"
     ]
   },
   "extension": [
